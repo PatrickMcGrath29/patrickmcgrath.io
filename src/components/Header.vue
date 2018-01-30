@@ -4,7 +4,7 @@
     <nav class="navbar">
       <router-link v-bind:to="{ name: 'Home' }" class="navbar-link">Home</router-link>
       <a href="#" class="navbar-link">Projects</a>
-      <a href="#" class="navbar-link">Resume</a>
+      <a href="/static/resume.pdf" class="navbar-link">Resume</a>
     </nav>
   </div>
 </template>
