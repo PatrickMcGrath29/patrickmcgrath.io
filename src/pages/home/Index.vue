@@ -32,7 +32,6 @@
 </template>
 
 <script>
-import ContentService from '@/services/ContentService/'
 import DefaultTemplate from '@/templates/Default'
 
 export default {

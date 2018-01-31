@@ -1,20 +1,25 @@
-.header {
+header {
   align-items: center;
   background-color: $dark-gray;
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
   padding: 0px 60px;
 }
 
 .header-icon {
   color: $white;
   font-weight: $bold-font-weight;
-  font-size: $large-font-size;
+  font-size: $xl-font-size;
 }
 
 .navbar-link {
   color: $white;
+  font-weight: $semibold-font-weight;
   padding: 10px 15px;
   text-decoration: none;
+
+  &.active {
+    border-bottom: $thicker-border;
+  }
 }

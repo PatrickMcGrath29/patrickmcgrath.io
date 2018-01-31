@@ -6,3 +6,8 @@ body {
 a {
   text-decoration: none;
 }
+
+h2 {
+  border-left: $base-border;
+  padding-left: 7.5px;
+}

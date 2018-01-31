@@ -22,6 +22,8 @@ $light-action-color-hover: $action-color;
 $base-font-size: 12px;
 $medium-font-size: $base-font-size * 1.2;
 $large-font-size: $medium-font-size * 1.2;
+$xl-font-size: $large-font-size * 1.2;
+$xll-font-size: $xl-font-size * 1.2;
 
 
 // Font weights
@@ -30,9 +32,12 @@ $semibold-font-weight: 600;
 $bold-font-weight: 700;
 
 // Borders
-$base-border-color: #d5d8dc;
+$base-border-color: $yellow;
 $base-border-radius: 4px;
+
 $base-border: $base-border-color 2px solid;
+$thicker-border: $base-border-color 3px solid;
+
 $thin-border: $medium-gray 1px solid;
 //Shadows
 $base-box-shadow: 0 14px 26px -12px rgba(0,0,0, 0.42), 0 4px 23px 0px rgba(0,0,0, 0.12), 0 8px 10px -5px rgba(0,0,0, 0.02);
