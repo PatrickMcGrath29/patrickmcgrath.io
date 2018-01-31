@@ -13,3 +13,7 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+if (location.protocol !== 'https:' && window.location.hostname !== 'localhost') {
+  location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
+}
