@@ -18,13 +18,12 @@
     </div>
     <div class="container">
       <div class="homepage-intro">
-        <h2>About</h2>
+        <h1><span class="heading-bracket left">[</span>About<span class="heading-bracket right">]</span></h1>
         <p>
-          In convallis diam et nibh eleifend, vitae elementum libero varius. Morbi vel eleifend libero, ac feugiat ipsum. Duis ut quam dapibus, finibus augue sed, consequat turpis. In sollicitudin rutrum magna, vel cursus mauris faucibus quis. Quisque ultrices dui porta, aliquet velit vel, tristique velit.
+          I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>. I'm an engineer and entrepreneur at heart, driven by a keen desire to change the world through innovative problem solving. I appreciate every opportunity to disrupt the status quo in favor of progress.
         </p>
-        <h2>My favorite API's</h2>
         <p>
-          In convallis diam et nibh eleifend, vitae elementum libero varius. Morbi vel eleifend libero, ac feugiat ipsum. Duis ut quam dapibus, finibus augue sed, consequat turpis. In sollicitudin rutrum magna, vel cursus mauris faucibus quis. Quisque ultrices dui porta, aliquet velit vel, tristique velit.
+          I'm the Vice President and Lead Developer at <a href="http://acm.ccs.neu.edu">NUACM</a> (Northeastern University Association of Computing Machinery), im on the executive board of Agape Christian Fellowship, and I help lead a local service group called <a href="https://www.facebook.com/SOMAserviceboston/">SOMA Service Boston</a>.
         </p>
       </div>
     </div>

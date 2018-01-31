@@ -1,0 +1,19 @@
+a {
+  color: $yellow;
+  text-decoration: none;
+}
+
+p {
+  font-size: $medium-font-size;
+}
+
+.heading-bracket {
+  color: $yellow;
+
+  &.left {
+    padding-right: 8px;
+  }
+  &.right {
+    padding-left: 8px;
+  }
+}
