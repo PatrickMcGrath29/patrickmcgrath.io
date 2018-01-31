@@ -9,6 +9,14 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: () => import('@/pages/home/Index')
+    },
+    {
+      path: '/404',
+      component: () => import('@/pages/404')
+    },
+    {
+      path: '*',
+      redirect: '/404'
     }
   ]
 })
