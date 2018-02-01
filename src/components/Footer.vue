@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer role="contentinfo">
     <div class="container">
       <div class="footer-content">
         &copy; Patrick McGrath 2018
