@@ -1,3 +1,9 @@
+html {
+  @media (max-width: $medium-screen - 1) {
+    font-size: 85%;
+  }
+}
+
 a {
   color: $yellow;
   text-decoration: none;

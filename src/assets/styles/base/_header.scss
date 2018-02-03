@@ -3,14 +3,44 @@ header {
   background-color: $dark-gray;
   display: flex;
   justify-content: space-between;
-  height: 60px;
+  min-height: 60px;
   padding: 0px 60px;
+  flex-wrap: wrap;
+
+  @include media-down($medium-screen) {
+    padding: 10px 20px;
+  }
+}
+
+.hamburger {
+  @include media-down($medium-screen) {
+    display: flex;
+    flex-direction: column;
+    width: 40px;
+
+    .hamburger-line {
+      background-color: $white;
+      height: 2px;
+      margin: 5px;
+
+      &:first-of-type,
+      &:last-of-type {
+        transition: all 300ms ease-in-out;
+      }
+    }
+  }
 }
 
 .header-icon {
   color: $white;
   font-weight: $bold-font-weight;
   font-size: $xl-font-size;
+}
+
+.navbar {
+  @include media-down($medium-screen) {
+    width: 100%;
+  }
 }
 
 .navbar-link {
@@ -21,5 +51,16 @@ header {
 
   &.active {
     border-bottom: $thicker-border;
+  }
+
+  @include media-down($medium-screen) {
+    display: block;
+    margin: 10px 0px;
+  }
+}
+
+.mobile-hidden {
+  @include media-down($medium-screen) {
+    display: none;
   }
 }
