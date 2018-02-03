@@ -4,6 +4,10 @@
   justify-content: center;
   text-align: center;
   height: 200px;
+
+  @include media-down($medium-screen) {
+    display: none;
+  }
 }
 
 .hero-image {
