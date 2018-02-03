@@ -6,7 +6,7 @@
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
     </div>
-    <nav class="navbar navbar-collapse" :class="{'mobile-hidden': mobileOpen}" ref="navbar">
+    <nav class="navbar navbar-collapse" :class="{'mobile-hidden': mobileHidden}" ref="navbar">
       <router-link v-bind:to="{ name: 'Home' }" active-class="active" class="navbar-link">Home</router-link>
       <a href="#" class="navbar-link">Projects</a>
       <a href="/static/resume.pdf" class="navbar-link">Resume</a>
@@ -19,12 +19,12 @@ export default {
   name: 'Header',
   data () {
     return {
-      mobileOpen: false
+      mobileHidden: true
     }
   },
   methods: {
     toggleMobileNav () {
-      this.mobileOpen = !this.mobileOpen
+      this.mobileHidden = !this.mobileHidden
     }
   }
 }
