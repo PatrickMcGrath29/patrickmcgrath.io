@@ -11,6 +11,11 @@ export default new Router({
       component: () => import('@/pages/home/Index')
     },
     {
+      path: '/projects',
+      name: 'Projects',
+      component: () => import('@/pages/projects/Projects')
+    },
+    {
       path: '/404',
       component: () => import('@/pages/404')
     },

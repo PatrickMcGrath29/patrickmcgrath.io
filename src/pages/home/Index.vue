@@ -1,9 +1,5 @@
 <template>
   <default-template>
-    <div class="hero">
-      <div class="hero-image">
-      </div>
-    </div>
     <div class="container">
       <div class="homepage-intro content-section">
         <h1><span class="heading-bracket left">[</span>About<span class="heading-bracket right">]</span></h1>

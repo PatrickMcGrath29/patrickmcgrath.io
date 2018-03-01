@@ -1,6 +1,6 @@
 <template>
-  <div class="posts">
-    <h1>Add Post</h1>
+  <div class="projects">
+    <h1>Add Project</h1>
       <div class="form">
         <div>
           <input type="text" name="title" placeholder="TITLE" v-model="title">
@@ -9,16 +9,16 @@
           <textarea rows="15" cols="15" placeholder="DESCRIPTION" v-model="description"></textarea>
         </div>
         <div>
-          <button class="app_post_btn" @click="addPost">Add</button>
+          <button class="app_project_btn" @click="addProject">Add</button>
         </div>
       </div>
   </div>
 </template>
 
 <script>
-import PostsService from '@/services/PostsService'
+import ProjectsService from '@/services/ProjectsService'
 export default {
-  name: 'NewPost',
+  name: 'NewProject',
   data () {
     return {
       title: '',
@@ -26,12 +26,12 @@ export default {
     }
   },
   methods: {
-    async addPost () {
-      await PostsService.addPost({
+    async addProject () {
+      await ProjectsService.addProject({
         title: this.title,
         description: this.description
       })
-      this.$router.push({ name: 'Posts' })
+      this.$router.push({ name: 'Projects' })
     }
   }
 }
@@ -47,7 +47,7 @@ export default {
 .form div {
   margin: 20px;
 }
-.app_post_btn {
+.app_project_btn {
   background: #4d7ef7;
   color: #fff;
   padding: 10px 80px;
