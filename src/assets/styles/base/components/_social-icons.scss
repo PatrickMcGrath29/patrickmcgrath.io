@@ -1,0 +1,22 @@
+.social-item {
+  color: $text-color;
+  display: flex;
+  margin: 10px 0;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.social-data {
+  padding-left: 10px;
+}
+
+.social-svg {
+  border-right: $side-border;
+  padding-right: 10px;
+  img {
+    height: auto;
+    width: 25px;
+  }
+}

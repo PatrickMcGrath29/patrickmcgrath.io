@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="content-section">
-        <h1><span class="heading-bracket left">[</span>My Projects<span class="heading-bracket right">]</span></h1>
+        <h1><span class="heading-bracket left">[</span>Current Projects<span class="heading-bracket right">]</span></h1>
         <div class="content-section-bordered">
           <h2> Victoria McGrath Foundation </h2>
           <p>
@@ -38,9 +38,20 @@
       <div class="content-section">
         <h1><span class="heading-bracket left">[</span>Say Hello<span class="heading-bracket right">]</span></h1>
         <p>
-          I'm always looking for new projects and opportunities -- I also enjoy casual conversations. You can reach me at my email below.
+          I'm always interested in hearing about new projects or opportunities. I also enjoy casual conversations.
         </p>
-        <h3>hello@patrickmcgrath.io</h3>
+        <div class="social-item">
+          <div class="social-svg"><img src="@/assets/images/email.svg"></div>
+          <h3 class="social-data"> hello@patrickmcgrath.io </h3>
+        </div>
+        <a class="social-item" href="https://github.com/PatrickMcGrath29">
+          <div class="social-svg"><img src="@/assets/images/github.svg"></div>
+          <h3 class="social-data">PatrickMcGrath29</h3>
+        </a>
+        <a class="social-item" href="https://www.linkedin.com/in/patrickrmcgrath/">
+          <div class="social-svg"><img src="@/assets/images/linkedin.svg"></div>
+          <h3 class="social-data">in/patrickrmcgrath</h3>
+        </a>
       </div>
     </div>
   </default-template>
@@ -48,13 +59,11 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
-import HomeWorkspace from '@/components/HomeWorkspace'
 
 export default {
   name: 'home-index',
   components: {
-    DefaultTemplate,
-    HomeWorkspace
+    DefaultTemplate
   }
 }
 </script>

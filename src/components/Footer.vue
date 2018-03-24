@@ -12,12 +12,3 @@ export default {
   name: 'Footer'
 }
 </script>
-<style type="text/css">
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  text-align: center;
-}
-</style>
