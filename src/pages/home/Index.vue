@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="content-section">
-        <h1><span class="heading-bracket left">[</span>Current Projects<span class="heading-bracket right">]</span></h1>
+        <h1><span class="heading-bracket left">[</span>Current Work<span class="heading-bracket right">]</span></h1>
         <div class="content-section-bordered">
           <h2> Victoria McGrath Foundation </h2>
           <p>
