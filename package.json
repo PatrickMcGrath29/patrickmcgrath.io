@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "buttercms": "^1.1.1",
     "vue": "^2.5.16",
     "vue-gtm": "^1.0.2",
     "vue-router": "^3.0.1"
