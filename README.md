@@ -13,9 +13,17 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
 ### Prerequisites
 
+
+[Yarn](https://yarnpkg.com/lang/en/)
+
+[s3cmd](https://github.com/s3tools/s3cmd)
 ```
-Yarn
+For MAC:
+
+brew install yarn
+brew install s3cmd
 ```
+
 
 ### Installing
 
