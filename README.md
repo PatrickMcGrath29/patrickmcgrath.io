@@ -1,30 +1,63 @@
-# client
+# patrickmcgrath.io
 
-> patrickmcgrath.io front end
+Patrick McGrath's personal website.
 
-## Build Setup
+## Getting Started
 
-``` bash
-# install dependencies
-npm install
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Environments
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
-# run unit tests
-npm run unit
+### Prerequisites
 
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```
+Yarn
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Installing
+
+Clone Application
+
+```
+git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io-ui.git
+```
+
+Setup Environment Variables
+
+```
+cp .env.sample .env
+and then edit with live-values
+```
+
+Run Development Webserver
+```
+yarn start
+```
+
+## Running the tests
+
+The test suite is not currently setup. Plans to implement Mocha tests (probably...) with ESLint
+
+## Deployment
+
+This application is entirely static, stored on Amazon's S3 and served to users via Amazon's Cloudfront CDN. To deploy a new version of the website to S3 you can use the deployment script `bin/deploy`.
+
+## Built With
+
+* [Vue JS](#) - The web framework used
+
+## Contributing
+
+This app is open source and contribution is encouraged. To make updates open up a Pull Request and it will be reviewed and merged in by a member of the NuACM development team.
+
+## Authors
+
+* **Patrick McGrath** - *Lead Developer* - [PatrickMcGrath29](https://github.com/PatrickMcGrath29)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
