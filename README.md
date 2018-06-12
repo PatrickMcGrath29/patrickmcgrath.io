@@ -22,6 +22,7 @@ For MAC:
 
 brew install yarn
 brew install s3cmd
+s3cmd --configure (and input S3 access keys)
 ```
 
 

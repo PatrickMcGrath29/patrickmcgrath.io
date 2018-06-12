@@ -1,23 +1,75 @@
-.social-item {
-  color: $text-color;
+.social-icon__set {
   display: flex;
-  margin: 10px 0;
+  justify-content: center;
 
-  h3 {
-    margin: 0;
+  @include media-down($medium-screen) {
+    align-items: center;
+    flex-direction: column;
   }
 }
 
-.social-data {
-  padding-left: 10px;
-}
+.social-icon__icon {
+  position: relative;
+  font-size: 38px;
+  color: $white;
+  width: 72px;
+  margin: 10px;
+  height: 72px;
+  line-height: 72px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
 
-.social-svg {
-  border-right: $side-border;
-  padding-right: 10px;
-  img {
-    height: auto;
-    vertical-align: middle;
+  @include media-up($medium-screen) {
+    margin: 40px;
+  }
+
+  .social-svg {
     width: 25px;
+    height: 25px;
+    fill: $white;
   }
+}
+.social-icon__icon * {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.social-icon__icon:before,
+.social-icon__icon:after {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.social-icon__icon:before {
+  color: $white;
+}
+.social-icon__icon:after {
+  background: #333333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 6px solid #000000;
+  content: '';
+  z-index: -1;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.social-icon__icon.blue:after {
+  border-color: #005988;
+  background-color: #0077B5;
+}
+.social-icon__icon.green:after {
+  border-color: #104627;
+  background-color: #27ae60;
+}
+.social-icon__icon:hover:after,
+.social-icon__icon .hover:after {
+  border-color: transparent;
+  border-left-color: $white !important;
+  border-right-color: $white !important;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
 }

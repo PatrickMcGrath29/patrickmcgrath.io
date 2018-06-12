@@ -3,12 +3,17 @@
     <div class="container">
       <div class="homepage-intro content-section">
         <h1><span class="heading-bracket left">[</span>About<span class="heading-bracket right">]</span></h1>
-        <p>
-          I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving. I appreciate every opportunity to disrupt the status quo in favor of progress.
-        </p>
-        <p>
-          In my spare time you'll find me hanging out with friends, working on side projects, and exploring Boston's restaurant scene.
-        </p>
+        <div class="bio-and-image">
+          <div class="bio">
+            <p>
+              I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving. I appreciate every opportunity to disrupt the status quo in favor of progress.
+            </p>
+            <p>
+              In my spare time you'll find me hanging out with friends, working on side projects, and exploring Boston's restaurant scene.
+            </p>
+          </div>
+          <img src="@/assets/images/patrickmcgrath.jpg" height="300px" width="auto" alt="Patrick McGrath">
+        </div>
       </div>
       <div class="content-section">
         <h1><span class="heading-bracket left">[</span>Current Work<span class="heading-bracket right">]</span></h1>
@@ -26,32 +31,23 @@
             I currently serve as an executive board member at <a href="https://www.facebook.com/groups/nuagape/">Agape Christian Fellowship</a>, a Christian organization at Northeastern University. Agape partners with Cru (an international Christian organization) to offer a student run environment where students can grow in community and understanding of Christ.
           </p>
         </div>
-        <div class="content-section-bordered">
-          <h2> NUACM </h2>
-          <p>
-            I'm the Vice President and lead developer at <a href="http://acm.ccs.neu.edu">NUACM</a> (Northeastern University Association of Computing Machinery).
-            <br><br>
-            NUACM serves to connect students with engaging Computer Science and Computer Engineering related opportunities. We regularly invite professors, companies, and interesting people in to talk about research they are doing or different problems they have solved.
-          </p>
-        </div>
       </div>
       <div class="content-section">
         <h1><span class="heading-bracket left">[</span>Say Hello<span class="heading-bracket right">]</span></h1>
         <p>
           I'm always interested in hearing about new projects or opportunities. I also enjoy casual conversations.
         </p>
-        <div class="social-item">
-          <div class="social-svg"><img src="@/assets/images/email.svg"></div>
-          <h3 class="social-data"> hello@patrickmcgrath.io </h3>
+        <div class="social-icon__set">
+          <a class="social-icon__icon green" href="mailto:hello@patrickmcgrath.io">
+            <EmailIcon class="social-svg" />
+          </a>
+          <a class="social-icon__icon" href="https://github.com/PatrickMcGrath29">
+            <GithubIcon class="social-svg" />
+          </a>
+          <a class="social-icon__icon blue" href="https://www.linkedin.com/in/patrickrmcgrath/">
+            <LinkedInIcon class="social-svg" />
+          </a>
         </div>
-        <a class="social-item" href="https://github.com/PatrickMcGrath29">
-          <div class="social-svg"><img src="@/assets/images/github.svg"></div>
-          <h3 class="social-data">PatrickMcGrath29</h3>
-        </a>
-        <a class="social-item" href="https://www.linkedin.com/in/patrickrmcgrath/">
-          <div class="social-svg"><img src="@/assets/images/linkedin.svg"></div>
-          <h3 class="social-data">in/patrickrmcgrath</h3>
-        </a>
       </div>
     </div>
   </default-template>
@@ -59,11 +55,17 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
+import EmailIcon from '@/assets/images/email.svg'
+import GithubIcon from '@/assets/images/github.svg'
+import LinkedInIcon from '@/assets/images/linkedin.svg'
 
 export default {
   name: 'home-index',
   components: {
-    DefaultTemplate
+    DefaultTemplate,
+    EmailIcon,
+    GithubIcon,
+    LinkedInIcon,
   }
 }
 </script>
