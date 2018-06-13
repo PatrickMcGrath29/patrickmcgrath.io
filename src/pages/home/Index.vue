@@ -73,7 +73,7 @@ export default {
     DefaultTemplate,
     EmailIcon,
     GithubIcon,
-    LinkedInIcon,
+    LinkedInIcon
   }
 }
 </script>
