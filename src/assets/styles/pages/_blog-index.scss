@@ -1,0 +1,8 @@
+.blog-groups {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-down($medium-screen) {
+    flex-direction: column;
+  }
+}

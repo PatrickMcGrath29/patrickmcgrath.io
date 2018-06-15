@@ -1,3 +1,5 @@
+// Thanks http://littlesnippets.net/page/5/
+
 .social-icon__set {
   display: flex;
   justify-content: center;
@@ -65,8 +67,7 @@
   border-color: #104627;
   background-color: #27ae60;
 }
-.social-icon__icon:hover:after,
-.social-icon__icon .hover:after {
+.social-icon__icon:hover:after {
   border-color: transparent;
   border-left-color: $white !important;
   border-right-color: $white !important;

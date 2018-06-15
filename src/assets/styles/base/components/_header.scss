@@ -32,7 +32,7 @@ header {
   transition: border-bottom 150ms;
 
   @include media-up($medium-screen) {
-    &.active,
+    &.router-link-exact-active,
     &:hover, {
       border-bottom: $thicker-border;
     }
