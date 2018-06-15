@@ -3,6 +3,10 @@
     <div class="container">
       <div class="content-section">
         <h1><span class="heading-bracket left">[</span>Blog<span class="heading-bracket right">]</span></h1>
+        <div class="blog-groups">
+          <BlogGroupCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
+        </div>
+        <small> &lt;3 ButterCMS! </small>
       </div>
     </div>
   </default-template>
@@ -10,29 +14,31 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
+import BlogGroupCard from '@/components/BlogGroupCard'
 import { butter } from '@/cms'
 
 export default {
   name: 'home-index',
   components: {
-    DefaultTemplate
+    DefaultTemplate,
+    BlogGroupCard
   },
-  methods: {
-    fetchPosts () {
-      butter.post.list({
-        page: 1,
-        page_size: 10
-      }).then((res) => {
-        console.log('Content from ButterCMS')
-        console.log(res)
-      })
+  data () {
+    return {
+      blogs: []
     }
   },
-  created () {
-    this.fetchPosts()
+  mounted () {
+    this.getBlogs()
+  },
+  methods: {
+    async getBlogs () {
+      const blogs = await butter.page.list('blog_group')
+      this.blogs = blogs.data.data
+    }
   }
 }
 </script>
 <style lang="sass">
-@import "../../assets/styles/pages/_home-index.scss";
+@import "../../assets/styles/pages/blog-index.scss";
 </style>
