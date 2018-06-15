@@ -1,19 +1,23 @@
 // Thanks http://littlesnippets.net/
 
 .blog-group-card {
+  flex: 0 1 calc(50% - 20px);
   background-color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
   color: $white;
   float: left;
-  font-size: 16px;
+  font-size: $base-font-size;
   line-height: 1.6em;
-  margin: 10px 1%;
-  max-width: calc(33% - 30px);
+  margin: 10px;
   min-width: 250px;
   overflow: hidden;
   position: relative;
   text-align: left;
   width: 100%;
+
+  @include media-down($medium-screen) {
+    max-width: calc(100% - 20px);
+  }
 
   * {
     box-sizing: border-box;
@@ -30,7 +34,6 @@
   .blog-group-card__date {
     background-color: #fff;
     color: #333;
-    font-size: 18px;
     font-weight: 800;
     min-height: 48px;
     min-width: 48px;
@@ -48,7 +51,7 @@
 
     .blog-group-card__date-day,
     .blog-group-card__date-month {
-      font-size: 11px;
+      font-size: $small-font-size;
     }
   }
 
