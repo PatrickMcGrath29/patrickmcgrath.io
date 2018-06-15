@@ -3,7 +3,7 @@
     <div class="container">
       <div class="not-found-body">
         <h1>You're Lost</h1>
-        <img src="@/assets/images/pennywise.png">
+        <img src="@/assets/images/pennywise.png" alt="Penywise">
         <h2 class="spooky-scarry">Tasty Tasty Beautiful Fear</h2>
       </div>
     </div>

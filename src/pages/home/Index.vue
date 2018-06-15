@@ -63,6 +63,7 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
+
 import EmailIcon from '@/assets/images/email.svg'
 import GithubIcon from '@/assets/images/github.svg'
 import LinkedInIcon from '@/assets/images/linkedin.svg'
