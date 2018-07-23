@@ -28,9 +28,7 @@
         <div class="content-section-bordered">
           <h2> South Africa 2018 </h2>
           <p>
-            From mid-June to mid-July I will be heading on a mission trip to South Africa, where I will have the opportunity to teach foundational math, english, and computer science skills to local students. The trip, led by Cru, will bring us to Mamelodi South Africa where we will be partnering with the <a href="http://mamelodi.org/">Mamelodi Iniative</a>, a local Christian organization that aims to empower local students with the skills they need to inspire positive change.
-            <br><br>
-            If you'd like to get updates about the trip while I'm away shoot me an note at the email address below!
+            From mid-June to mid-July I had the opportunity to go on a mission trip to South Africa, where I taught math, english, and computer science skills to local students. The trip, led by Cru, brought us to Mamelodi, South Africa where we partnered with the <a href="http://mamelodi.org/">Mamelodi Iniative</a>, a Christian organization that aims to empower local students with the skills they need to inspire positive change.
           </p>
         </div>
         <div class="content-section-bordered">
