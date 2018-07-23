@@ -18,7 +18,7 @@ import BlogGroupCard from '@/components/BlogGroupCard'
 import { butter } from '@/cms'
 
 export default {
-  name: 'home-index',
+  name: 'blog-index',
   components: {
     DefaultTemplate,
     BlogGroupCard
