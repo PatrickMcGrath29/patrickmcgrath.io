@@ -58,10 +58,6 @@ This application is entirely static, stored on Amazon's S3 and served to users v
 
 * [Vue JS](#) - The web framework used
 
-## Contributing
-
-This app is open source and contribution is encouraged. To make updates open up a Pull Request and it will be reviewed and merged in by a member of the NuACM development team.
-
 ## Authors
 
 * **Patrick McGrath** - *Lead Developer* - [PatrickMcGrath29](https://github.com/PatrickMcGrath29)

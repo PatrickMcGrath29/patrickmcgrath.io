@@ -11,16 +11,6 @@ export default new Router({
       component: () => import('@/pages/home/Index')
     },
     {
-      path: '/blog',
-      name: 'Blog',
-      component: () => import('@/pages/blog/Index')
-    },
-    {
-      path: '/blog/:slug',
-      name: 'BlogPosts',
-      component: () => import('@/pages/blog/Show')
-    },
-    {
       path: '/404',
       component: () => import('@/pages/404')
     },
