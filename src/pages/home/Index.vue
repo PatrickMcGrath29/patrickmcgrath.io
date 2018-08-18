@@ -6,7 +6,7 @@
         <div class="bio-and-image">
           <div class="bio">
             <p>
-              I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>, currently working as a UI engineer at <a href="https://placepass.com">PlacePass</a>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving. I appreciate every opportunity to disrupt the status quo in favor of progress.
+              I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>, currently working as a Full Stack software engineer at <a href="https://placepass.com">PlacePass</a>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
             </p>
             <p>
               In my spare time you'll find me hanging out with friends, hiking or skiing the northern east coast, working on side projects, and exploring Boston's restaurant scene.
@@ -34,7 +34,7 @@
         <div class="content-section-bordered">
           <h2> Agape Christian Fellowship </h2>
           <p>
-            I currently serve as an executive board member at <a href="https://www.facebook.com/groups/nuagape/">Agape Christian Fellowship</a>, a Christian organization at Northeastern University. Agape partners with Cru (an international Christian organization) to offer a student run environment where students can grow in community and the understanding of Christ.
+            I currently serve as an executive board member at <a href="https://www.facebook.com/groups/nuagape/">Agape Christian Fellowship</a>, a Christian organization at Northeastern University. Agape partners with Cru (an international Christian organization) to offer a student run environment where students can grow in community and the understanding of Jesus.
           </p>
         </div>
       </div>
