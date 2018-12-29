@@ -6,10 +6,10 @@
         <div class="bio-and-image">
           <div class="bio">
             <p>
-              I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>, currently working as a Full Stack software engineer at <a href="https://placepass.com">PlacePass</a>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
+              I am a student at Northeastern University pursuing a <strong>Bachelor of Science in Computer Science</strong>, currently working as a Data Engineer at <a href="https://placepass.com">PlacePass</a>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
             </p>
             <p>
-              In my spare time you'll find me hanging out with friends, hiking or skiing the northern east coast, working on side projects, and exploring Boston's restaurant scene.
+              In my spare time you'll find me swing dancing, placing chess, hiking or skiing the northern east coast, and working on side projects.
             </p>
           </div>
           <img src="@/assets/images/patrickmcgrath.jpg" height="300px" width="auto" alt="Patrick McGrath">
