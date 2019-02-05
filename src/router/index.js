@@ -1,7 +1,7 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: () => import('@/pages/home/Index')
+    },
+    {
+      path: '/urls',
+      name: 'URL Shortner',
+      component: () => import('@/pages/url-shortner/Index')
     },
     {
       path: '/404',
@@ -19,4 +24,4 @@ export default new Router({
       redirect: '/404'
     }
   ]
-})
+});
