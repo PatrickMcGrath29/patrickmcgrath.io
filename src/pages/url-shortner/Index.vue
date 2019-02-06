@@ -4,19 +4,10 @@
       <div class="url-shortner__body">
         <h1> Shorten a URL </h1>
         <div class="url-shortner__form">
-          <div class="form-group">
-            <input v-model="link" placeholder="URL" type="text">
-          </div>
-          <div class="form-group">
-            <label for="useCustomCode">Use Custom Path</label>
-            <input id="useCustomCode" type="checkbox" v-model="useCustomCode" class="highlighted-input">
-          </div>
-          <div class="form-group">
-            <input v-model="code" v-show="useCustomCode" placeholder="Custom Path" type="text">
-          </div>
-          <div class="form-group-submit">
-            <button> Shorten URL </button>
-          </div>
+          <v-text-field solo single-line v-model="link" append-icon="link" label="URL"></v-text-field>
+          <v-checkbox v-model="useCustomCode" :label="`Use Custom Code`"></v-checkbox>
+          <v-text-field solo single-line v-model="code" v-show="useCustomCode" append-icon="short_text" label="Custom Alias"></v-text-field>
+          <v-btn block> Shorten URL </v-btn>
         </div>
       </div>
     </div>

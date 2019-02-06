@@ -2,7 +2,7 @@
   <default-template>
     <div class="container">
       <div class="homepage-intro content-section">
-        <h1><span class="heading-bracket left">[</span>About<span class="heading-bracket right">]</span></h1>
+        <h1><span class="heading-bracket bracket-left">[</span>About<span class="heading-bracket bracket-right">]</span></h1>
         <div class="bio-and-image">
           <div class="bio">
             <p>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="content-section">
-        <h1><span class="heading-bracket left">[</span>My Hobbies<span class="heading-bracket right">]</span></h1>
+        <h1><span class="heading-bracket bracket-left">[</span>My Hobbies<span class="heading-bracket bracket-right">]</span></h1>
         <div class="content-section-bordered">
           <h2> Victoria McGrath Foundation </h2>
           <p>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="content-section">
-        <h1><span class="heading-bracket left">[</span>Say Hello<span class="heading-bracket right">]</span></h1>
+        <h1><span class="heading-bracket bracket-left">[</span>Say Hello<span class="heading-bracket bracket-right">]</span></h1>
         <p>
           If you'd like to get in contact with me, drop me a line at the email address below.
         </p>
