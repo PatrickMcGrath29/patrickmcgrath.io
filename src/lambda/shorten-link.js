@@ -5,28 +5,25 @@ var config = require('dotenv').config();
 var Hashids = require('hashids');
 
 export function handler(event, context, callback) {
-  const rootURL = process.env.URL + '/';
-  const destination = event.queryStringParameters['link'];
-  const existingRoutes = request.get({ url: rootURL})
+  var rootURL = process.env.URL + '/';
+  var link = event.queryStringParameters['link'];
 
-  let code = '';
+  var code = '';
   if (event.queryStringParameters['code']) {
-    code = event.queryStringParameters['code']
+    code = event.queryStringParameters['code'];
   } else {
-
+    var hash = new Hashids();
+    var number = Math.round(new Date().getTime() / 100);
+    code = hash.encode(number);
   }
-  var hash = new Hashids();
-  var number = Math.round(new Date().getTime() / 100);
-  var code = hash.encode(number);
 
-  // ensure that a protocol was provided
   if (destination.indexOf('://') == -1) {
-    destination = 'http://' + destination;
+    destination = 'https://' + destination;
   }
 
   var payload = {
     'form-name': 'routes',
-    destination: destination,
+    link: link,
     code: code,
     expires: ''
   };
@@ -38,22 +35,20 @@ export function handler(event, context, callback) {
     body
   ) {
     var msg;
+    var response;
     if (err) {
-      msg = 'Post to Routes stash failed: ' + err;
+      response = {
+        statusCode: 400,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ errorMessage: 'Failed to create route, ' + err })
+      };
     } else {
-      msg = 'Route registered. Site deploying to include it. ' + rootURL + code;
+      response = {
+        statusCode: 200,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: rootURL + code })
+      };
     }
-    console.log(msg);
-    // tell the user what their shortcode will be
-    return callback(null, {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ url: rootURL + code })
-    });
+    return callback(null, response);
   });
-
-  // ENHANCEMENT: check for uniqueness of shortcode
-  // ENHANCEMENT: let the user provide their own shortcode
-  // ENHANCEMENT: dont' duplicate existing routes, return the current one
-  // ENHANCEMENT: allow the user to specify how long the redirect should exist for
 }
