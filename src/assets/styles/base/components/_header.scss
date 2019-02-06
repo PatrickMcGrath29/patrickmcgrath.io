@@ -7,7 +7,7 @@ header {
   flex-wrap: wrap;
 
   @include media-up($medium-screen) {
-    min-height: 60px;
+    min-height: 70px;
     padding: 0px 60px;
   }
 }

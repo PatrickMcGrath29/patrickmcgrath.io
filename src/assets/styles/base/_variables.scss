@@ -19,13 +19,15 @@ $action-color: $light-gray;
 $action-color-hover: $medium-gray;
 $light-action-color-hover: $action-color;
 
-$base-font-size: 1rem;
-$medium-font-size: $base-font-size * 1.2;
-$large-font-size: $medium-font-size * 1.2;
-$xl-font-size: $large-font-size * 1.2;
-$xll-font-size: $xl-font-size * 1.2;
+$base-font-size: 1.12rem;
+$medium-font-size: $base-font-size * 1.1;
+$large-font-size: $medium-font-size * 1.1;
+$xl-font-size: $large-font-size * 1.1;
+$xll-font-size: $xl-font-size * 1.1;
 $small-font-size: $base-font-size * .8;
 
+
+$base-line-height: 1.5;
 
 // Font weights
 $normal-font-weight: 400;
@@ -38,7 +40,7 @@ $base-border-radius: 4px;
 
 $base-border: $base-border-color 2px solid;
 $thicker-border: $base-border-color 3px solid;
-
+$thin-gray-border: #dbdbdb 1px solid;
 $thin-border: $medium-gray 1px solid;
 $side-border: $dark-gray 3px solid;
 //Shadows

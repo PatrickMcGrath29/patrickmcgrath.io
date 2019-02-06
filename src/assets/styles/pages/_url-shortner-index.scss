@@ -1,0 +1,15 @@
+.url-shortner__body {
+  @include media-up($medium-screen) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .url-shortner__form {
+      width: 50%;
+
+      input[type="text"] {
+        width: 100%;
+      }
+    }
+  }
+}
