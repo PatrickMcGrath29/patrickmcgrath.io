@@ -1,31 +1,31 @@
-'use strict';
-
-var request = require('request');
-var config = require('dotenv').config();
-var Hashids = require('hashids');
+let request = require('request');
+let config = require('dotenv').config();
+let Hashids = require('hashids');
 
 export function handler(event, context, callback) {
-  var rootURL = process.env.URL + '/';
-  var link = event.queryStringParameters['link'];
+  let rootURL = process.env.URL + '/';
 
-  var code = '';
-  if (event.queryStringParameters['code']) {
-    code = event.queryStringParameters['code'];
-  } else {
-    var hash = new Hashids();
-    var number = Math.round(new Date().getTime() / 100);
+  let link = event.queryStringParameters['link'];
+  let code = event.queryStringParameters['code'];
+
+  if (link == undefined) {
+    return callback(null, { statusCode: 400, body: "Must specify a link to be shortened"})
+  }
+
+  if (code == undefined || code.length == 0) {
+    let hash = new Hashids();
+    let number = Math.round(new Date().getTime() / 100);
     code = hash.encode(number);
   }
 
-  if (destination.indexOf('://') == -1) {
-    destination = 'https://' + destination;
+  if (link.indexOf('://') == -1) {
+    link = 'https://' + link;
   }
 
-  var payload = {
+  let payload = {
     'form-name': 'routes',
     link: link,
-    code: code,
-    expires: ''
+    code: code
   };
 
   // post the new route to the Routes form
@@ -34,9 +34,8 @@ export function handler(event, context, callback) {
     httpResponse,
     body
   ) {
-    var msg;
-    var response;
-    if (err) {
+    let response;
+    if (err) {x
       response = {
         statusCode: 400,
         headers: { 'Content-Type': 'application/json' },
@@ -51,4 +50,5 @@ export function handler(event, context, callback) {
     }
     return callback(null, response);
   });
+  return callback(null, { statusCode: 200, body: 'Done!' });
 }

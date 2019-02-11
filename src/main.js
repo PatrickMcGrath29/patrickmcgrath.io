@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App'
 import VueGtm from 'vue-gtm'
 import router from './router'
-import Vuetify from 'vuetify';
-import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
 
@@ -20,4 +20,4 @@ Vue.use(VueGtm, {
   vueRouter: router
 })
 
-Vue.use(Vuetify);
+Vue.use(ElementUI);

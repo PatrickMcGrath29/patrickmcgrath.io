@@ -18,14 +18,14 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "element-ui": "^2.5.4",
     "hashids": "^1.2.2",
     "netlify-lambda": "^1.0.3",
     "node-fetch": "^2.3.0",
     "prerender-spa-plugin": "^3.4.0",
     "vue": "^2.5.16",
     "vue-gtm": "^1.0.2",
-    "vue-router": "^3.0.1",
-    "vuetify": "^1.5.0"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -33,6 +33,7 @@
     "babel-eslint": "^8.2.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
     "babel-loader": "^7.1.1",
+    "babel-plugin-component": "^1.1.1",
     "babel-plugin-istanbul": "^4.1.1",
     "babel-plugin-syntax-jsx": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.22.0",

@@ -4,17 +4,19 @@
       <div class="url-shortner__body">
         <h1>Shorten a URL</h1>
         <div class="url-shortner__form">
-          <v-text-field solo single-line v-model="link" append-icon="link" label="URL"></v-text-field>
-          <v-checkbox v-model="useCustomCode" :label="`Use Custom Code`"></v-checkbox>
-          <v-text-field
-            solo
-            single-line
-            v-model="code"
-            v-show="useCustomCode"
-            append-icon="short_text"
-            label="Custom Alias"
-          ></v-text-field>
-          <v-btn block v-on:click="shortenUrl()">Shorten URL</v-btn>
+          <el-row class="form-row">
+            <el-input v-model="link" placeholder="Link">
+            </el-input>
+          </el-row>
+          <el-row class="form-row">
+            <el-checkbox v-model="useCustomCode" :label="`Use Custom Code`" border></el-checkbox>
+          </el-row>
+          <el-row class="form-row" v-show="useCustomCode" >
+            <el-input v-model="code" placeholder="Custom Alias"></el-input>
+          </el-row>
+          <el-row class="form-row full">
+            <el-button plain type="info" v-on:click="shortenUrl()">Shorten URL</el-button>
+          </el-row>
         </div>
       </div>
     </div>
