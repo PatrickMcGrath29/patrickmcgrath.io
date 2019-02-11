@@ -16,8 +16,6 @@
     "build:client": "node build/build.js",
     "build:server": "netlify-lambda build src/lambda"
   },
-  "dependencies": {
-  },
   "devDependencies": {
     "node-fetch": "^2.3.0",
     "prerender-spa-plugin": "^3.4.0",
