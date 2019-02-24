@@ -1,0 +1,67 @@
+[
+  {
+    "title": "Work Experience",
+    "projects": [
+      {
+        "heading": "Data Engineer",
+        "heading_subtitle": "PlacePass",
+        "content": [
+          "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling daily updates of products that was previously updated every month",
+          "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations",
+          "Cut the onboarding time of new partners in half by developing standardized components with config driven systems"
+        ],
+        "professional": true
+      },
+      {
+        "heading": "UI Engineer",
+        "heading_subtitle": "PlacePass",
+        "content": [
+          "Architected and implement the marketing analytics suite for Marriott Moments, collecting actionable data on over 3.64 million users and counting using Google Tag Manager, jQuery, and Mixpanel",
+          "Engineered countless new features across Marriott Moments as a lead member of the UI team, with scalability in mind (to handle 25,000 transactions p/m), and helped double the experiences conversion rate"
+        ],
+        "professional": true
+      },
+      {
+        "heading": "Research Assistant, Developer",
+        "heading_subtitle": "IoT Open Innovation Lab, Northeastern",
+        "content": [
+          "Pioneered technical solutions to a university-wide research project focused on improving participation in grant requests, ultimately developing a system over 40% more effective than its predecessor"
+        ],
+        "professional": true
+      },
+      {
+        "heading": "Owner, Founder",
+        "heading_subtitle": "Forgecraft Servers",
+        "content": [
+          "Created and managed two virtual servers that hosted an environment for gamers to play Minecraft with each other, achieving a 436% ROI",
+          "Hired, trained, and led a staff team of over 15 people to support our 6,500+ unique players"
+        ],
+        "professional": true
+      }
+    ]
+  },
+  {
+    "title": "Other Fun Stuff",
+    "projects": [
+      {
+        "heading": "Board Member",
+        "heading_subtitle": "Victoria McGrath Foundation"
+      },
+      {
+        "heading": "Teacher at the Mamelodi Initiative",
+        "heading_subtitle": "South Africa"
+      },
+      {
+        "heading": "Leadership Team",
+        "heading_subtitle": "Agape Christian Fellowship, Northeastern"
+      },
+      {
+        "heading": "Eagle Scout",
+        "heading_subtitle": "Boy Scouts of America",
+        "content": [
+          "Spearheaded an Eagle Scout project designing and carrying out a renovation project with the help of fellow Scouts for the Weston Historical Society, fulfilling a 100+ hour of community service requirement in order to achieve the Eagle Scout rank"
+        ]
+      }
+    ]
+  }
+]

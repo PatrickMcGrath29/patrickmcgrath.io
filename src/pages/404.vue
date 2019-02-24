@@ -20,6 +20,4 @@ export default {
   }
 }
 </script>
-<style lang="sass">
-@import "../assets/styles/pages/_404.scss";
-</style>
+<style lang="sass"></style>

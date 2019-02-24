@@ -19,6 +19,26 @@
           </el-row>
         </div>
       </div>
+        <div class="content-section-bordered">
+          <h2> Victoria McGrath Foundation </h2>
+          <p>
+            <a href="https://www.victoriamcgrath.org">The Victoria McGrath Foundation</a> foundation was created in 2018 to honor the memory of my sister, Victoria. Our objective is to serve others by creating pathways for hope and care, with a focus on supporting special needs ministries, displaced refugees, and veterans.
+            <br><br>
+            As both a board member and the lead developer I help guide the course of the foundation while building and maintaining its online assets.
+          </p>
+        </div>
+        <div class="content-section-bordered">
+          <h2> South Africa 2018 </h2>
+          <p>
+            From mid-June to mid-July I had the opportunity to go on a mission trip to South Africa, where I taught math, english, and computer science skills to local students. The trip, led by Cru, brought us to Mamelodi, South Africa where we partnered with the <a href="http://mamelodi.org/">Mamelodi Iniative</a>, a Christian organization that aims to empower local students with the skills they need to inspire positive change.
+          </p>
+        </div>
+        <div class="content-section-bordered">
+          <h2> Agape Christian Fellowship </h2>
+          <p>
+            I currently serve as an executive board member at <a href="https://www.facebook.com/groups/nuagape/">Agape Christian Fellowship</a>, a Christian organization at Northeastern University. Agape partners with Cru (an international Christian organization) to offer a student run environment where students can grow in community and the understanding of Jesus.
+          </p>
+        </div>
     </div>
   </default-template>
 </template>
@@ -62,6 +82,4 @@ export default {
   }
 };
 </script>
-<style lang="sass">
-@import "../../assets/styles/pages/_url-shortner-index.scss";
-</style>
+<style lang="sass"></style>

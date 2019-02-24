@@ -35,9 +35,13 @@ header {
   text-decoration: none;
   transition: border-bottom 150ms;
 
-  @include media-up($medium-screen) {
-    &.router-link-exact-active,
-    &:hover {
+  &.router-link-exact-active,
+  &:hover {
+    @include media-down($medium-screen) {
+      border-left: $thicker-border;
+    }
+
+    @include media-up($medium-screen) {
       border-bottom: $thicker-border;
     }
   }

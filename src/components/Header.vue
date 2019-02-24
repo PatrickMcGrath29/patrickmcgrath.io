@@ -8,8 +8,9 @@
     </div>
     <nav class="navbar" :class="{'mobile-hidden': mobileHidden}">
       <router-link v-bind:to="{ name: 'Home' }" active-class="active" class="navbar-link">Home</router-link>
-      <a href="https://patrickrmcgrath.wordpress.com/" class="navbar-link">Blog</a>
+      <router-link v-bind:to="{ name: 'Projects' }" active-class="active" class="navbar-link">Projects</router-link>
       <a href="/static/Resume_McGrath_Patrick.pdf" class="navbar-link">Resume</a>
+      <a href="https://patrickrmcgrath.wordpress.com/" class="navbar-link">Blog</a>
     </nav>
   </header>
 </template>
