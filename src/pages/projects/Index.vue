@@ -1,14 +1,16 @@
 <template>
   <default-template>
     <section id="projects">
-      <div
-        class="project-section__wrapper"
-        v-for="(projectGroup, index) in projectList"
-        :key="index"
-      >
+      <div class="container">
+        <div class="project-section__introduction">
+          <h2> An Introduction </h2>
+          <p> Here's a list of some stuff that i've been working on. </p>
+        </div>
+      </div>
+      <div class="project-section__wrapper">
         <div
           class="project-section__entry"
-          v-for="(project, index) in projectGroup.projects"
+          v-for="(project, index) in projects"
           :key="index"
           :style="{ backgroundColor: getColor(index) }"
         >
@@ -42,6 +44,11 @@ export default {
     return {
       projectList: ProjectJson
     };
+  },
+  computed: {
+    projects: function() {
+      return this.projectList.map(projectGroup => projectGroup.projects).flat()
+    }
   },
   methods: {
     getColor: function(index) {
