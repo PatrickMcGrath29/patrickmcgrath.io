@@ -33,9 +33,13 @@
           >
             <div class="project-intro__entry-inner">
               <h2 class="project-intro__headline">{{ project.heading }}</h2>
-              <h4 class="project-intro__subtitle">
+              <h4 class="project-intro__subtitle" v-if="project.heading_subtitle">
                 <i class="el-icon-location"></i>
-                <em>{{ project.heading_subtitle }}</em>
+                {{ project.heading_subtitle }}
+              </h4>
+              <h4 class="project-intro__subtitle" v-if="project.start_date">
+                <i class="el-icon-date"></i>
+                <small>{{ project.start_date}} <span v-if="project.end_date">–</span> {{ project.end_date }}</small>
               </h4>
             </div>
           </div>
