@@ -1,3 +1,11 @@
 .project-section__entry {
   padding: 40px 0;
 }
+
+.project-bg-1 {
+  background-color: darken($background-color, 10);
+}
+
+.project-bg-2 {
+  background-color: darken($background-color, 5);
+}

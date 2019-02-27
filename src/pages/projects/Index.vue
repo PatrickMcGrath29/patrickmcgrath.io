@@ -3,8 +3,8 @@
     <section id="projects">
       <div class="container">
         <div class="project-section__introduction">
-          <h2> An Introduction </h2>
-          <p> Here's a list of some stuff that i've been working on. </p>
+          <h2> Projects </h2>
+          <p> Here's some more detail on the various things that I've been doing. </p>
         </div>
       </div>
       <div class="project-section__wrapper">
@@ -12,7 +12,7 @@
           class="project-section__entry"
           v-for="(project, index) in projects"
           :key="index"
-          :style="{ backgroundColor: getColor(index) }"
+          :class="index % 2 == 0 ? 'project-bg-1' : 'project-bg-2'"
         >
           <div class="container">
             <h1>{{ project.heading }}</h1>
@@ -48,17 +48,6 @@ export default {
   computed: {
     projects: function() {
       return this.projectList.map(projectGroup => projectGroup.projects).flat()
-    }
-  },
-  methods: {
-    getColor: function(index) {
-      if (index % 3 == 0) {
-        return "#bbbf95";
-      } else if (index % 3 == 1) {
-        return "#dcd9c6";
-      } else if (index % 3 == 2) {
-        return "#f2ece1";
-      }
     }
   }
 };
