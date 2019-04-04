@@ -1,11 +1,14 @@
-.project-section__entry {
-  padding: 40px 0;
+.project-section__introduction {
+  margin: 30px 0;
+  text-align: center;
 }
 
-.project-bg-1 {
-  background-color: darken($background-color, 10);
-}
+.project-section__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px 0;
 
-.project-bg-2 {
-  background-color: darken($background-color, 5);
+  @include media-down($medium-screen) {
+    flex-direction: column;
+  }
 }

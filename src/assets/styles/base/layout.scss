@@ -5,6 +5,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: $light-gray;
   margin: 0;

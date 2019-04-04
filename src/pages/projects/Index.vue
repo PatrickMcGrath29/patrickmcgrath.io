@@ -3,26 +3,17 @@
     <section id="projects">
       <div class="container">
         <div class="project-section__introduction">
-          <h2>Projects</h2>
-          <p>Here's some more detail on the various things that I've been doing.</p>
+          <h1>Projects</h1>
         </div>
       </div>
-      <div class="project-section__wrapper">
-        <div
-          class="project-section__entry"
-          v-for="(project, index) in projects"
-          :key="index"
-        >
-          <div class="container">
-            <h1>{{ project.heading }}</h1>
-            <h4>
-              <i class="el-icon-location"></i>
-              <em>{{ project.heading_subtitle }}</em>
-            </h4>
-            <ul class="project-section__entry-content">
-              <li v-for="(content, index) in project.content" :key="index">{{ content }}</li>
-            </ul>
-          </div>
+      <div class="container">
+        <div class="project-section__wrapper">
+          <project-entry
+            v-for="(project, index) in projects"
+            :key="index"
+            :project="project"
+            :index="index"
+          ></project-entry>
         </div>
       </div>
     </section>
@@ -31,14 +22,15 @@
 
 <script>
 import DefaultTemplate from "@/templates/Default";
+import ProjectEntry from "@/components/ProjectEntry";
 
 import ProjectJson from "@/json/projects.json";
-
 
 export default {
   name: "projects-index",
   components: {
-    DefaultTemplate
+    DefaultTemplate,
+    ProjectEntry
   },
   data: function() {
     return {
@@ -53,7 +45,7 @@ export default {
   methods: {
     getBackgroundImage: function(index) {
       if (index % 6 == 0) {
-        return 'url(' + require('@/../static/bg2.png') + ')'
+        return "url(" + require("@/../static/bg2.png") + ")";
       }
     }
   }
