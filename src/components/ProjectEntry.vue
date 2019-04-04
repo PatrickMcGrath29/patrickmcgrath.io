@@ -1,7 +1,7 @@
 <template>
   <div class="project-entry">
     <div class="project-entry__wrapper">
-      <div class="project-entry__front" :class="`pastel-${index % 5}`">
+      <div class="project-entry__front" :class="`card-bg-${index % 5}`">
         <div class="project-entry__front-wrapper">
           <h2> {{ project.heading }} </h2>
           <h3> {{ project.heading_subtitle }} </h3>
@@ -15,7 +15,6 @@
         </ul>
       </div>
     </div>
-    <!-- :class="`pastel-${index % 5}`" -->
   </div>
 </template>
 
