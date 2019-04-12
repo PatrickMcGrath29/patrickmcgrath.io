@@ -1,10 +1,8 @@
 .project-entry {
   height: 480px;
-  margin: 10px 0;
   perspective: 1000px;
 
   @include media-up($medium-screen) {
-    margin: 10px;
     width: calc(50% - 20px);
   }
 
@@ -36,7 +34,6 @@
 
 .project-entry__front, .project-entry__back {
   backface-visibility: hidden;
-  border-radius: $base-border-radius;
   box-shadow: $base-box-shadow;
   height: 100%;
   padding: 10px;
