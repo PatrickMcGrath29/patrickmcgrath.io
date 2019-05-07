@@ -10,8 +10,7 @@
           <div class="bio">
             <p>
               I am a student at Northeastern University pursuing a
-              <strong>Bachelor of Science in Computer Science</strong>, currently working as a Data Engineer at
-              <a href="https://placepass.com">PlacePass</a>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
+              <strong>Bachelor of Science in Computer Science</strong>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
             </p>
             <p>In my spare time you'll find me swing dancing, placing chess, hiking or skiing the northern east coast, and working on side projects.</p>
           </div>
