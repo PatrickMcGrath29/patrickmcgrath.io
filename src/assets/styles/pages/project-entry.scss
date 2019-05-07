@@ -1,5 +1,6 @@
 .project-entry {
   height: 480px;
+  margin: 10px;
   perspective: 1000px;
 
   @include media-up($medium-screen) {

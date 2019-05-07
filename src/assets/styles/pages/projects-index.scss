@@ -12,3 +12,14 @@
     flex-direction: column;
   }
 }
+
+// Overrides for Element UI
+#projects {
+  .el-tabs__active-bar {
+    background-color: $yellow;
+  }
+
+  .el-tabs__item {
+    color: $text-color;
+  }
+}

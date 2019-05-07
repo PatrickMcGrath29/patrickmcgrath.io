@@ -21,7 +21,7 @@
 <script>
 export default {
   name: "project-entry",
-  props: ["project", "index"]
-};
+  props: ['project', 'index']
+}
 </script>
 <style lang="sass"></style>

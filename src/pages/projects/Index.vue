@@ -7,14 +7,22 @@
         </div>
       </div>
       <div class="container">
-        <div class="project-section__wrapper">
-          <project-entry
-            v-for="(project, index) in projects"
+        <el-tabs stretch="true">
+          <el-tab-pane
+            v-for="(projectGroup, index) in projects"
             :key="index"
-            :project="project"
-            :index="index"
-          ></project-entry>
-        </div>
+            :label="projectGroup.title"
+          >
+            <div class="project-section__wrapper">
+              <project-entry
+                v-for="(project, index) in projectGroup.projects"
+                :key="index"
+                :project="project"
+                :index="index"
+              ></project-entry>
+            </div>
+          </el-tab-pane>
+        </el-tabs>
       </div>
     </section>
   </default-template>
@@ -39,7 +47,7 @@ export default {
   },
   computed: {
     projects: function() {
-      return this.projectList.map(projectGroup => projectGroup.projects).flat();
+      return this.projectList;
     }
   },
   methods: {
