@@ -8,7 +8,6 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Environments
 
-
 Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
 ### Prerequisites
@@ -16,29 +15,16 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
 [Yarn](https://yarnpkg.com/lang/en/)
 
-[s3cmd](https://github.com/s3tools/s3cmd)
 ```
-For MAC:
-
 brew install yarn
-brew install s3cmd
-s3cmd --configure (and input S3 access keys)
 ```
-
 
 ### Installing
 
 Clone Application
 
 ```
-git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io-ui.git
-```
-
-Setup Environment Variables
-
-```
-cp .env.sample .env
-and then edit with live-values
+git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io.git
 ```
 
 Run Development Webserver
@@ -46,21 +32,20 @@ Run Development Webserver
 yarn start
 ```
 
-## Running the tests
-
-The test suite is not currently setup. Plans to implement Mocha tests (probably...) with ESLint
-
 ## Deployment
 
-This application is entirely static, stored on Amazon's S3 and served to users via Amazon's Cloudfront CDN. To deploy a new version of the website to S3 you can use the deployment script `bin/deploy`.
+The master branch on the GitHub repository automatically deploys to production using Netlify's build and hosting services.
+
+At buildtime a prerendering plugin will generate static assets for most of the website in the dist directory, which enable better search engine indexing of the website while improving its performance on older browsers.
 
 ## Built With
 
-* [Vue JS](#) - The web framework used
+* [Vue JS](https://vuejs.org/) - The web framework used
+* [Netlify](https://www.netlify.com/) - CI/CD, Hosting
 
 ## Authors
 
-* **Patrick McGrath** - *Lead Developer* - [PatrickMcGrath29](https://github.com/PatrickMcGrath29)
+* [PatrickMcGrath29](https://github.com/PatrickMcGrath29)
 
 
 ## License
