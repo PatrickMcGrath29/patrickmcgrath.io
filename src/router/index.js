@@ -16,11 +16,6 @@ export default new Router({
       component: () => import('@/pages/projects/Index')
     },
     {
-      path: '/urls',
-      name: 'URL Shortner',
-      component: () => import('@/pages/url-shortner/Index')
-    },
-    {
       path: '/404',
       component: () => import('@/pages/404')
     },
