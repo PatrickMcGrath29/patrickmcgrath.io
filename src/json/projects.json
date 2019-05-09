@@ -7,12 +7,10 @@
         "heading_subtitle": "PlacePass",
         "content": [
           "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling daily updates of products that was previously updated every month",
-          "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations",
-          "Cut the onboarding time of new partners in half by developing standardized components with config driven systems"
+          "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations"
         ],
         "start_date": "July 2018",
-        "end_date": "December 2018",
-        "professional": true
+        "end_date": "December 2018"
       },
       {
         "heading": "Full Stack Engineer",
@@ -22,8 +20,7 @@
           "Engineered countless new features across Marriott Moments as a lead member of the UI team, with scalability in mind (to handle 25,000 transactions p/m), and helped double the experiences conversion rate"
         ],
         "start_date": "June 2017",
-        "end_date": "May 2018",
-        "professional": true
+        "end_date": "May 2018"
       },
       {
         "heading": "Research Assistant, Developer",
@@ -32,8 +29,7 @@
           "Pioneered technical solutions to a university-wide research project focused on improving participation in grant requests, ultimately developing a system over 40% more effective than its predecessor"
         ],
         "start_date": "September 2016",
-        "end_date": "April 2017",
-        "professional": true
+        "end_date": "April 2017"
       },
       {
         "heading": "Owner, Founder",
@@ -43,8 +39,7 @@
           "Hired, trained, and led a staff team of over 15 people to support our 6,500+ unique players"
         ],
         "start_date": "December 2013",
-        "end_date": "July 2015",
-        "professional": true
+        "end_date": "July 2015"
       }
     ]
   },
@@ -53,11 +48,14 @@
     "projects": [
       {
         "heading": "Board Member",
-        "heading_subtitle": "Victoria McGrath Foundation"
+        "heading_subtitle": "Victoria McGrath Foundation",
+        "start_date": "April 2017"
       },
       {
         "heading": "Teacher at the Mamelodi Initiative",
-        "heading_subtitle": "South Africa"
+        "heading_subtitle": "South Africa",
+        "start_date": "June 2018",
+        "end_date": "July 2018"
       },
       {
         "heading": "Leadership Team",

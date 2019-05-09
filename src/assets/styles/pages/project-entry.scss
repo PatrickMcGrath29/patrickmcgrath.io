@@ -14,10 +14,18 @@
 
 .project-entry__front {
   align-items: center;
-  background-color: $medium-gray;
+  background-color: #4c5454;
   color: $light-gray;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .project-entry__front-heading {
+    display: flex;
+    flex-basis: 70%;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .project-entry__wrapper {
@@ -45,24 +53,29 @@
 .project-entry__back {
   background-color: white;
   transform: rotateY(180deg);
+  text-align: left;
+
+  li {
+    padding: 10px 10px 10px 0;
+  }
 }
 
-.card-bg-0 {
-  background-color: #60634b;
-}
+// .card-bg-0 {
+//   background-color: #60634b;
+// }
 
-.card-bg-1 {
-  background-color: #634e4b;
-}
+// .card-bg-1 {
+//   background-color: #634e4b;
+// }
 
-.card-bg-2 {
-  background-color: #3d4f61;
-}
+// .card-bg-2 {
+//   background-color: #3d4f61;
+// }
 
-.card-bg-3 {
-  background-color: #6f506e;
-}
+// .card-bg-3 {
+//   background-color: #6f506e;
+// }
 
-.card-bg-4 {
-  background-color: #475f39;
-}
+// .card-bg-4 {
+//   background-color: #475f39;
+// }

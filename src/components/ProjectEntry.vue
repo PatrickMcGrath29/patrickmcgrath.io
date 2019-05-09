@@ -1,17 +1,23 @@
 <template>
   <div class="project-entry">
     <div class="project-entry__wrapper">
-      <div class="project-entry__front" :class="`card-bg-${index % 5}`">
-        <div class="project-entry__front-wrapper">
-          <h2> {{ project.heading }} </h2>
-          <h3> {{ project.heading_subtitle }} </h3>
+      <div class="project-entry__front">
+        <div class="project-entry__front-heading">
+          <h2>{{ project.heading }}</h2>
+          <h3>{{ project.heading_subtitle }}</h3>
         </div>
+        <h4 class="project-intro__subtitle" v-if="project.start_date">
+          <i class="el-icon-date"></i>
+          <small>
+            {{ project.start_date}}
+            <span v-if="project.end_date">–</span>
+            {{ project.end_date }}
+          </small>
+        </h4>
       </div>
       <div class="project-entry__back">
         <ul>
-          <li v-for="item in project.content" v-bind:key="item">
-            {{ item }}
-          </li>
+          <li v-for="item in project.content" v-bind:key="item">{{ item }}</li>
         </ul>
       </div>
     </div>
@@ -21,7 +27,7 @@
 <script>
 export default {
   name: "project-entry",
-  props: ['project', 'index']
-}
+  props: ["project", "index"]
+};
 </script>
 <style lang="sass"></style>
