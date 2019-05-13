@@ -17,7 +17,7 @@
       </div>
       <div class="project-entry__back">
         <ul>
-          <li v-for="item in project.content" v-bind:key="item">{{ item }}</li>
+          <li v-for="(item, index) in project.content" v-bind:key="index">{{ item }}</li>
         </ul>
       </div>
     </div>
