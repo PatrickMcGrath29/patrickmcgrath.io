@@ -8,6 +8,10 @@
   flex-wrap: wrap;
   margin: 40px 0;
 
+  .el-card {
+    width: 100%;
+  }
+
   @include media-down($medium-screen) {
     flex-direction: column;
   }
@@ -21,5 +25,36 @@
 
   .el-tabs__item {
     color: $text-color;
+  }
+}
+
+.el-collapse-item__header {
+  height: auto;
+
+  .project-heading-group {
+    padding: 15px 0;
+    line-height: 1.2;
+
+    .project-heading {
+      padding: 10px 0;
+      font-size: $small-font-size;
+    }
+
+    .project-subheading-group {
+      .project-subheading,
+      .project-subheading-date {
+        margin-top: 7.5px;
+      }
+
+      @include media-down($medium-screen) {
+        display: inline-grid;
+      }
+
+      @include media-up($medium-screen) {
+        .project-subheading-date {
+          margin-left: 10px;
+        }
+      }
+    }
   }
 }

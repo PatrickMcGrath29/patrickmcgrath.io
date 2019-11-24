@@ -10,9 +10,9 @@
           <div class="bio">
             <p>
               I am a student at Northeastern University pursuing a
-              <strong>Bachelor of Science in Computer Science</strong>. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
+              Bachelor of Science in Computer Science. I'm an engineer and entrepreneur at heart, driven by a desire to change the world through innovative problem solving.
             </p>
-            <p>In my spare time you'll find me swing dancing, placing chess, hiking or skiing the northern east coast, and working on side projects.</p>
+            <p>In my spare time you'll find me swing dancing, playing chess, hiking or skiing the northern east coast, and working on side projects.</p>
           </div>
           <img
             src="@/assets/images/patrickmcgrath.jpg"
@@ -38,7 +38,7 @@
               </h4>
               <h4 class="project-intro__subtitle" v-if="project.start_date">
                 <i class="el-icon-date"></i>
-                <small>{{ project.start_date}} <span v-if="project.end_date">–</span> {{ project.end_date }}</small>
+                <small>{{ project.start_date}} <span v-if="project.end_date"> – </span> {{ project.end_date }}</small>
               </h4>
             </div>
           </div>

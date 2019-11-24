@@ -5,14 +5,12 @@
   "description": "patrickmcgrath.io front end",
   "author": "Patrick McGrath <mcgrath.p@husky.neu.edu>",
   "scripts": {
-    "build": "yarn build:client && yarn build:server",
+    "build": "yarn build:client",
     "build:client": "node build/build.js",
-    "build:server": "netlify-lambda build src/lambda",
     "e2e": "node test/e2e/runner.js",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "start": "concurrently 'yarn start:client' 'yarn start:server'",
+    "start": "yarn start:client",
     "start:client": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start:server": "netlify-lambda serve src/lambda -c config/server.js",
     "test": "npm run unit && npm run e2e",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
   },
