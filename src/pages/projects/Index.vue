@@ -53,7 +53,7 @@
                               <i class="el-icon-location"></i>
                               {{project.heading_subtitle}}
                             </span>
-                            <span class="project-subheading-date">
+                            <span class="project-subheading-date" v-if="project.start_end">
                               <i class="el-icon-date"></i>
                               {{ project.start_date}}
                               <span v-if="project.end_date">– {{ project.end_date }}</span>
@@ -69,12 +69,6 @@
                   </el-collapse-item>
                 </el-collapse>
               </el-card>
-              <!-- <project-entry
-                v-for="(project, index) in projectGroup.projects"
-                :key="index"
-                :project="project"
-                :index="index"
-              ></project-entry>-->
             </div>
           </el-tab-pane>
         </el-tabs>
