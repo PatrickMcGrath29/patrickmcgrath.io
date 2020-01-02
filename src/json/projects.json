@@ -3,10 +3,11 @@
     "title": "Work Experience",
     "projects": [
       {
-        "heading": "Ops Tech Lead, Co-op",
+        "heading": "DevOps Co-Op",
         "heading_subtitle": "FareLogix",
         "content": [
-          "Led the architecture and implementation of the monitoring, alerting, and escalation infrastructure, monitoring 1000+ servers across a hybrid multicloud environment"
+          "Led the architecture and implementation of the monitoring, alerting, and escalation infrastructure for the organization, monitoring 1,000+ servers across a hybrid multi-cloud environment using SolarWinds, ",
+          "Assisted a major airline with a PSS (passenger service system) cutover, optimizing internal infrastructure and coordinating with external stakeholders to ensure performance and stability of the new environment"
         ],
         "start_date": "July 2019",
         "end_date": "Present"
