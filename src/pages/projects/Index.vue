@@ -14,34 +14,32 @@
             :label="projectGroup.title"
           >
             <el-card class="box-card">
-              <div
-                class="project-section__wrapper"
-                v-for="(project, index) in projectGroup.projects"
-                :key="index"
-                :name="index"
-              >
-                <div>
-                  <div class="project-heading-group">
-                    <div class="project-heading">{{ project.heading}}</div>
-                    <div class="project-subheading-group">
-                      <span class="project-subheading-">
-                        <i class="el-icon-location"></i>
-                        {{project.heading_subtitle}}
-                      </span>
-                      <span class="project-subheading-date" v-if="project.start_end">
-                        <i class="el-icon-date"></i>
+              <div class="project-section__wrapper">
+                <div
+                  class="project-entry"
+                  v-for="(project, index) in projectGroup.projects"
+                  :key="index"
+                  :name="index"
+                >
+                  <div class="project-entry__intro">
+                    <h4 class="project-entry__intro-headline">{{ project.heading }}</h4>
+                    <div class="project-entry__intro-subtitle" v-if="project.heading_subtitle">
+                      <i class="el-icon-location"></i>
+                      {{ project.heading_subtitle }}
+                    </div>
+                    <div class="project-entry__intro-subtitle" v-if="project.start_date">
+                      <i class="el-icon-date"></i>
+                      <small>
                         {{ project.start_date}}
-                        <span
-                          v-if="project.end_date"
-                        >– {{ project.end_date }}</span>
-                      </span>
+                        <span v-if="project.end_date">–</span>
+                        {{ project.end_date }}
+                      </small>
                     </div>
                   </div>
+                  <ul v-if="project.content" class="project-entry__content">
+                    <li v-for="(item, index) in project.content" v-bind:key="index">{{ item }}</li>
+                  </ul>
                 </div>
-                <i class="header-icon el-icon-info"></i>
-                <ul>
-                  <li v-for="(item, index) in project.content" v-bind:key="index">{{ item }}</li>
-                </ul>
               </div>
             </el-card>
           </el-tab-pane>
@@ -53,15 +51,15 @@
 
 <script>
 import DefaultTemplate from "@/templates/Default";
-import ProjectEntry from "@/components/ProjectEntry";
+// import ProjectEntry from "@/components/ProjectEntry";
 
 import ProjectJson from "@/json/projects.json";
 
 export default {
   name: "projects-index",
   components: {
-    DefaultTemplate,
-    ProjectEntry
+    DefaultTemplate
+    // ProjectEntry
   },
   data: function() {
     return {
