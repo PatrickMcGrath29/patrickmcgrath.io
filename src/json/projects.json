@@ -6,14 +6,16 @@
         "heading": "DevOps Co-Op",
         "heading_subtitle": "FareLogix",
         "content": [
-          "Led the architecture and implementation of the monitoring, alerting, and escalation infrastructure for the organization, monitoring 1,000+ servers across a hybrid multi-cloud environment",
+          "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment using SolarWinds with a suite of custom tooling build with PowerShell, Jenkins, Django, and VueJs",
+          "Build production multi-AZ cloud environments with Spinnaker and Terraform using immutable infrastructure on AWS",
+          "Demonstrated new monitoring capabilities to airline clients by leading technical demos",
           "Assisted a major airline with a PSS (passenger service system) cutover, optimizing internal infrastructure and coordinating with external stakeholders to ensure performance and stability of the new environment"
         ],
         "start_date": "July 2019",
         "end_date": "Present"
       },
       {
-        "heading": "Data Engineer, Co-op",
+        "heading": "Data Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
           "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling daily updates of products that was previously updated every month",
@@ -23,7 +25,7 @@
         "end_date": "December 2018"
       },
       {
-        "heading": "Full Stack Engineer, Co-op",
+        "heading": "Full Stack Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
           "Architected and implement the marketing analytics suite for Marriott Moments, collecting actionable data on over 3.64 million users and counting using Google Tag Manager, jQuery, and Mixpanel",
