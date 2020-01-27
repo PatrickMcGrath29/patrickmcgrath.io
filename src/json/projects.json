@@ -7,7 +7,7 @@
         "heading_subtitle": "FareLogix",
         "content": [
           "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment using SolarWinds with a suite of custom tooling build with PowerShell, Jenkins, Django, and VueJs",
-          "Build production multi-AZ cloud environments with Spinnaker and Terraform using immutable infrastructure on AWS",
+          "Built production multi-AZ cloud environments with Spinnaker and Terraform using immutable infrastructure on AWS",
           "Demonstrated new monitoring capabilities to airline clients by leading technical demos",
           "Assisted a major airline with a PSS (passenger service system) cutover, optimizing internal infrastructure and coordinating with external stakeholders to ensure performance and stability of the new environment"
         ],
