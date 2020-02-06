@@ -35,12 +35,7 @@
   }
 
   .project-intro__entry-inner {
-    // display: inline-block;
     padding: 5px 40px 5px 5px;
-
-    &:hover {
-      background-color: darken($background-color, 10%);
-    }
   }
 
   .project-intro__headline {
