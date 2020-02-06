@@ -3,17 +3,20 @@
     <section id="projects">
       <div class="container">
         <div class="project-section__introduction">
-          <h1>Projects</h1>
+          <h1>
+            <span class="heading-bracket bracket-left">[</span>Projects
+            <span class="heading-bracket bracket-right">]</span>
+          </h1>
         </div>
       </div>
       <div class="container">
-        <el-tabs stretch="true">
-          <el-tab-pane
-            v-for="(projectGroup, index) in projects"
-            :key="index"
-            :label="projectGroup.title"
-          >
-            <el-card class="box-card">
+        <el-card class="box-card">
+          <el-tabs stretch="true">
+            <el-tab-pane
+              v-for="(projectGroup, index) in projects"
+              :key="index"
+              :label="projectGroup.title"
+            >
               <div class="project-section__wrapper">
                 <div
                   class="project-entry"
@@ -41,9 +44,9 @@
                   </ul>
                 </div>
               </div>
-            </el-card>
-          </el-tab-pane>
-        </el-tabs>
+            </el-tab-pane>
+          </el-tabs>
+        </el-card>
       </div>
     </section>
   </default-template>
