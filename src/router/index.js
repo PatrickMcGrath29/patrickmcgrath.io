@@ -16,6 +16,11 @@ export default new Router({
       component: () => import('@/pages/projects/Index')
     },
     {
+      path: '/skills',
+      name: 'Skills',
+      component: () => import('@/pages/skills/Index')
+    },
+    {
       path: '/404',
       component: () => import('@/pages/404')
     },
