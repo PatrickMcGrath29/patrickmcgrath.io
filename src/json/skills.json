@@ -9,32 +9,25 @@
       "group_name": "Concepts",
       "terms": [
         {
-          "name": "Data Orchestration, ETLs, Data Engineering",
-          "proficiency": "2"
+          "name": "Data Orchestration, ETLs, Data Engineering"
         },
         {
-          "name": "Analytics, AB Testing, Conversion Optimization",
-          "proficiency": "2"
+          "name": "Analytics, AB Testing, Conversion Optimization"
         },
         {
-          "name": "Infrastructure Monitoring",
-          "proficiency": "2"
+          "name": "Infrastructure Monitoring"
         },
         {
-          "name": "Load Testing & Performance Monitoring",
-          "proficiency": "2"
+          "name": "Load Testing & Performance Monitoring"
         },
         {
-          "name": "Front End Development",
-          "proficiency": "2"
+          "name": "Front End Development"
         },
         {
-          "name": "REST API Methodologies",
-          "proficiency": "2"
+          "name": "REST API Methodologies"
         },
         {
-          "name": "Networking, Load Balancing, Firewalls",
-          "proficiency": "2"
+          "name": "Networking, Load Balancing, Firewalls"
         }
       ]
     },

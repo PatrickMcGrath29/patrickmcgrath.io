@@ -1,0 +1,20 @@
+.skills__introduction {
+  text-align: center;
+}
+
+.skills__group {
+  margin-bottom: 30px;
+
+  .skills__term-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skills__term {
+      background-color: darken($white, 5%);
+      border: $thin-gray-border;
+      border-radius: $base-border-radius;
+      margin: 5px 7.5px;
+      padding: 5px 10px;
+    }
+  }
+}

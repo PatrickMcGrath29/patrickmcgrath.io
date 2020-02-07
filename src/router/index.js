@@ -16,9 +16,9 @@ export default new Router({
       component: () => import('@/pages/projects/Index')
     },
     {
-      path: '/concepts',
-      name: 'Concepts',
-      component: () => import('@/pages/concepts/Index')
+      path: '/skills',
+      name: 'Skills',
+      component: () => import('@/pages/skills/Index')
     },
     {
       path: '/404',

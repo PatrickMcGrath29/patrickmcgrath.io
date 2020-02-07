@@ -13,7 +13,7 @@
         <el-card class="box-card">
           <el-tabs stretch="true">
             <el-tab-pane
-              v-for="(projectGroup, index) in projects"
+              v-for="(projectGroup, index) in projectList"
               :key="index"
               :label="projectGroup.title"
             >
@@ -54,33 +54,17 @@
 
 <script>
 import DefaultTemplate from "@/templates/Default";
-// import ProjectEntry from "@/components/ProjectEntry";
-
 import ProjectJson from "@/json/projects.json";
 
 export default {
   name: "projects-index",
   components: {
     DefaultTemplate
-    // ProjectEntry
   },
   data: function() {
     return {
-      projectList: ProjectJson,
-      activeNames: [0]
+      projectList: ProjectJson
     };
-  },
-  computed: {
-    projects: function() {
-      return this.projectList;
-    }
-  },
-  methods: {
-    getBackgroundImage: function(index) {
-      if (index % 6 == 0) {
-        return "url(" + require("@/../static/bg2.png") + ")";
-      }
-    }
   }
 };
 </script>

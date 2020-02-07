@@ -9,7 +9,7 @@
     <nav class="navbar" :class="{'mobile-hidden': mobileHidden}">
       <router-link v-bind:to="{ name: 'Home' }" active-class="active" class="navbar-link">Home</router-link>
       <router-link v-bind:to="{ name: 'Projects' }" active-class="active" class="navbar-link">Projects</router-link>
-      <router-link v-bind:to="{ name: 'Concepts' }" active-class="active" class="navbar-link">Concepts</router-link>
+      <router-link v-bind:to="{ name: 'Skills' }" active-class="active" class="navbar-link">Skills</router-link>
       <a href="/static/Resume_McGrath_Patrick.pdf" class="navbar-link">Resume</a>
       <!-- <a href="https://patrickrmcgrath.wordpress.com/" class="navbar-link">Blog</a> -->
     </nav>
