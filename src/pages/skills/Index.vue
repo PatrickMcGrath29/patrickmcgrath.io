@@ -9,6 +9,10 @@
           </h1>
         </div>
         <div class="skills__wrapper">
+          <!-- <el-card class="skills__group">
+            <h3 class="skills__group-header"> Key </h3>
+
+          </el-card> -->
           <el-card
             v-for="(skill_group, index) in skillsJson.data"
             :key="index"
@@ -16,7 +20,12 @@
           >
             <h3 class="skills__group-header">{{ skill_group.group_name }}</h3>
             <div v-if="skill_group.terms" class="skills__term-wrapper">
-              <div v-for="(skill, index) in skill_group.terms" :key="index" class="skills__term">{{skill.name}}</div>
+              <div v-for="(skill, index) in skill_group.terms" :key="index" class="skills__term">
+                <div v-if="'proficiency' in skill" class="skills__proficiency-indicator" v-bind:class="skillsJson.proficiency_key[skill.proficiency]"></div>
+                <div class="skills__term-content">
+                  {{skill.name}}
+                </div>
+              </div>
             </div>
           </el-card>
         </div>
