@@ -9,6 +9,18 @@
           </h1>
         </div>
         <div class="skills__wrapper">
+          <!-- <el-card class="skills__group skills__group-key">
+            <div class="skills__term-wrapper">
+              <h3 class="skills__group-header">Key</h3>
+              <div
+                class="skills__term"
+                v-for="(skill, index) in skillsJson.proficiency_key"
+                :key="index"
+              >
+                <div class="skills__term-content">{{ skill }}</div>
+              </div>
+            </div>
+          </el-card> -->
           <el-card
             v-for="(skill_group, index) in skillsJson.data"
             :key="index"
@@ -16,7 +28,18 @@
           >
             <h3 class="skills__group-header">{{ skill_group.group_name }}</h3>
             <div v-if="skill_group.terms" class="skills__term-wrapper">
-              <div v-for="(skill, index) in skill_group.terms" :key="index" class="skills__term">{{skill.name}}</div>
+              <div
+                v-for="(skill, index) in sortByProficiency(skill_group.terms)"
+                :key="index"
+                class="skills__term"
+              >
+                <div
+                  v-if="'proficiency' in skill"
+                  class="skills__proficiency-indicator"
+                  v-bind:class="skillsJson.proficiency_key[skill.proficiency]"
+                ></div>
+                <div class="skills__term-content">{{skill.name}}</div>
+              </div>
             </div>
           </el-card>
         </div>
@@ -38,6 +61,22 @@ export default {
     return {
       skillsJson: SkillsJson
     };
+  },
+  methods: {
+    sortByProficiency: function(skills) {
+      return skills.sort((a, b) => {
+        if ("proficiency" in a) {
+          if ("proficiency" in b) {
+            return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1;
+          }
+          return -1;
+        }
+        if ("proficiency" in b) {
+          return -1;
+        }
+        return 0;
+      });
+    }
   }
 };
 

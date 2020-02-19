@@ -5,6 +5,15 @@
 .skills__group {
   margin-bottom: 30px;
 
+  &.skills__group-key {
+    display: inline-block;
+    align-self: right;
+  }
+
+  .skills__group-header {
+    margin-top: 0;
+  }
+
   .skills__term-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -13,8 +22,29 @@
       background-color: darken($white, 5%);
       border: $thin-gray-border;
       border-radius: $base-border-radius;
+      display: flex;
       margin: 5px 7.5px;
+      position: relative;
+    }
+
+    .skills__term-content {
       padding: 5px 10px;
+    }
+
+    .skills__proficiency-indicator {
+      width: 5px;
+      border-radius: 3px 0 0 3px;
+
+      &.Expert {
+        background-color: $green;
+      }
+      &.Proficient {
+        background-color: $yellow;
+      }
+      &.Familiar {
+        background-color: $light-blue;
+        opacity: .5;
+      }
     }
   }
 }
