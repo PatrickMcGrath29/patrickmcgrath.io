@@ -44,7 +44,7 @@
         },
         {
           "name": "Application Load Balancers, Health Checks, Target Groups",
-          "proficiency": "3"
+          "proficiency": 3
         },
         {
           "name": "VPCs, Subnets",
