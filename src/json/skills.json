@@ -15,13 +15,13 @@
           "name": "Analytics, AB Testing, Conversion Optimization"
         },
         {
+          "name": "Front End Development"
+        },
+        {
           "name": "Infrastructure Monitoring"
         },
         {
           "name": "Load Testing & Performance Monitoring"
-        },
-        {
-          "name": "Front End Development"
         },
         {
           "name": "REST API Methodologies"
@@ -97,6 +97,10 @@
         {
           "name": "Cognito",
           "proficiency": "1"
+        },
+        {
+          "name": "Athena",
+          "proficiency": "1"
         }
       ]
     },
@@ -138,10 +142,10 @@
       ]
     },
     {
-      "group_name": "Big Data Tech",
+      "group_name": "Big Data & Analytics Tech",
       "terms": [
         {
-          "name": "MongoDB (Mongo Atlas, Cluster Optimization, Aggregations)",
+          "name": "MongoDB (Atlas, Cluster Optimization, Aggregations)",
           "proficiency": "2"
         },
         {
@@ -161,7 +165,19 @@
           "proficiency": "2"
         },
         {
-          "name": "MapReduce",
+          "name": "Hadoop MapReduce",
+          "proficiency": "2"
+        },
+        {
+          "name": "Mixpanel",
+          "proficiency": "3"
+        },
+        {
+          "name": "Google Tag Manager",
+          "proficiency": "3"
+        },
+        {
+          "name": "Optimizely AB Testing Framework",
           "proficiency": "2"
         }
       ]
@@ -203,20 +219,12 @@
           "proficiency": "2"
         },
         {
-          "name": "Google Tag Manager",
-          "proficiency": "3"
-        },
-        {
           "name": "Docker",
           "proficiency": "2"
         },
         {
           "name": "Swagger",
           "proficiency": "1"
-        },
-        {
-          "name": "Mixpanel",
-          "proficiency": "3"
         },
         {
           "name": "git",
@@ -229,6 +237,10 @@
         {
           "name": "Akamai Edge Networking",
           "proficiency": "1"
+        },
+        {
+          "name": "Linux / Command Line",
+          "proficiency": "3"
         }
       ]
     }
