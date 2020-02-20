@@ -1,20 +1,19 @@
 <template>
   <main>
-    <Header/>
+    <Header />
     <slot></slot>
-    <Footer/>
+    <Footer />
   </main>
 </template>
 <script>
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default {
-  name: 'default-template',
+  name: "default-template",
   components: {
     Header,
     Footer
   }
-}
-
+};
 </script>

@@ -20,19 +20,15 @@
                 <div class="skills__term-content">{{ skill }}</div>
               </div>
             </div>
-          </el-card> -->
+          </el-card>-->
           <el-card
-            v-for="(skill_group, index) in skillsJson.data"
+            v-for="(skill_group, index) in sortedSkills.data"
             :key="index"
             class="skills__group"
           >
             <h3 class="skills__group-header">{{ skill_group.group_name }}</h3>
             <div v-if="skill_group.terms" class="skills__term-wrapper">
-              <div
-                v-for="(skill, index) in sortByProficiency(skill_group.terms)"
-                :key="index"
-                class="skills__term"
-              >
+              <div v-for="(skill, index) in skill_group.terms" :key="index" class="skills__term">
                 <div
                   v-if="'proficiency' in skill"
                   class="skills__proficiency-indicator"
@@ -62,24 +58,22 @@ export default {
       skillsJson: SkillsJson
     };
   },
-  methods: {
-    sortByProficiency: function(skills) {
-      return skills.sort((a, b) => {
-        if ("proficiency" in a) {
-          if ("proficiency" in b) {
-            return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1;
-          }
-          return -1;
-        }
-        if ("proficiency" in b) {
-          return -1;
-        }
-        return 0;
-      });
+  computed: {
+    sortedSkills: function() {
+      if (this.skillsJson.data) {
+        this.skillsJson.data.map(group => {
+          group.terms.sort((a, b) => {
+            if ("proficiency" in a && "proficiency" in b) {
+              return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1;
+            } else {
+              return 0;
+            }
+          });
+        });
+      }
+      return this.skillsJson;
     }
   }
 };
-
-// - {{skillsJson.proficiency_key[skill.proficiency]
 </script>
 <style lang="sass"></style>

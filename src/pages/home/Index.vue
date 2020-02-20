@@ -19,7 +19,7 @@
             height="300px"
             width="auto"
             alt="Patrick McGrath"
-          >
+          />
         </div>
       </div>
       <div class="content-section project-intro__wrapper">
@@ -38,7 +38,11 @@
               </h4>
               <h4 class="project-intro__subtitle" v-if="project.start_date">
                 <i class="el-icon-date"></i>
-                <small>{{ project.start_date}} <span v-if="project.end_date"> – </span> {{ project.end_date }}</small>
+                <small>
+                  {{ project.start_date}}
+                  <span v-if="project.end_date">–</span>
+                  {{ project.end_date }}
+                </small>
               </h4>
             </div>
           </div>
@@ -52,13 +56,13 @@
         <p>If you'd like to get in contact with me, drop me a line at the email address below.</p>
         <div class="social-icon__set">
           <a class="social-icon__icon green" href="mailto:website@patrickmcgrath.io">
-            <EmailIcon class="social-svg"/>
+            <EmailIcon class="social-svg" />
           </a>
           <a class="social-icon__icon" href="https://github.com/PatrickMcGrath29">
-            <GithubIcon class="social-svg"/>
+            <GithubIcon class="social-svg" />
           </a>
           <a class="social-icon__icon blue" href="https://www.linkedin.com/in/patrickrmcgrath/">
-            <LinkedInIcon class="social-svg"/>
+            <LinkedInIcon class="social-svg" />
           </a>
         </div>
       </div>
