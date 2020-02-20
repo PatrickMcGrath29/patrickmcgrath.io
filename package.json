@@ -1,16 +1,14 @@
 {
-  "name": "client",
+  "name": "patrickmcgrath-io-client",
   "version": "1.0.0",
   "private": true,
-  "description": "patrickmcgrath.io front end",
-  "author": "Patrick McGrath <mcgrath.p@husky.neu.edu>",
+  "description": "patrickmcgrath.io client",
+  "author": "Patrick McGrath <patrickmcgrath29@gmail.com>",
   "scripts": {
-    "build": "yarn build:client",
-    "build:client": "node build/build.js",
+    "build": "node build/build.js",
     "e2e": "node test/e2e/runner.js",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "start": "yarn start:client",
-    "start:client": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "test": "npm run unit && npm run e2e",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"
   },
