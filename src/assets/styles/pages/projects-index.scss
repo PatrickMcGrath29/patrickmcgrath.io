@@ -47,9 +47,12 @@
 
 // Overrides for Element UI
 #projects {
+  .el-tabs__header {
+    margin: 10px 0 25px 0;
+  }
+
   .el-tabs__active-bar {
     background-color: $yellow;
-    // height: 3px;
   }
 
   .el-tabs__item {
