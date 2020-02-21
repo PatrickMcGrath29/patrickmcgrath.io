@@ -38,7 +38,7 @@
       },
       {
         "heading": "Research Assistant, Developer",
-        "heading_subtitle": "IoT Open Innovation Lab at Northeastern",
+        "heading_subtitle": "IoT Open Innovation Lab, Northeastern",
         "content": [
           "Pioneered technical solutions to a university-wide research project focused on improving participation in grant requests, ultimately developing a system over 40% more effective than its predecessor"
         ],
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "title": "Other Fun Stuff",
+    "title": "Outside the Office",
     "projects": [
       {
         "heading": "Board Member",
@@ -73,7 +73,7 @@
         "end_date": "July 2018"
       },
       {
-        "heading": "Leadership Team",
+        "heading": "President",
         "heading_subtitle": "Agape Christian Fellowship, Northeastern"
       },
       {
@@ -82,6 +82,10 @@
         "content": [
           "Spearheaded an Eagle Scout project designing and carrying out a renovation project with the help of fellow Scouts for the Weston Historical Society, fulfilling a 100+ hour of community service requirement in order to achieve the Eagle Scout rank"
         ]
+      },
+      {
+        "heading": "Former President",
+        "heading_subtitle": "Association of Computing Machinery, Northeastern"
       }
     ]
   }
