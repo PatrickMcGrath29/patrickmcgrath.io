@@ -5,15 +5,22 @@
 .skills__group {
   margin-bottom: 30px;
 
-  &.skills__group-key {
-    display: inline-block;
+  @include media-up($medium-screen) {
+    &.skills__group-key-wrapper {
+      display: inline-flex;
 
-    .skills__term-wrapper {
-      align-items: center;
-    }
+      .skills__group-key {
+        display: flex;
+        align-items: center;
+      }
 
-    .skills__group-header {
-      margin: 0 10px 0 0;
+      .skills__term-wrapper {
+        align-items: center;
+      }
+
+      .skills__group-header {
+        margin: 0 10px 0 0;
+      }
     }
   }
 
