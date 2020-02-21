@@ -2,12 +2,24 @@
   text-align: center;
 }
 
+.skills__group-key-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .skills__group {
   margin-bottom: 30px;
 
   &.skills__group-key {
     display: inline-block;
-    align-self: right;
+
+    .skills__term-wrapper {
+      align-items: center;
+    }
+
+    .skills__group-header {
+      margin: 0 10px 0 0;
+    }
   }
 
   .skills__group-header {
@@ -30,21 +42,21 @@
     .skills__term-content {
       padding: 5px 10px;
     }
+  }
 
-    .skills__proficiency-indicator {
-      width: 5px;
-      border-radius: 3px 0 0 3px;
+  .skills__proficiency-indicator {
+    width: 5px;
+    border-radius: 3px 0 0 3px;
 
-      &.Expert {
-        background-color: $green;
-      }
-      &.Proficient {
-        background-color: $yellow;
-      }
-      &.Familiar {
-        background-color: $light-blue;
-        opacity: .5;
-      }
+    &.Expert {
+      background-color: $green;
+    }
+    &.Proficient {
+      background-color: $yellow;
+    }
+    &.Familiar {
+      background-color: $light-blue;
+      opacity: 0.5;
     }
   }
 }
