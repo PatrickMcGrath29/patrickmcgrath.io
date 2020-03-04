@@ -1,0 +1,28 @@
+.shorten__wrapper {
+  form {
+
+    input {
+      width: 100%;
+    }
+
+    button {
+      background: linear-gradient(120deg, $yellow, $medium-gray, gold);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    input,
+    button {
+      background-color: inherit;
+      border: none;
+      font-weight: $bold-font-weight;
+      outline: none;
+
+      @include media-up($medium-screen) {
+        height: 75px;
+        font-size: $xll-font-size;
+      }
+    }
+  }
+}

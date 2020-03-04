@@ -21,6 +21,11 @@ export default new Router({
       component: () => import('@/pages/skills/Index')
     },
     {
+      path: '/shorten',
+      name: 'Shorten',
+      component: () => import('@/pages/shorten/Index')
+    },
+    {
       path: '/404',
       component: () => import('@/pages/404')
     },
