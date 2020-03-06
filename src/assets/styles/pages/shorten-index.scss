@@ -14,15 +14,27 @@
 
     input,
     button {
-      background-color: inherit;
       border: none;
+      font-size: $xll-font-size;
       font-weight: $bold-font-weight;
+      margin: 10px 0;
       outline: none;
 
       @include media-up($medium-screen) {
         height: 75px;
-        font-size: $xll-font-size;
       }
     }
   }
+}
+
+.shorten__result-url {
+  overflow: scroll;
+}
+
+.shorten__result-subtitle {
+  margin-bottom: 0;
+}
+
+.shorten__result-wrapper {
+  margin-top: 30px;
 }

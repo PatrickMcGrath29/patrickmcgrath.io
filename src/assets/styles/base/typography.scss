@@ -16,6 +16,13 @@ p {
   font-size: $base-font-size;
 }
 
+.primary-header {
+
+  &.center {
+    text-align: center;
+  }
+}
+
 .heading-bracket {
   color: $yellow;
 

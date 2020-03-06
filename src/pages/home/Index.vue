@@ -2,10 +2,12 @@
   <default-template>
     <div class="container">
       <div class="homepage-intro content-section">
-        <h1>
-          <span class="heading-bracket bracket-left">[</span>About
-          <span class="heading-bracket bracket-right">]</span>
-        </h1>
+        <div class="primary-header">
+          <h1>
+            <span class="heading-bracket bracket-left">[</span>About
+            <span class="heading-bracket bracket-right">]</span>
+          </h1>
+        </div>
         <div class="bio-and-image">
           <div class="bio">
             <p>

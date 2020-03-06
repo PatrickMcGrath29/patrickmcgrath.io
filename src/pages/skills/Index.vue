@@ -2,7 +2,7 @@
   <default-template>
     <section id="skills">
       <div class="container">
-        <div class="skills__introduction">
+        <div class="primary-header center">
           <h1>
             <span class="heading-bracket bracket-left">[</span>Skills
             <span class="heading-bracket bracket-right">]</span>
