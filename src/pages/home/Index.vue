@@ -13,11 +13,7 @@
             </p>
             <p>In my spare time you'll find me swing dancing, playing chess, hiking or skiing the northern east coast, and working on side projects.</p>
           </div>
-          <img
-            src="@/assets/images/patrickmcgrath.jpg"
-            class="bio-image"
-            alt="Patrick McGrath"
-          />
+          <img src="@/assets/images/patrickmcgrath.jpg" class="bio-image" alt="Patrick McGrath" />
         </div>
       </div>
       <div class="content-section project-intro__wrapper">
@@ -68,27 +64,27 @@
 </template>
 
 <script>
-import DefaultTemplate from "@/templates/Default";
+import DefaultTemplate from '@/templates/Default'
 
-import EmailIcon from "@/assets/images/email.svg";
-import GithubIcon from "@/assets/images/github.svg";
-import LinkedInIcon from "@/assets/images/linkedin.svg";
+import EmailIcon from '@/assets/images/email.svg'
+import GithubIcon from '@/assets/images/github.svg'
+import LinkedInIcon from '@/assets/images/linkedin.svg'
 
-import ProjectJson from "@/json/projects.json";
+import ProjectJson from '@/json/projects.json'
 
 export default {
-  name: "home-index",
+  name: 'home-index',
   components: {
     DefaultTemplate,
     EmailIcon,
     GithubIcon,
     LinkedInIcon
   },
-  data: function() {
+  data: function () {
     return {
       projectList: ProjectJson
-    };
+    }
   }
-};
+}
 </script>
 <style lang="sass"></style>

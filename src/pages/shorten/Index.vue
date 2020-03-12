@@ -46,47 +46,46 @@
 </template>
 
 <script>
-import DefaultTemplate from "@/templates/Default";
-import axios from "axios";
+import DefaultTemplate from '@/templates/Default'
+import axios from 'axios'
 
 export default {
-  name: "shorten-index",
+  name: 'shorten-index',
   components: {
     DefaultTemplate
   },
   data: () => {
     return {
-      proposed_full_url: "",
-      proposed_alias: "",
+      proposed_full_url: '',
+      proposed_alias: '',
       secret_id: null,
-      result_alias: "johntest",
-      base_endpoint: "https://urls.patrickmcgrath.io/",
+      result_alias: 'johntest',
+      base_endpoint: 'https://urls.patrickmcgrath.io/',
       error_message: null
-    };
+    }
   },
   methods: {
-    async requestAlias() {
+    async requestAlias () {
       let response = await axios.post(this.base_endpoint, {
         full_url: this.proposed_full_url,
         alias: this.proposed_alias
-      });
+      })
 
       if (response.statusCode !== 200) {
-        this.error_message = response.data.errorMessage;
+        this.error_message = response.data.errorMessage
       } else {
-        this.result_alias = response.data.alias;
-        this.secret_id = response.data.secret_id;
+        this.result_alias = response.data.alias
+        this.secret_id = response.data.secret_id
       }
     },
-    copyAlias() {
-      let aliasText = document.querySelector("#shortened-url");
-      console.log(aliasText)
+    copyAlias () {
+      let aliasText = document.querySelector('#shortened-url')
       aliasText.setAttribute('type', 'text')
-      aliasText.select();
-      alaisText.setSelectionRange(0, 99999);
-      document.execCommand("copy");
+      aliasText.select()
+      aliasText.setSelectionRange(0, 99999)
+      document.execCommand('copy')
     }
   }
-};
+}
 </script>
 <style lang="sass"></style>
