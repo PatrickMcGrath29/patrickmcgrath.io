@@ -13,13 +13,14 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 ### Prerequisites
 
 
-[Yarn](https://yarnpkg.com/lang/en/)
+- [Yarn](https://yarnpkg.com/lang/en/)
+
+### Setup & Installation
 
 ```
 brew install yarn
 ```
 
-### Installing
 
 Clone Application
 
@@ -36,7 +37,7 @@ yarn start
 
 The master branch on the GitHub repository automatically deploys to production using Netlify's build and hosting services.
 
-At buildtime a prerendering plugin will generate static assets for most of the website in the dist directory, which enable better search engine indexing of the website while improving its performance on older browsers.
+At buildtime a prerendering plugin will generate static assets for most of the website in the `dist` directory, which enable better search engine indexing of the website while improving its performance on older browsers.
 
 ## Built With
 
