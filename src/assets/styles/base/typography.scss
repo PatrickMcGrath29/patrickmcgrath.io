@@ -16,10 +16,22 @@ p {
   font-size: $base-font-size;
 }
 
+h1 {
+  font-size: $xlll-font-size;
+}
+
 .primary-header {
+  display: flex;
+
+  h1 {
+    background: linear-gradient(120deg, $medium-gray, $yellow, $medium-gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
   &.center {
-    text-align: center;
+    justify-content: center;
   }
 }
 

@@ -3,9 +3,7 @@
     <section id="shorten">
       <div class="primary-header center">
         <h1>
-          <span class="heading-bracket bracket-left">[</span>
-          Shorten URLs
-          <span class="heading-bracket bracket-right">]</span>
+          Shorten Urls
         </h1>
       </div>
       <div class="container">

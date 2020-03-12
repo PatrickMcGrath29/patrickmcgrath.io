@@ -117,7 +117,7 @@
         },
         {
           "name": "Java",
-          "proficiency": "1"
+          "proficiency": "2"
         },
         {
           "name": "PowerShell",
@@ -190,7 +190,7 @@
           "proficiency": "2"
         },
         {
-          "name": "NuxtJS / JAM Stack / Universal Apps",
+          "name": "NuxtJS / Universal Apps",
           "proficiency": "2"
         },
         {
@@ -199,7 +199,7 @@
         },
         {
           "name": "NodeJS",
-          "proficiency": "1"
+          "proficiency": "2"
         },
         {
           "name": "Django",
@@ -239,7 +239,7 @@
           "proficiency": "1"
         },
         {
-          "name": "Linux / Command Line",
+          "name": "Linux / Unix",
           "proficiency": "3"
         }
       ]

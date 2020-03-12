@@ -3,10 +3,7 @@
     <div class="container">
       <div class="homepage-intro content-section">
         <div class="primary-header">
-          <h1>
-            <span class="heading-bracket bracket-left">[</span>About
-            <span class="heading-bracket bracket-right">]</span>
-          </h1>
+          <h1>About</h1>
         </div>
         <div class="bio-and-image">
           <div class="bio">
@@ -51,10 +48,9 @@
         </div>
       </div>
       <div class="content-section">
-        <h1>
-          <span class="heading-bracket bracket-left">[</span>Say Hello
-          <span class="heading-bracket bracket-right">]</span>
-        </h1>
+        <div class="primary-header">
+          <h1>Say Hi</h1>
+        </div>
         <p>If you'd like to get in contact with me, drop me a line at the email address below.</p>
         <div class="social-icon__set">
           <a class="social-icon__icon green" href="mailto:website@patrickmcgrath.io">

@@ -4,8 +4,7 @@
       <div class="container">
         <div class="primary-header center">
           <h1>
-            <span class="heading-bracket bracket-left">[</span>Skills
-            <span class="heading-bracket bracket-right">]</span>
+            Skills
           </h1>
         </div>
         <div class="skills__wrapper">
