@@ -15,8 +15,7 @@
           </div>
           <img
             src="@/assets/images/patrickmcgrath.jpg"
-            height="300px"
-            width="auto"
+            class="bio-image"
             alt="Patrick McGrath"
           />
         </div>
