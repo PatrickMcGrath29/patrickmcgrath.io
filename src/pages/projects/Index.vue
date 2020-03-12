@@ -2,10 +2,9 @@
   <default-template>
     <section id="projects">
       <div class="container">
-        <div class="project-section__introduction">
+        <div class="primary-header center">
           <h1>
-            <span class="heading-bracket bracket-left">[</span>Projects
-            <span class="heading-bracket bracket-right">]</span>
+            Projects
           </h1>
         </div>
       </div>
