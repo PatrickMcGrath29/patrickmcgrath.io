@@ -52,19 +52,19 @@
 </template>
 
 <script>
-import DefaultTemplate from "@/templates/Default";
-import ProjectJson from "@/json/projects.json";
+import DefaultTemplate from '@/templates/Default'
+import ProjectJson from '@/json/projects.json'
 
 export default {
-  name: "projects-index",
+  name: 'projects-index',
   components: {
     DefaultTemplate
   },
-  data: function() {
+  data: function () {
     return {
       projectList: ProjectJson
-    };
+    }
   }
-};
+}
 </script>
 <style lang="sass"></style>

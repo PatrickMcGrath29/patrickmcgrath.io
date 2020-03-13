@@ -47,35 +47,35 @@
 </template>
 
 <script>
-import DefaultTemplate from "@/templates/Default";
-import SkillsJson from "@/json/skills.json";
+import DefaultTemplate from '@/templates/Default'
+import SkillsJson from '@/json/skills.json'
 
 export default {
-  name: "skills-index",
+  name: 'skills-index',
   components: {
     DefaultTemplate
   },
-  data: function() {
+  data: function () {
     return {
       skillsJson: SkillsJson
-    };
+    }
   },
   computed: {
-    sortedSkills: function() {
+    sortedSkills: function () {
       if (this.skillsJson.data) {
         this.skillsJson.data.map(group => {
           group.terms.sort((a, b) => {
-            if ("proficiency" in a && "proficiency" in b) {
-              return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1;
+            if ('proficiency' in a && 'proficiency' in b) {
+              return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1
             } else {
-              return 0;
+              return 0
             }
-          });
-        });
+          })
+        })
       }
-      return this.skillsJson;
+      return this.skillsJson
     }
   }
-};
+}
 </script>
 <style lang="sass"></style>
