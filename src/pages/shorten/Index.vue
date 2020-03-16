@@ -10,10 +10,10 @@
         <div class="shorten__wrapper">
           <el-card>
             <el-form :model="form_fields" :rules="form_rules" ref="alias-form">
-              <el-form-item label="a long url" prop="proposed_full_url" type="url">
+              <el-form-item label="A long URL" prop="proposed_full_url" type="url">
                 <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off"></el-input>
               </el-form-item>
-              <el-form-item label="alias" prop="proposed_alias">
+              <el-form-item label="Alias" prop="proposed_alias">
                 <el-input v-model="form_fields.proposed_alias" autocomplete="off"></el-input>
               </el-form-item>
                 <el-form-item>
