@@ -48,7 +48,7 @@
         </div>
         <p>If you'd like to get in contact with me, drop me a line at the email address below.</p>
         <div class="social-icon__set">
-          <a class="social-icon__icon green" href="mailto:website@patrickmcgrath.io">
+          <a class="social-icon__icon green" href="mailto:hello@patrickmcgrath.io">
             <EmailIcon class="social-svg" />
           </a>
           <a class="social-icon__icon" href="https://github.com/PatrickMcGrath29">
