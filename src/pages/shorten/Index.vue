@@ -25,9 +25,9 @@
           <div class="shorten__result-wrapper" v-if="result_alias && secret_id">
             <el-card>
               <h5 class="shorten__result-subtitle">Shortened URL</h5>
-              <a v-bind:href="base_endpoint + result_alias">
+              <a v-bind:href="local_address + result_alias">
                 <h3 id="shortened-url" class="shorten__result-primary">
-                  {{ base_endpoint + result_alias }}
+                  {{ local_address + result_alias }}
                 </h3>
               </a>
               <h5 class="shorten__result-subtitle">Secret ID</h5>
@@ -73,13 +73,14 @@ export default {
       result_alias: null,
       error_message: null,
       pending: false,
-      base_endpoint: 'https://urls.patrickmcgrath.io/alias/'
+      api_endpoint: 'https://urls.patrickmcgrath.io/alias/',
+      local_address: `${window.location.host}/shorten/`
     }
   },
   methods: {
     async requestAlias () {
       this.pending = true
-      let response = await axios.post(this.base_endpoint, {
+      let response = await axios.post(this.api_endpoint, {
         full_url: this.form_fields.proposed_full_url,
         alias: this.form_fields.proposed_alias
       }, { timeout: 5000 })
