@@ -10,7 +10,7 @@
       <router-link v-bind:to="{ name: 'Home' }" active-class="active" class="navbar-link">Home</router-link>
       <router-link v-bind:to="{ name: 'Projects' }" active-class="active" class="navbar-link">Projects</router-link>
       <router-link v-bind:to="{ name: 'Skills' }" active-class="active" class="navbar-link">Skills</router-link>
-      <!-- <router-link v-bind:to="{ name: 'Shorten' }" active-class="active" class="navbar-link">URL Shortener</router-link> -->
+      <router-link v-bind:to="{ name: 'Shorten' }" active-class="active" class="navbar-link">URL Shortener</router-link>
       <a href="/static/Resume_McGrath_Patrick.pdf" class="navbar-link">Resume</a>
     </nav>
   </header>
