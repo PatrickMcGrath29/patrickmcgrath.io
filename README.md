@@ -12,6 +12,7 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
 
 - [Yarn](https://yarnpkg.com/lang/en/)
+- NodeJS (I'm using v13.5)
 
 ### Setup & Installation
 
