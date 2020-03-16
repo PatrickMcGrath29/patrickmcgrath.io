@@ -63,7 +63,7 @@ export default {
       },
       form_rules: {
         proposed_full_url: [
-          { required: true, message: 'Please enter a valid URL' }
+          { required: true, message: 'Please enter a valid URL', type: 'url' }
         ],
         proposed_alias: [
           { required: true, message: 'Please enter an alias' }
