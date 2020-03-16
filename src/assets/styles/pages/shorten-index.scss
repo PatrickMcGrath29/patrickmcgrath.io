@@ -1,6 +1,10 @@
 .shorten__wrapper {
   max-width: 800px;
   margin: auto;
+
+  .shorten__submit-button {
+    width: 100%;
+  }
 }
 
 .shorten__result-wrapper {

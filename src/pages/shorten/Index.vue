@@ -11,14 +11,14 @@
           <el-card>
             <el-form :model="form_fields" :rules="form_rules" ref="alias-form">
               <el-form-item label="A long URL" prop="proposed_full_url" type="url">
-                <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off"></el-input>
+                <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off" prefix-icon="el-icon-link"></el-input>
               </el-form-item>
               <el-form-item label="Alias" prop="proposed_alias">
-                <el-input v-model="form_fields.proposed_alias" autocomplete="off"></el-input>
+                <el-input v-model="form_fields.proposed_alias" autocomplete="off" prefix-icon="el-icon-key"></el-input>
               </el-form-item>
-                <el-form-item>
-                  <el-button @click="submitForm('alias-form')" :loading="pending">shorten</el-button>
-                </el-form-item>
+              <el-form-item>
+                <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
+              </el-form-item>
             </el-form>
           </el-card>
 
