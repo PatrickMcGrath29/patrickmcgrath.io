@@ -17,7 +17,7 @@
                 <el-input v-model="form_fields.proposed_alias" autocomplete="off"></el-input>
               </el-form-item>
                 <el-form-item>
-                  <el-button @click="submitForm('alias-form')">shorten</el-button>
+                  <el-button @click="submitForm('alias-form')" :loading="pending">shorten</el-button>
                 </el-form-item>
             </el-form>
           </el-card>
@@ -72,16 +72,18 @@ export default {
       secret_id: null,
       result_alias: null,
       error_message: null,
-      base_endpoint: 'https://urls.patrickmcgrath.io/'
+      pending: false,
+      base_endpoint: 'https://urls.patrickmcgrath.io/alias/'
     }
   },
   methods: {
     async requestAlias () {
+      this.pending = true
       let response = await axios.post(this.base_endpoint, {
         full_url: this.form_fields.proposed_full_url,
         alias: this.form_fields.proposed_alias
-      })
-
+      }, { timeout: 5000 })
+      this.pending = false
       if (response.data.errorMessage) {
         this.error_message = response.data.errorMessage
         this.result_alias = null

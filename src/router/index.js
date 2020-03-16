@@ -4,6 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -24,6 +25,11 @@ export default new Router({
       path: '/shorten',
       name: 'Shorten',
       component: () => import('@/pages/shorten/Index')
+    },
+    {
+      path: '/shorten/:alias',
+      name: 'Shorten Redirect',
+      component: () => import('@/pages/shorten/Redirect')
     },
     {
       path: '/404',
