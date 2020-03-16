@@ -20,7 +20,7 @@
         "content": [
           "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling automated daily updates of products that was previously updated every month",
           "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations",
-          "Build custom Apache NiFI processors in Java to improve automation and stability in our data flows",
+          "Build custom Apache NiFi processors in Java to improve automation and stability in our data flows",
           "Helped develop a dynamic css injection system for the flagship whitelabel Ruby on Rails application"
         ],
         "start_date": "July 2018",
