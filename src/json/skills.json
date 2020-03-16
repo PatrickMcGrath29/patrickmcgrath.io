@@ -18,16 +18,22 @@
           "name": "Front End Development"
         },
         {
-          "name": "Infrastructure Monitoring"
+          "name": "Algorithms & Efficient Programming"
         },
         {
-          "name": "Load Testing & Performance Monitoring"
+          "name": "Concurrency, Parallelization, Distributed Systems"
         },
         {
           "name": "REST API Methodologies"
         },
         {
           "name": "Networking, Load Balancing, Firewalls"
+        },
+        {
+          "name": "Infrastructure Management & Monitoring"
+        },
+        {
+          "name": "Load Testing & Performance Monitoring"
         }
       ]
     },
@@ -121,11 +127,11 @@
         },
         {
           "name": "PowerShell",
-          "proficiency": "3"
+          "proficiency": "2"
         },
         {
           "name": "Racket",
-          "proficiency": "3"
+          "proficiency": "2"
         },
         {
           "name": "JavaScript",
@@ -138,6 +144,10 @@
         {
           "name": "CSS / SCSS",
           "proficiency": "3"
+        },
+        {
+          "name": "C",
+          "proficiency": "1"
         }
       ]
     },
@@ -220,6 +230,10 @@
         },
         {
           "name": "Docker",
+          "proficiency": "2"
+        },
+        {
+          "name": "Docker Compose",
           "proficiency": "2"
         },
         {
