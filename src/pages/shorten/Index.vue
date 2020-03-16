@@ -74,7 +74,7 @@ export default {
       error_message: null,
       pending: false,
       api_endpoint: 'https://urls.patrickmcgrath.io/alias/',
-      local_address: `${window.location.host}/shorten/`
+      local_address: `${window.location.origin}/shorten/`
     }
   },
   methods: {
