@@ -78,22 +78,26 @@ export default {
     }
   },
   methods: {
-    async requestAlias () {
+    requestAlias () {
       this.pending = true
-      let response = await axios.post(this.api_endpoint, {
+      axios.post(this.api_endpoint, {
         full_url: this.form_fields.proposed_full_url,
         alias: this.form_fields.proposed_alias
-      }, { timeout: 5000 })
-      this.pending = false
-      if (response.data.errorMessage) {
-        this.error_message = response.data.errorMessage
-        this.result_alias = null
-        this.secret_id = null
-      } else {
-        this.error_message = null
-        this.result_alias = response.data.alias
-        this.secret_id = response.data.secret_id
-      }
+      }, { timeout: 5000 }).then(response => {
+        this.pending = false
+        if (response.data.errorMessage) {
+          this.error_message = response.data.errorMessage
+          this.result_alias = this.secret_id = null
+        } else {
+          this.result_alias = response.data.alias
+          this.secret_id = response.data.secret_id
+          this.error_message = null
+        }
+      }).catch(() => {
+        this.pending = false
+        this.error_message = 'Unable to create alias, no response received from server'
+        this.result_alias = this.secret_id = null
+      })
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
