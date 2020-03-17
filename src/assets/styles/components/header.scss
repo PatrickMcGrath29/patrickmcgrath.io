@@ -6,7 +6,7 @@ header {
   padding: 10px 20px;
   flex-wrap: wrap;
 
-  @include media-up($medium-screen) {
+  @include media-up($laptop-screen) {
     min-height: 70px;
     padding: 0px 60px;
   }
@@ -23,7 +23,7 @@ header {
   opacity: 1;
   transition: all 200ms ease-in-out;
 
-  @include media-down($medium-screen) {
+  @include media-down($laptop-screen) {
     width: 100%;
   }
 }
@@ -37,16 +37,16 @@ header {
 
   &.router-link-exact-active,
   &:hover {
-    @include media-down($medium-screen) {
+    @include media-down($laptop-screen) {
       border-left: $thicker-border;
     }
 
-    @include media-up($medium-screen) {
+    @include media-up($laptop-screen) {
       border-bottom: $thicker-border;
     }
   }
 
-  @include media-down($medium-screen) {
+  @include media-down($laptop-screen) {
     background-color: $medium-gray;
     display: block;
     padding: 15px 15px;
@@ -59,7 +59,7 @@ header {
 }
 
 .mobile-hidden {
-  @include media-down($medium-screen) {
+  @include media-down($laptop-screen) {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -71,7 +71,7 @@ header {
 .hamburger {
   display: none;
 
-  @include media-down($medium-screen) {
+  @include media-down($laptop-screen) {
     display: block;
     transition: margin 600ms;
     cursor: pointer;

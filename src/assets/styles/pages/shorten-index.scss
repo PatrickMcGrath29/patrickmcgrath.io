@@ -2,12 +2,12 @@
   max-width: 800px;
   margin: auto;
 
-  // button,
-  // input {
-  //   font-size: $base-font-size;
-  // }
+  .shorten__form {
+    margin: 20px 5px;
+  }
 
   .shorten__submit-button {
+    margin-top: 20px;
     width: 100%;
   }
 }

@@ -9,17 +9,20 @@
       <div class="container">
         <div class="shorten__wrapper">
           <el-card>
-            <el-form :model="form_fields" :rules="form_rules" ref="alias-form">
-              <el-form-item label="A long URL" prop="proposed_full_url" type="url">
-                <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off" prefix-icon="el-icon-link"></el-input>
+            <el-form :model="form_fields" :rules="form_rules" ref="alias-form" class="shorten__form">
+              <el-form-item prop="proposed_full_url" type="url">
+                <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off" prefix-icon="el-icon-link" placeholder="a long url"></el-input>
               </el-form-item>
-              <el-form-item label="Alias" prop="proposed_alias">
-                <el-input v-model="form_fields.proposed_alias" autocomplete="off" prefix-icon="el-icon-key"></el-input>
+              <el-form-item prop="proposed_alias">
+                <el-input v-model="form_fields.proposed_alias" autocomplete="off" prefix-icon="el-icon-key" placeholder="alias"></el-input>
               </el-form-item>
               <el-form-item>
                 <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
               </el-form-item>
             </el-form>
+            <div class="shorten__implementation-description">
+              <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a>, built with Nginx, Node.js, Docker, and MongoDB.</small>
+            </div>
           </el-card>
 
           <div class="shorten__result-wrapper" v-if="result_alias && secret_id">
@@ -78,22 +81,26 @@ export default {
     }
   },
   methods: {
-    async requestAlias () {
+    requestAlias () {
       this.pending = true
-      let response = await axios.post(this.api_endpoint, {
+      axios.post(this.api_endpoint, {
         full_url: this.form_fields.proposed_full_url,
         alias: this.form_fields.proposed_alias
-      }, { timeout: 5000 })
-      this.pending = false
-      if (response.data.errorMessage) {
-        this.error_message = response.data.errorMessage
-        this.result_alias = null
-        this.secret_id = null
-      } else {
-        this.error_message = null
-        this.result_alias = response.data.alias
-        this.secret_id = response.data.secret_id
-      }
+      }, { timeout: 5000 }).then(response => {
+        this.pending = false
+        if (response.data.errorMessage) {
+          this.error_message = response.data.errorMessage
+          this.result_alias = this.secret_id = null
+        } else {
+          this.result_alias = response.data.alias
+          this.secret_id = response.data.secret_id
+          this.error_message = null
+        }
+      }).catch(() => {
+        this.pending = false
+        this.error_message = 'Unable to create alias, no response received from server'
+        this.result_alias = this.secret_id = null
+      })
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
