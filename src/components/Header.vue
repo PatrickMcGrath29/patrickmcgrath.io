@@ -11,7 +11,7 @@
       <router-link v-bind:to="{ name: 'Projects' }" active-class="active" class="navbar-link">Projects</router-link>
       <router-link v-bind:to="{ name: 'Skills' }" active-class="active" class="navbar-link">Skills</router-link>
       <router-link v-bind:to="{ name: 'Shorten' }" active-class="active" class="navbar-link">Shorten URLs</router-link>
-      <a href="/static/Resume_McGrath_Patrick.pdf" class="navbar-link">Resume</a>
+      <a href="/static/Resume_McGrath_Patrick.pdf" class="navbar-link">Résumé</a>
     </nav>
   </header>
 </template>

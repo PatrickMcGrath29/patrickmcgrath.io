@@ -134,7 +134,7 @@
           "proficiency": "2"
         },
         {
-          "name": "JavaScript / NodeJS",
+          "name": "JavaScript / Node.js",
           "proficiency": "2"
         },
         {
@@ -196,11 +196,11 @@
       "group_name": "Frameworks",
       "terms": [
         {
-          "name": "VueJS",
+          "name": "Vue.js",
           "proficiency": "2"
         },
         {
-          "name": "NuxtJS / Universal Apps",
+          "name": "Nuxt.js / Universal Apps",
           "proficiency": "2"
         },
         {
