@@ -155,7 +155,7 @@
       "group_name": "Big Data & Analytics Tech",
       "terms": [
         {
-          "name": "MongoDB (Atlas, Cluster Optimization, Aggregations)",
+          "name": "MongoDB",
           "proficiency": "2"
         },
         {
@@ -221,8 +221,8 @@
           "proficiency": "3"
         },
         {
-          "name": "Bootstrap / ElementUI",
-          "proficiency": "2"
+          "name": "Bootstrap, Material UI, Element UI",
+          "proficiency": "3"
         },
         {
           "name": "Docker",
@@ -249,7 +249,7 @@
           "proficiency": "1"
         },
         {
-          "name": "Linux / Unix",
+          "name": "Linux, Unix, Command Line",
           "proficiency": "3"
         }
       ]
