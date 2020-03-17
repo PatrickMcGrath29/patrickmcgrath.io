@@ -6,10 +6,10 @@
         "heading": "DevOps Co-Op",
         "heading_subtitle": "FareLogix",
         "content": [
-          "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment, using SolarWinds with a suite of custom tooling build with PowerShell, Jenkins, Django, Vue.js, and Docker",
-          "Build a custom deployment pipeline to configure and manage application server monitoring across production blue-green deployments of immutable infrastructure, using Jenkins, Spinnaker, AWS, and PowerShell",
+          "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment, using SolarWinds with a suite of custom tooling built with PowerShell, Jenkins, Django, Vue.js, Docker, RDS, and EC2",
+          "Built a custom deployment pipeline to configure and manage application server monitoring across production blue-green deployments of immutable infrastructure, using Jenkins, Spinnaker, AWS, and PowerShell",
           "Built production multi availability-zone cloud environments with Spinnaker and Terraform using immutable infrastructure on AWS",
-          "Demonstrated new monitoring capabilities to airline clients by leading technical demos while gathering feedback to further optimize the new tooling",
+          "Demonstrated new monitoring capabilities to airline clients by leading technical demos, while gathering feedback to further optimize the new platform",
           "Assisted a major airline with a PSS (passenger service system) cutover, optimizing internal infrastructure and coordinating with external stakeholders to ensure performance and stability of the new environment"
         ],
         "start_date": "July 2019",
@@ -19,8 +19,9 @@
         "heading": "Data Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
-          "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling automated daily updates of products that was previously updated every month",
+          "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling daily updates of products that were previously updated every month",
           "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations",
+          "Cut the onboarding time of new partners in half by developing standardized components with config driven systems",
           "Build custom Apache NiFi processors in Java to improve automation and stability in our data flows",
           "Helped develop a dynamic css injection system for the flagship whitelabel Ruby on Rails application"
         ],
@@ -31,8 +32,8 @@
         "heading": "Full Stack Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
-          "Architected and implement the marketing analytics suite for Marriott Moments, collecting actionable data on over 3.64 million users and counting using Google Tag Manager, jQuery, and Mixpanel",
-          "Engineered countless new features across Marriott Moments as a lead member of the UI team, with scalability in mind (to handle 25,000 transactions p/m), and helped double the experiences conversion rate"
+          "Engineered countless new conversation related features on our customer facing Ruby on Rails application while performing thorough AB testing, helping to double our conversion rate",
+          "Built the marketing analytics suite on our platform using a hybrid of client-side and server-side tracking, collecting actionable data on millions of users using Google Tag Manager, jQuery, Mixpanel, and Ruby on Rails"
         ],
         "start_date": "June 2017",
         "end_date": "May 2018"

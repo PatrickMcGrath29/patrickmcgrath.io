@@ -20,6 +20,9 @@
                 <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
               </el-form-item>
             </el-form>
+            <div class="shorten__implementation-description">
+              <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a></small>
+            </div>
           </el-card>
 
           <div class="shorten__result-wrapper" v-if="result_alias && secret_id">
