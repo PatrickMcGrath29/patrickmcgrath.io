@@ -65,7 +65,7 @@ export default {
   components: {
     DefaultTemplate
   },
-  data: function () {
+  data: () => {
     return {
       projectList: ProjectJson
     }
