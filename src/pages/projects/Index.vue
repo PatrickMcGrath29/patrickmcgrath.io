@@ -38,6 +38,11 @@
                       </small>
                     </div>
                   </div>
+                  <div v-if="project.about" class="project-entry__about">
+                    <small> About </small>
+                    <br/>
+                    {{ project.about }}
+                  </div>
                   <ul v-if="project.content" class="project-entry__content">
                     <li v-for="(item, index) in project.content" v-bind:key="index">{{ item }}</li>
                   </ul>
