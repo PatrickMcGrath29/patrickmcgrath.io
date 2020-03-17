@@ -7,7 +7,7 @@
         "heading_subtitle": "FareLogix",
         "content": [
           "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment, using SolarWinds with a suite of custom tooling built with PowerShell, Jenkins, Django, Vue.js, Docker, RDS, and EC2",
-          "Built a custom deployment pipeline to configure and manage application server monitoring across production blue-green deployments of immutable infrastructure, using Jenkins, Spinnaker, AWS, and PowerShell",
+          "Built a custom deployment pipeline to configure application server monitoring across production blue-green deployments of immutable infrastructure, using Jenkins, Spinnaker, AWS, and PowerShell",
           "Built production multi availability-zone cloud environments with Spinnaker and Terraform using immutable infrastructure on AWS",
           "Demonstrated new monitoring capabilities to airline clients by leading technical demos, while gathering feedback to further optimize the new platform",
           "Assisted a major airline with a PSS (passenger service system) cutover, optimizing internal infrastructure and coordinating with external stakeholders to ensure performance and stability of the new environment"
@@ -63,7 +63,7 @@
     "title": "Outside the Office",
     "projects": [
       {
-        "heading": "Board Member",
+        "heading": "Board Member, Vice President",
         "heading_subtitle": "Victoria McGrath Foundation",
         "about": "The Victoria McGrath Foundation is a 501(c)(3) organization founded in 2018 with a goal of 'opening doors and uplifting lives'. Founded in memory of my sister Victoria, and motivated by her heart for serving others, it is a means to support worthy causes by providing them with resources and financial support.",
         "start_date": "April 2017",
