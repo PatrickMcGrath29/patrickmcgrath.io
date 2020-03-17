@@ -21,7 +21,7 @@
               </el-form-item>
             </el-form>
             <div class="shorten__implementation-description">
-              <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a></small>
+              <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a>, built with Nginx, Node.js, Docker, and MongoDB.</small>
             </div>
           </el-card>
 
