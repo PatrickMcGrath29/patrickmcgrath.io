@@ -134,7 +134,7 @@
           "proficiency": "2"
         },
         {
-          "name": "JavaScript",
+          "name": "JavaScript / NodeJS",
           "proficiency": "2"
         },
         {
@@ -205,10 +205,6 @@
         },
         {
           "name": "Ruby on Rails",
-          "proficiency": "2"
-        },
-        {
-          "name": "NodeJS",
           "proficiency": "2"
         },
         {
