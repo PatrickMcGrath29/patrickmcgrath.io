@@ -32,7 +32,7 @@
         "heading": "Full Stack Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
-          "Engineered countless new conversation related features on our customer facing Ruby on Rails application while performing thorough AB testing, helping to double our conversion rate",
+          "Engineered countless new features on our customer facing Ruby on Rails application while performing thorough AB testing, helping to double our conversion rate",
           "Built the marketing analytics suite on our platform using a hybrid of client-side and server-side tracking, collecting actionable data on millions of users using Google Tag Manager, jQuery, Mixpanel, and Ruby on Rails"
         ],
         "start_date": "June 2017",
