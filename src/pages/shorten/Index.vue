@@ -82,10 +82,9 @@ export default {
   methods: {
     requestAlias () {
       this.pending = true
-      ShortenUrlsService.create({
-        full_url: this.form_fields.proposed_full_url,
-        alias: this.form_fields.proposed_alias
-      }).then(response => {
+      ShortenUrlsService.create(
+        this.form_fields.proposed_alias,
+        this.form_fields.proposed_full_url).then(response => {
         this.pending = false
         if (response.data.errorMessage) {
           this.error_message = response.data.errorMessage
