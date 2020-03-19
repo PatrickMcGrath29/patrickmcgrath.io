@@ -148,6 +148,10 @@
         {
           "name": "C",
           "proficiency": "1"
+        },
+        {
+          "name": "Scala",
+          "proficiency": "1"
         }
       ]
     },
@@ -177,6 +181,10 @@
         {
           "name": "Hadoop MapReduce",
           "proficiency": "2"
+        },
+        {
+          "name": "Spark",
+          "proficiency": "1"
         },
         {
           "name": "Mixpanel",

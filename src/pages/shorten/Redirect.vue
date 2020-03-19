@@ -1,12 +1,11 @@
 <script>
 import { Loading } from 'element-ui'
-import axios from 'axios'
+import ShortenUrlsService from '@/services/shortenUrls.service'
 
 export default {
   name: 'shorten-redirect',
   data: () => {
     return {
-      base_endpoint: `https://urls.patrickmcgrath.io/alias`,
       loading_service: null
     }
   },
@@ -17,7 +16,7 @@ export default {
       spinner: 'el-icon-loading',
       background: 'rgba(0, 0, 0, 0.7)'
     })
-    axios.get(`${this.base_endpoint}/${this.$route.params.alias}`, { timeout: 5000 }).then(response => {
+    ShortenUrlsService.get(this.$route.params.alias).then(response => {
       if (response.data.errorMessage) {
         this.notifyAndClose()
       } else {

@@ -51,7 +51,7 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
-import axios from 'axios'
+import ShortenUrlsService from '@/services/shortenUrls.service'
 
 export default {
   name: 'shorten-index',
@@ -76,17 +76,15 @@ export default {
       result_alias: null,
       error_message: null,
       pending: false,
-      api_endpoint: 'https://urls.patrickmcgrath.io/alias/',
       local_address: `${window.location.origin}/shorten/`
     }
   },
   methods: {
     requestAlias () {
       this.pending = true
-      axios.post(this.api_endpoint, {
-        full_url: this.form_fields.proposed_full_url,
-        alias: this.form_fields.proposed_alias
-      }, { timeout: 5000 }).then(response => {
+      ShortenUrlsService.create(
+        this.form_fields.proposed_alias,
+        this.form_fields.proposed_full_url).then(response => {
         this.pending = false
         if (response.data.errorMessage) {
           this.error_message = response.data.errorMessage

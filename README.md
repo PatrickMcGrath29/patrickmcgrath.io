@@ -17,15 +17,13 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 
 ```
 brew install yarn
-```
 
-Clone Application
-
-```
 git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io.git
 ```
 
-Run Development Webserver
+Modify Environment Variables (`config/dev.env.js`, `config/prod.env.js`)
+
+### Run Development Webserver
 
 ```
 yarn start
