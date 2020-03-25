@@ -35,5 +35,11 @@
 
   .shorten__saved-aliases {
     display: flex;
+    flex-wrap: wrap;
+  }
+
+  .shorten__saved-aliases-disclaimer {
+    margin-top: 10px;
+    text-align: center;
   }
 }

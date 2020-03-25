@@ -1,6 +1,17 @@
 .alias-card {
   display: flex;
   margin: 10px;
+  flex: 1 calc(50% - 20px);
+  overflow: hidden;
+  white-space: nowrap;
+
+  @include media-down($medium-screen) {
+    flex-basis: 100%;
+  }
+
+  .el-card {
+    width: 100%;
+  }
 }
 
 .alias-card__content-group-header h3 {
@@ -10,9 +21,10 @@
 .alias-card__content-group {
   margin-top: 20px;
 
-  .alias-card__ful-url {
-    max-width: 300px;
-    overflow: scroll;
+  .alias-card-long-text {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .alias-card__buttons {

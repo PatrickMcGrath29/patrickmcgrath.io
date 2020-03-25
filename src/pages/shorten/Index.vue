@@ -51,10 +51,15 @@
               <AliasCard
                 v-for="(aliasData, index) in myAliases"
                 :key="index"
+                :pending="aliasData.pending"
                 :alias="aliasData.alias"
                 :fullUrl="aliasData.fullUrl"
                 :secretID="aliasData.secretID"
-                :localAddress="localAddress" />
+                :localAddress="localAddress"
+                v-on:delete="deleteAlias(aliasData.alias)" />
+            </div>
+            <div class="shorten__saved-aliases-disclaimer">
+              <small> Saved aliases do not transfer between devices. </small>
             </div>
           </div>
         </div>
@@ -117,13 +122,23 @@ export default {
       this.myAliases.push({
         fullUrl: response.data.full_url,
         alias: this.resultAlias,
-        secretID: this.secretID
+        secretID: this.secretID,
+        pending: false
       })
     },
     handleError (errorMessage) {
       this.pending = false
       this.errorMessage = errorMessage
       this.resultAlias = this.secretID = null
+    },
+    deleteAlias (aliasId) {
+      let newAliases = this.myAliases.map(a => {
+        if (a.alias === aliasId) {
+          a.pending = true
+        }
+        return a
+      })
+      this.myAliases = newAliases
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
@@ -142,6 +157,7 @@ export default {
   },
   watch: {
     myAliases (newAliases) {
+      console.log('Updating aliases')
       localStorage.myAliases = JSON.stringify(newAliases)
     }
   }
