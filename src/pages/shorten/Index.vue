@@ -9,12 +9,12 @@
       <div class="container">
         <div class="shorten__wrapper">
           <el-card>
-            <el-form :model="form_fields" :rules="form_rules" ref="alias-form" class="shorten__form">
-              <el-form-item prop="proposed_full_url" type="url">
-                <el-input type="url" v-model="form_fields.proposed_full_url" autocomplete="off" prefix-icon="el-icon-link" placeholder="a long url"></el-input>
+            <el-form :model="formFields" :rules="form_rules" ref="alias-form" class="shorten__form">
+              <el-form-item prop="proposedFullUrl" type="url">
+                <el-input type="url" v-model="formFields.proposedFullUrl" autocomplete="off" prefix-icon="el-icon-link" placeholder="a long url"></el-input>
               </el-form-item>
-              <el-form-item prop="proposed_alias">
-                <el-input v-model="form_fields.proposed_alias" autocomplete="off" prefix-icon="el-icon-key" placeholder="alias"></el-input>
+              <el-form-item prop="proposedAlias">
+                <el-input v-model="formFields.proposedAlias" autocomplete="off" prefix-icon="el-icon-key" placeholder="alias"></el-input>
               </el-form-item>
               <el-form-item>
                 <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
@@ -25,23 +25,31 @@
             </div>
           </el-card>
 
-          <div class="shorten__result-wrapper" v-if="result_alias && secret_id">
+          <div class="shorten__result-wrapper" v-if="resultAlias && secretID">
             <el-card>
               <h5 class="shorten__result-subtitle">Shortened URL</h5>
-              <a v-bind:href="local_address + result_alias">
+              <a v-bind:href="local_address + resultAlias">
                 <h3 id="shortened-url" class="shorten__result-primary">
-                  {{ local_address + result_alias }}
+                  {{ local_address + resultAlias }}
                 </h3>
               </a>
               <h5 class="shorten__result-subtitle">Secret ID</h5>
-              <h4 class="shorten__result-primary">{{ secret_id }}</h4>
+              <h4 class="shorten__result-primary">{{ secretID }}</h4>
             </el-card>
           </div>
-          <div class="shorten__result-wrapper" v-if="error_message">
+          <div class="shorten__result-wrapper" v-if="errorMessage">
             <el-card>
               <h5 class="shorten__result-subtitle">Error Message </h5>
-              <h3 class="shorten__result-primary"> {{ error_message}} </h3>
+              <h3 class="shorten__result-primary"> {{ errorMessage}} </h3>
             </el-card>
+          </div>
+          <div class="shorten__saved-aliases">
+            <AliasCard
+              v-for="(index, aliasData) in myAliases"
+              :key="index"
+              :alias="aliasData.alias"
+              :fullUrl="aliasData.fullUrl"
+              :secretID="aliasData.secretID"/>
           </div>
         </div>
       </div>
@@ -51,54 +59,65 @@
 
 <script>
 import DefaultTemplate from '@/templates/Default'
+import AliasCard from '@/components/AliasCard'
 import ShortenUrlsService from '@/services/shortenUrls.service'
 
 export default {
   name: 'shorten-index',
   components: {
-    DefaultTemplate
+    DefaultTemplate,
+    AliasCard
   },
   data: () => {
     return {
-      form_fields: {
-        proposed_full_url: null,
-        proposed_alias: null
+      formFields: {
+        proposedFullUrl: null,
+        proposedAlias: null
       },
       form_rules: {
-        proposed_full_url: [
+        proposedFullUrl: [
           { required: true, message: 'Please enter a valid URL', type: 'url' }
         ],
-        proposed_alias: [
+        proposedAlias: [
           { required: true, message: 'Please enter an alias' }
         ]
       },
-      secret_id: null,
-      result_alias: null,
-      error_message: null,
+      secretID: null,
+      resultAlias: null,
+      errorMessage: null,
       pending: false,
-      local_address: `${window.location.origin}/shorten/`
+      local_address: `${window.location.origin}/shorten/`,
+      myAliases: []
     }
   },
   methods: {
     requestAlias () {
       this.pending = true
       ShortenUrlsService.create(
-        this.form_fields.proposed_alias,
-        this.form_fields.proposed_full_url).then(response => {
-        this.pending = false
-        if (response.data.errorMessage) {
-          this.error_message = response.data.errorMessage
-          this.result_alias = this.secret_id = null
-        } else {
-          this.result_alias = response.data.alias
-          this.secret_id = response.data.secret_id
-          this.error_message = null
-        }
+        this.formFields.proposedAlias,
+        this.formFields.proposedFullUrl
+      ).then(response => {
+        response.data.errorMessage
+          ? this.handleError(response.data.errorMessage) : this.handleResponse(response)
       }).catch(() => {
-        this.pending = false
-        this.error_message = 'Unable to create alias, no response received from server'
-        this.result_alias = this.secret_id = null
+        this.handleError('Unable to create alias.')
       })
+    },
+    handleResponse (response) {
+      this.pending = false
+      this.resultAlias = response.data.alias
+      this.secretID = response.data.secret_id
+      this.errorMessage = null
+      this.myAliases.push({
+        fullUrl: response.data.full_url,
+        alias: this.resultAlias,
+        secretID: this.secretID
+      })
+    },
+    handleError (errorMessage) {
+      this.pending = false
+      this.errorMessage = errorMessage
+      this.resultAlias = this.secretID = null
     },
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
@@ -108,6 +127,16 @@ export default {
           return false
         }
       })
+    }
+  },
+  mounted () {
+    if (localStorage.myAliases) {
+      this.myAliases = JSON.parse(localStorage.myAliases)
+    }
+  },
+  watch: {
+    myAliases (newAliases) {
+      localStorage.myAliases = JSON.stringify(newAliases)
     }
   }
 }
