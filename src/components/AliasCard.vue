@@ -1,6 +1,6 @@
 <template>
   <div class="alias-card">
-    <el-card v-loading="pending">
+    <el-card>
       <div class="alias-card__content-group-header">
         <h3>
           {{ alias }}
@@ -12,7 +12,12 @@
         <div class="alias-card-long-text">{{ fullUrl }}</div>
         <div class="alias-card__buttons">
           <el-button @click="redirect" icon="el-icon-link"></el-button>
-          <el-button @click="$emit('delete')" type="danger" icon="el-icon-delete"></el-button>
+          <el-button
+            @click="$emit('delete')"
+            type="danger"
+            icon="el-icon-delete"
+            :loading="pending"
+          ></el-button>
         </div>
       </div>
     </el-card>

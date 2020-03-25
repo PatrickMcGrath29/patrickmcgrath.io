@@ -29,7 +29,8 @@ export default new Router({
     {
       path: '/shorten/:alias',
       name: 'Shorten Redirect',
-      component: () => import('@/pages/shorten/Redirect')
+      component: () => import('@/pages/shorten/Redirect'),
+      alias: '/s/:alias'
     },
     {
       path: '/404',
