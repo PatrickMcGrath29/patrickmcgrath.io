@@ -28,9 +28,9 @@
           <div class="shorten__result-wrapper" v-if="resultAlias && secretID">
             <el-card>
               <h5 class="shorten__result-subtitle">Shortened URL</h5>
-              <a v-bind:href="local_address + resultAlias">
+              <a v-bind:href="localAddress + resultAlias">
                 <h3 id="shortened-url" class="shorten__result-primary">
-                  {{ local_address + resultAlias }}
+                  {{ localAddress + resultAlias }}
                 </h3>
               </a>
               <h5 class="shorten__result-subtitle">Secret ID</h5>
@@ -43,13 +43,19 @@
               <h3 class="shorten__result-primary"> {{ errorMessage}} </h3>
             </el-card>
           </div>
-          <div class="shorten__saved-aliases">
-            <AliasCard
-              v-for="(index, aliasData) in myAliases"
-              :key="index"
-              :alias="aliasData.alias"
-              :fullUrl="aliasData.fullUrl"
-              :secretID="aliasData.secretID"/>
+          <div class="shorten__saved-aliases-wrapper" v-if="myAliases.length > 0">
+            <div class="primary-header center">
+              <h2> Saved Aliases </h2>
+            </div>
+            <div class="shorten__saved-aliases">
+              <AliasCard
+                v-for="(aliasData, index) in myAliases"
+                :key="index"
+                :alias="aliasData.alias"
+                :fullUrl="aliasData.fullUrl"
+                :secretID="aliasData.secretID"
+                :localAddress="localAddress" />
+            </div>
           </div>
         </div>
       </div>
@@ -86,7 +92,7 @@ export default {
       resultAlias: null,
       errorMessage: null,
       pending: false,
-      local_address: `${window.location.origin}/shorten/`,
+      localAddress: `${window.location.origin}/shorten/`,
       myAliases: []
     }
   },

@@ -1,0 +1,28 @@
+.alias-card {
+  display: flex;
+  margin: 10px;
+}
+
+.alias-card__content-group-header h3 {
+  margin: 0;
+}
+
+.alias-card__content-group {
+  margin-top: 20px;
+
+  .alias-card__ful-url {
+    max-width: 300px;
+    overflow: scroll;
+  }
+
+  .alias-card__buttons {
+    display: flex;
+    margin-top: 15px;
+    text-align: center;
+
+    button {
+      flex-grow: 1;
+      margin: 0 3px;
+    }
+  }
+}
