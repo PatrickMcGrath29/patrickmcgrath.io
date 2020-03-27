@@ -33,8 +33,6 @@
                   {{ localAddress + resultAlias }}
                 </h3>
               </a>
-              <h5 class="shorten__result-subtitle">Secret ID</h5>
-              <h4 class="shorten__result-primary">{{ secretID }}</h4>
             </el-card>
           </div>
           <div class="shorten__result-wrapper" v-if="errorMessage">

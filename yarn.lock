@@ -7038,6 +7038,11 @@ loglevel@^1.4.1:
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.7.tgz#b3e034233188c68b889f5b862415306f565e2c56"
   integrity sha512-cY2eLFrQSAfVPhCgH1s7JI73tMbg9YC3v3+ZHVW67sBS7UxWzNEk/ZBbSfLykBWHp33dqqtOv82gjhKEi81T/A==
 
+logrocket@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/logrocket/-/logrocket-1.0.7.tgz#fe17dbdfc861481cd274fbda533d552de7800a3a"
+  integrity sha512-v6HWEQIsyG+3FkldB7vIAgHh7/qpsiz2Br4bLK5SHBvjqRrHs/Fp+Jr8oiA2GYq0UurAtCu51U8SWft5+OCKtg==
+
 lolex@^1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/lolex/-/lolex-1.6.0.tgz#3a9a0283452a47d7439e72731b9e07d7386e49f6"
