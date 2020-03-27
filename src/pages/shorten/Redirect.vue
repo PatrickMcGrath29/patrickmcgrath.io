@@ -6,11 +6,11 @@ export default {
   name: 'shorten-redirect',
   data: () => {
     return {
-      loading_service: null
+      loadingService: null
     }
   },
   mounted () {
-    this.loading_service = Loading.service({
+    this.loadingService = Loading.service({
       lock: true,
       text: 'Redirecting',
       spinner: 'el-icon-loading',
@@ -28,11 +28,11 @@ export default {
   },
   methods: {
     notifyAndClose () {
-      this.loading_service.text = 'No Alias Found. Taking you back...'
-      this.loading_service.spinner = 'el-icon-error'
+      this.loadingService.text = 'No Alias Found. Taking you back...'
+      this.loadingService.spinner = 'el-icon-error'
 
       setTimeout(() => {
-        this.loading_service.close()
+        this.loadingService.close()
         this.$router.push('/shorten')
       }, 3000)
     }

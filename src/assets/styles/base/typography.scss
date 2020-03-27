@@ -23,7 +23,9 @@ h1 {
 .primary-header {
   display: flex;
 
-  h1 {
+  h1,
+  h2,
+  h3 {
     background: linear-gradient(120deg, $medium-gray, $yellow, $medium-gray);
     -webkit-background-clip: text;
     background-clip: text;

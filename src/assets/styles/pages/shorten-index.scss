@@ -29,3 +29,18 @@
     display: inherit;
   }
 }
+
+.shorten__saved-aliases-wrapper {
+  margin-top: 40px;
+
+  .shorten__saved-aliases {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .shorten__saved-aliases-disclaimer {
+    margin-top: 10px;
+    text-align: center;
+  }
+}
