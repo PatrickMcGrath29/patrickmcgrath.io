@@ -8,7 +8,7 @@
       </div>
       <div class="container">
         <div class="shorten__wrapper">
-          <h3> Generate a new Alias </h3>
+          <h3> Create a new alias </h3>
           <el-card>
             <el-form :model="formFields" :rules="form_rules" ref="alias-form" class="shorten__form">
               <el-form-item prop="proposedFullUrl" type="url">
@@ -43,7 +43,7 @@
             </el-card>
           </div>
           <div class="shorten__saved-aliases-wrapper" v-if="myAliases.length > 0">
-            <h3> Saved Aliases </h3>
+            <h3> Saved aliases </h3>
             <div class="shorten__saved-aliases">
               <AliasCard
                 v-for="(aliasData, index) in myAliases"
@@ -109,6 +109,7 @@ export default {
         response.data.errorMessage
           ? this.handleError(response.data.errorMessage) : this.handleResponse(response)
       }).catch(() => {
+        console.error('Error creating alias')
         this.handleError('Unable to create alias.')
       })
     },
@@ -134,19 +135,19 @@ export default {
     // Handle a delete operation on an alias
     deleteAlias (aliasId) {
       let selectedAlias
-      this.myAliases.map(a => {
+      this.myAliases.forEach(a => {
         if (a.alias === aliasId) {
           selectedAlias = a
         }
-        return a
       })
       if (selectedAlias) {
         selectedAlias.pending = true
         ShortenUrlsService.delete(aliasId, selectedAlias.secretID
         ).then(res => {
           this.myAliases = this.myAliases.filter(a => { return a !== selectedAlias })
-        }).catch((err) => {
-          console.log('Caught error ' + err)
+        }).catch(() => {
+          selectedAlias.pending = false
+          console.error('Error when deleting an alias')
         })
       }
     },
