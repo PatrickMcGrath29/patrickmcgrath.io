@@ -18,14 +18,18 @@
   margin: 0;
 }
 
+.alias-card__subtitle {
+  font-size: smaller;
+}
+
+.alias-card__long-text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .alias-card__content-group {
   margin-top: 20px;
-
-  .alias-card-long-text {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
 
   .alias-card__buttons {
     display: flex;
