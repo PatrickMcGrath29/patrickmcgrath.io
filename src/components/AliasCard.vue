@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     redirect () {
-      window.location.href = this.localAddress + this.alias
+      window.location.href = this.fullUrl
     }
   }
 }
