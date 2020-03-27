@@ -8,6 +8,7 @@
       </div>
       <div class="container">
         <div class="shorten__wrapper">
+          <h3> Generate a new Alias </h3>
           <el-card>
             <el-form :model="formFields" :rules="form_rules" ref="alias-form" class="shorten__form">
               <el-form-item prop="proposedFullUrl" type="url">
@@ -42,9 +43,7 @@
             </el-card>
           </div>
           <div class="shorten__saved-aliases-wrapper" v-if="myAliases.length > 0">
-            <div class="primary-header center">
-              <h2> Saved Aliases </h2>
-            </div>
+            <h3> Saved Aliases </h3>
             <div class="shorten__saved-aliases">
               <AliasCard
                 v-for="(aliasData, index) in myAliases"
@@ -100,6 +99,7 @@ export default {
     }
   },
   methods: {
+    // Use the ShortenUrlsService to request a new alias
     requestAlias () {
       this.pending = true
       ShortenUrlsService.create(
@@ -112,6 +112,7 @@ export default {
         this.handleError('Unable to create alias.')
       })
     },
+    // Handle a successful response when creating an alias
     handleResponse (response) {
       this.pending = false
       this.resultAlias = response.data.alias
@@ -124,20 +125,32 @@ export default {
         pending: false
       })
     },
+    // Handle an error received when requesting a new alias
     handleError (errorMessage) {
       this.pending = false
       this.errorMessage = errorMessage
       this.resultAlias = this.secretID = null
     },
+    // Handle a delete operation on an alias
     deleteAlias (aliasId) {
-      let newAliases = this.myAliases.map(a => {
+      let selectedAlias
+      this.myAliases.map(a => {
         if (a.alias === aliasId) {
-          a.pending = true
+          selectedAlias = a
         }
         return a
       })
-      this.myAliases = newAliases
+      if (selectedAlias) {
+        selectedAlias.pending = true
+        ShortenUrlsService.delete(aliasId, selectedAlias.secretID
+        ).then(res => {
+          this.myAliases = this.myAliases.filter(a => { return a !== selectedAlias })
+        }).catch((err) => {
+          console.log('Caught error ' + err)
+        })
+      }
     },
+    // Validation for the shorten url form
     submitForm (formName) {
       this.$refs[formName].validate((valid) => {
         if (valid) {
@@ -149,14 +162,18 @@ export default {
     }
   },
   mounted () {
+    // Load any saved aliases from localStorage
     if (localStorage.myAliases) {
       this.myAliases = JSON.parse(localStorage.myAliases)
     }
   },
   watch: {
-    myAliases (newAliases) {
-      console.log('Updating aliases')
-      localStorage.myAliases = JSON.stringify(newAliases)
+    // Update saved aliases in localStage whenever the local object is changed
+    myAliases: {
+      handler: (newAliases) => {
+        localStorage.myAliases = JSON.stringify(newAliases)
+      },
+      deep: true
     }
   }
 }
