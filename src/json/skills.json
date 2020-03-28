@@ -9,31 +9,28 @@
       "group_name": "Concepts",
       "terms": [
         {
-          "name": "Data Orchestration, ETLs, Data Engineering"
+          "name": "Data Engineering, Data Orchestration, ETLs"
         },
         {
           "name": "Analytics, AB Testing, Conversion Optimization"
         },
         {
-          "name": "Front End Development"
+          "name": "Single Page JS Apps & Tradeoffs"
         },
         {
-          "name": "Algorithms & Efficient Programming"
+          "name": "Algorithms, Efficient Programming, Runtime Analysis"
         },
         {
-          "name": "Concurrency, Parallelization, Distributed Systems"
+          "name": "Caching, Performance Optimization"
         },
         {
-          "name": "REST API Methodologies"
+          "name": "REST API Design / Methodologies"
         },
         {
-          "name": "Networking, Load Balancing, Firewalls"
+          "name": "Networking, DNS, Load Balancing, Firewalls"
         },
         {
-          "name": "Infrastructure Management & Monitoring"
-        },
-        {
-          "name": "Load Testing & Performance Monitoring"
+          "name": "Infrastructure Monitoring "
         }
       ]
     },
@@ -45,12 +42,12 @@
           "proficiency": "3"
         },
         {
-          "name": "AWS Auto Scaling",
+          "name": "Auto Scaling",
           "proficiency": "2"
         },
         {
           "name": "Application Load Balancers, Health Checks, Target Groups",
-          "proficiency": 3
+          "proficiency": "3"
         },
         {
           "name": "VPCs, Subnets",
@@ -237,6 +234,10 @@
           "proficiency": "2"
         },
         {
+          "name": "Spinnaker",
+          "proficiency": "2"
+        },
+        {
           "name": "Docker Compose",
           "proficiency": "2"
         },
@@ -250,7 +251,7 @@
         },
         {
           "name": "Webpack",
-          "proficiency": "2"
+          "proficiency": "1"
         },
         {
           "name": "Akamai Edge Networking",
