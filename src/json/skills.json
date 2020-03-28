@@ -12,6 +12,9 @@
           "name": "Data Engineering, Data Orchestration, ETLs"
         },
         {
+          "name": "Event Driven Architectures, Pub/Sub Messaging"
+        },
+        {
           "name": "Analytics, AB Testing, Conversion Optimization"
         },
         {
