@@ -230,15 +230,15 @@
           "proficiency": "3"
         },
         {
-          "name": "Docker",
+          "name": "Nginx & HAProxy",
+          "proficiency": "1"
+        },
+        {
+          "name": "Docker & Docker Compose",
           "proficiency": "2"
         },
         {
           "name": "Spinnaker",
-          "proficiency": "2"
-        },
-        {
-          "name": "Docker Compose",
           "proficiency": "2"
         },
         {
