@@ -19,10 +19,10 @@
         "heading": "Data Engineer, Co-Op",
         "heading_subtitle": "PlacePass",
         "content": [
-          "Architected and implemented the automation and deployment process for all product data using NiFi, ElasticSearch, MongoDB, Python, and Java, enabling daily updates of products that were previously updated every month",
+          "Architected and implemented the automated deployment process for all product data using rotating Elasticsearch indices, NiFi, MongoDB, and Python, enabling daily updates of products that were previously updated every month",
           "Worked with the Director of Engineering to design and build the structure for data ingestion of product data, using Apache NiFi for data orchestration, MongoDB for state management, and Python for data transformations",
           "Cut the data platform onboarding time of new partners in half by developing standardized config driven components",
-          "Built custom Apache NiFi processors in Java to improve automation and stability in our data flows",
+          "Built custom Apache NiFi processors in Java to improve automation and stability in our ETL data flows",
           "Helped develop a dynamic CSS injection system for the flagship whitelabel Ruby on Rails application"
         ],
         "start_date": "July 2018",
