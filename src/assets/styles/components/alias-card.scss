@@ -14,8 +14,14 @@
   }
 }
 
-.alias-card__content-group-header h3 {
-  margin: 0;
+.alias-card__title {
+  align-items: center;
+  display: flex;
+  margin: 0 0 10px 0;
+
+  img {
+    margin-right: 10px;
+  }
 }
 
 .alias-card__subtitle {
