@@ -49,7 +49,7 @@
             <div class="shorten__saved-aliases-empty" v-if="myAliases.length == 0">
               <i class="el-icon-place"></i>
               <h4> Oh no, it looks like you don't have any saved aliases. </h4>
-              <h5> Create one and it'll show up here.</h5>
+              <small>Create one and it'll show up here.</small>
             </div>
             <div class="shorten__saved-aliases" v-if="myAliases.length > 0">
               <AliasCard
