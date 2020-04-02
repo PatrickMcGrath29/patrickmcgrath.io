@@ -8,43 +8,50 @@
       </div>
       <div class="container">
         <div class="shorten__wrapper">
-          <h3> Create a new alias </h3>
-          <el-card>
-            <el-form :model="formFields" :rules="form_rules" ref="alias-form" class="shorten__form">
-              <el-form-item prop="proposedFullUrl" type="url">
-                <el-input type="url" v-model="formFields.proposedFullUrl" autocomplete="off" prefix-icon="el-icon-link" placeholder="a long url"></el-input>
-              </el-form-item>
-              <el-form-item prop="proposedAlias">
-                <el-input v-model="formFields.proposedAlias" autocomplete="off" prefix-icon="el-icon-key" placeholder="alias"></el-input>
-              </el-form-item>
-              <el-form-item>
-                <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
-              </el-form-item>
-            </el-form>
-            <div class="shorten__implementation-description">
-              <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a>, built with Nginx, Node.js, Docker, and MongoDB.</small>
-            </div>
-          </el-card>
+          <el-divider><h3 class="shorten__section-header"> Create A New Alias </h3></el-divider>
+          <div class="shorten__form-wrapper">
+            <el-card>
+              <el-form :model="formFields" :rules="form_rules" ref="alias-form" class="shorten__form">
+                <el-form-item prop="proposedFullUrl" type="url">
+                  <el-input type="url" v-model="formFields.proposedFullUrl" autocomplete="off" prefix-icon="el-icon-link" placeholder="a long url"></el-input>
+                </el-form-item>
+                <el-form-item prop="proposedAlias">
+                  <el-input v-model="formFields.proposedAlias" autocomplete="off" prefix-icon="el-icon-key" placeholder="alias"></el-input>
+                </el-form-item>
+                <el-form-item>
+                  <el-button type="info" @click="submitForm('alias-form')" :loading="pending" class="shorten__submit-button">shorten</el-button>
+                </el-form-item>
+              </el-form>
+              <div class="shorten__implementation-description">
+                <small> Powered by <a href="https://github.com/PatrickMcGrath29/stella">Stella</a>, built with Nginx, Node.js, Docker, and MongoDB.</small>
+              </div>
+            </el-card>
 
-          <div class="shorten__result-wrapper" v-if="resultAlias && secretID">
-            <el-card>
-              <h5 class="shorten__result-subtitle">Shortened URL</h5>
-              <a v-bind:href="localAddress + resultAlias">
-                <h3 id="shortened-url" class="shorten__result-primary">
-                  {{ localAddress + resultAlias }}
-                </h3>
-              </a>
-            </el-card>
+            <div class="shorten__result-wrapper" v-if="resultAlias && secretID">
+              <el-card>
+                <h5 class="shorten__result-subtitle">Shortened URL</h5>
+                <a v-bind:href="localAddress + resultAlias">
+                  <h3 id="shortened-url" class="shorten__result-primary">
+                    {{ localAddress + resultAlias }}
+                  </h3>
+                </a>
+              </el-card>
+            </div>
+            <div class="shorten__result-wrapper" v-if="errorMessage">
+              <el-card>
+                <h5 class="shorten__result-subtitle">Error Message </h5>
+                <h3 class="shorten__result-primary"> {{ errorMessage}} </h3>
+              </el-card>
+            </div>
           </div>
-          <div class="shorten__result-wrapper" v-if="errorMessage">
-            <el-card>
-              <h5 class="shorten__result-subtitle">Error Message </h5>
-              <h3 class="shorten__result-primary"> {{ errorMessage}} </h3>
-            </el-card>
-          </div>
-          <div class="shorten__saved-aliases-wrapper" v-if="myAliases.length > 0">
-            <h3> Saved aliases </h3>
-            <div class="shorten__saved-aliases">
+          <el-divider><h3 class="shorten__section-header"> Saved Aliases </h3></el-divider>
+          <div class="shorten__saved-aliases-wrapper">
+            <div class="shorten__saved-aliases-empty" v-if="myAliases.length == 0">
+              <i class="el-icon-place"></i>
+              <h4> Oh no, it looks like you don't have any saved aliases. </h4>
+              <small>Create one and it'll show up here.</small>
+            </div>
+            <div class="shorten__saved-aliases" v-if="myAliases.length > 0">
               <AliasCard
                 v-for="(aliasData, index) in myAliases"
                 :key="index"
@@ -166,6 +173,10 @@ export default {
     // Load any saved aliases from localStorage
     if (localStorage.myAliases) {
       this.myAliases = JSON.parse(localStorage.myAliases)
+    } else {
+      this.myAliases.push({
+        example: true
+      })
     }
   },
   watch: {
