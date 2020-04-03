@@ -39,7 +39,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new PrerenderSPAPlugin({
       staticDir: path.join(__dirname, '../dist/client'),
-      routes: ['/'],
+      routes: ['/', '/projects', '/skills', '/shorten', '/404'],
     }),
     new UglifyJsPlugin({
       uglifyOptions: {

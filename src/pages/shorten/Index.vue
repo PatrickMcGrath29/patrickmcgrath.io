@@ -173,10 +173,6 @@ export default {
     // Load any saved aliases from localStorage
     if (localStorage.myAliases) {
       this.myAliases = JSON.parse(localStorage.myAliases)
-    } else {
-      this.myAliases.push({
-        example: true
-      })
     }
   },
   watch: {
