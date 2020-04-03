@@ -1,48 +1,71 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!-- HTML Meta Tags -->
+    <title>Patrick McGrath | Home</title>
+    <meta
+      name="description"
+      content="Patrick McGrath's personal website and portfolio"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <!-- HTML Meta Tags -->
-  <title>Patrick McGrath - Home</title>
-  <meta name="description" content="Patrick McGrath's personal website and portfolio">
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="Patrick McGrath | Home" />
+    <meta
+      itemprop="description"
+      content="Patrick McGrath's personal website and portfolio"
+    />
 
-  <!-- Google / Search Engine Tags -->
-  <meta itemprop="name" content="Patrick McGrath - Home">
-  <meta itemprop="description" content="Patrick McGrath's personal website and portfolio">
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="http://patrickmcgrath.io" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Patrick McGrath | Home" />
+    <meta
+      property="og:description"
+      content="Patrick McGrath's personal website and portfolio"
+    />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="http://patrickmcgrath.io">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Patrick McGrath - Home">
-  <meta property="og:description" content="Patrick McGrath's personal website and portfolio">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Patrick McGrath | Home" />
+    <meta
+      name="twitter:description"
+      content="Patrick McGrath's personal website and portfolio"
+    />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Patrick McGrath - Home">
-  <meta name="twitter:description" content="Patrick McGrath's personal website and portfolio">
+    <!-- Favicon & Site Manifest -->
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
+    <link rel="manifest" href="static/manifest.json" />
 
-  <!-- Favicon & Site Manifest -->
-  <link rel="icon" type="image/x-icon" href="static/favicon.ico" />
-  <link rel="manifest" href="static/manifest.json" />
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js"
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MK9XB6N");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-MK9XB6N');</script>
-  <!-- End Google Tag Manager -->
-</head>
-
-<body>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MK9XB6N" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
-  <div id="app"></div>
-</body>
-
+  <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MK9XB6N"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"
+      ></iframe
+    ></noscript>
+    <div id="app"></div>
+  </body>
 </html>
