@@ -7,7 +7,8 @@
   }
 
   .el-divider__text {
-    background-color: $light-gray;
+    background-color: $background-color;
+    color: $text-color;
   }
 
   .shorten__form-wrapper {
