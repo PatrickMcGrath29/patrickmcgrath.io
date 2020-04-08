@@ -1,49 +1,22 @@
-# patrickmcgrath.io
+# patrickmcgrathio-nuxt
 
-This is the source code for my personal website. The codebase is written in VueJs, uses a prerender plugin that generates static HTML for the homepage to improve SEO, and deploys to Netlify. The content of the website describes various projects that I've worked on, lists different skills that I have acquired, and also has a UI for a [URL shortener that I built](https://github.com/PatrickMcGrath29/stella).
+> PatrickMcGrath.io, Nuxt.js style
 
-## Getting Started
+## Build Setup
 
-### Environments
+```bash
+# install dependencies
+$ yarn install
 
-Production - [patrickmcgrath.io](https://patrickmcgrath.io)
+# serve with hot reload at localhost:3000
+$ yarn dev
 
-### Prerequisites
+# build for production and launch server
+$ yarn build
+$ yarn start
 
-- [Yarn](https://yarnpkg.com/lang/en/)
-- NodeJS (I'm using v13.5)
-
-### Setup & Installation
-
-```
-brew install yarn
-
-git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io.git
+# generate static project
+$ yarn generate
 ```
 
-Modify Environment Variables (`config/dev.env.js`, `config/prod.env.js`)
-
-### Run Development Webserver
-
-```
-yarn start
-```
-
-## Deployment
-
-The master branch on the GitHub repository automatically deploys to production using Netlify's build and hosting services.
-
-At buildtime a prerendering plugin will generate static assets for most of the website in the `dist` directory, which enable better search engine indexing of the website while improving its performance on older browsers.
-
-## Built With
-
-- [Vue JS](https://vuejs.org/) - The web framework used
-- [Netlify](https://www.netlify.com/) - CI/CD, Hosting
-
-## Authors
-
-- [PatrickMcGrath29](https://github.com/PatrickMcGrath29)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
