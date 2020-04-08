@@ -1,0 +1,62 @@
+.project-section__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 10px;
+}
+
+.project-entry {
+  width: 100%;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &:not(:last-child) {
+    border-bottom: $thin-gray-border;
+    padding-bottom: 30px;
+  }
+
+  .project-entry__intro-headline {
+    margin: 0 0 20px 0;
+  }
+
+  .project-entry__intro-subtitle {
+    padding-bottom: 5px;
+  }
+
+  .project-entry__about {
+    margin: 10px 0px;
+  }
+
+  .project-entry__content {
+    margin: 20px 0 0 0;
+    list-style-type: square;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include media-down($medium-screen) {
+      padding-left: 20px;
+    }
+  }
+}
+
+// Overrides for Element UI
+#projects {
+  .el-tabs__header {
+    margin: 10px 0 25px 0;
+  }
+
+  .el-tabs__active-bar {
+    background-color: $yellow;
+  }
+
+  .el-tabs__item {
+    color: $text-color;
+    font-size: $small-font-size;
+    font-weight: $semibold-font-weight;
+  }
+}

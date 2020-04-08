@@ -1,0 +1,9 @@
+.form-row {
+  margin: 15px 0px;
+
+  &.full {
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+html {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  @media (max-width: $medium-screen - 1) {
+    font-size: 85%;
+  }
+}
+
+a {
+  color: $yellow;
+  text-decoration: none;
+}
+
+p {
+  font-size: $base-font-size;
+}
+
+h1 {
+  font-size: $xlll-font-size;
+}
+
+.primary-header {
+  display: flex;
+
+  h1,
+  h2,
+  h3 {
+    background: linear-gradient(120deg, $medium-gray, $yellow, $medium-gray);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+}
+
+.heading-bracket {
+  color: $yellow;
+
+  &.bracket-left {
+    padding-right: 8px;
+  }
+  &.bracket-right {
+    padding-left: 8px;
+  }
+}

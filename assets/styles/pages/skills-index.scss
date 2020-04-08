@@ -1,0 +1,60 @@
+.skills__group {
+  margin-bottom: 30px;
+
+  @include media-up($medium-screen) {
+    &.skills__group-key-wrapper {
+      display: inline-flex;
+
+      .skills__group-key {
+        display: flex;
+        align-items: center;
+      }
+
+      .skills__term-wrapper {
+        align-items: center;
+      }
+
+      .skills__group-header {
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  .skills__group-header {
+    margin-top: 0;
+  }
+
+  .skills__term-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .skills__term {
+      background-color: darken($white, 5%);
+      border: $thin-gray-border;
+      border-radius: $base-border-radius;
+      display: flex;
+      margin: 5px 7.5px;
+      position: relative;
+    }
+
+    .skills__term-content {
+      padding: 5px 10px;
+    }
+  }
+
+  .skills__proficiency-indicator {
+    width: 5px;
+    border-radius: 3px 0 0 3px;
+
+    &.Expert {
+      background-color: $green;
+    }
+    &.Proficient {
+      background-color: $yellow;
+    }
+    &.Comfortable {
+      background-color: $light-blue;
+      opacity: 0.5;
+    }
+  }
+}
