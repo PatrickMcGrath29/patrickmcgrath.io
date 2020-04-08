@@ -9,7 +9,7 @@
     </div>
     <div class="container">
       <el-card class="box-card">
-        <el-tabs stretch="true">
+        <el-tabs :stretch="true">
           <el-tab-pane
             v-for="(projectGroup, index) in projectList"
             :key="index"
