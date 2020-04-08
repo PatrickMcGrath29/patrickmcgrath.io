@@ -35,7 +35,9 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
     // Doc: https://github.com/nuxt-community/stylelint-module
-    '@nuxtjs/stylelint-module'
+    '@nuxtjs/stylelint-module',
+    // Doc: https://github.com/nuxt-community/gtm-module
+    '@nuxtjs/gtm'
   ],
   /*
    ** Nuxt.js modules
@@ -46,13 +48,27 @@ export default {
     '@nuxtjs/pwa',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
+    'nuxt-logrocket'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  /*
+   ** LogRocket Configuration
+   */
+  logRocket: {
+    logRocketId: process.env.LOGROCKET_ID,
+    devModeAllowed: false
+  },
+  /*
+   ** Google Tag Manager ID
+   */
+  gtm: {
+    id: 'GTM-MK9XB6N'
+  },
   /*
    ** Build configuration
    */
