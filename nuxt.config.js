@@ -21,6 +21,12 @@ export default {
    */
   loading: { color: '#fff' },
   /*
+   ** Environment Variables
+   */
+  env: {
+    baseUrl: process.env.BASE_URL || 'https://urls.patrickmcgrath.io'
+  },
+  /*
    ** Global CSS
    */
   css: ['element-ui/lib/theme-chalk/index.css', '@/assets/styles/styles.scss'],
