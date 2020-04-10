@@ -18,7 +18,7 @@
           </p>
         </div>
         <img
-          src="@/assets/images/patrickmcgrath.jpg"
+          src="@/static/patrickmcgrath.jpg"
           class="bio-image"
           alt="Patrick McGrath"
         />
@@ -100,6 +100,11 @@ export default {
   data: () => {
     return {
       projectList: ProjectJson
+    }
+  },
+  head() {
+    return {
+      title: 'Patrick McGrath | Home'
     }
   }
 }

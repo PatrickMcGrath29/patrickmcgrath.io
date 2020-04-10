@@ -73,6 +73,11 @@ export default {
     return {
       projectList: ProjectJson
     }
+  },
+  head() {
+    return {
+      title: 'Patrick McGrath | Projects'
+    }
   }
 }
 </script>

@@ -38,6 +38,11 @@ export default {
         this.$router.push('/shorten')
       }, 3000)
     }
+  },
+  head() {
+    return {
+      title: 'Redirecting...'
+    }
   }
 }
 </script>

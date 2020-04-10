@@ -7592,6 +7592,11 @@ nuxt-logrocket@^1.2.7:
     logrocket "^1.0.6"
     logrocket-vuex "^0.0.3"
 
+nuxt-social-meta@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/nuxt-social-meta/-/nuxt-social-meta-0.0.1.tgz#f31cfee523dbf10920936b9ed90d6ecfc0030892"
+  integrity sha512-Jo72poDZdRdKO66wyAuP/XRE5wKhLkYDOz8GWzX5+fcbz5Gfwyw3Jz8VPOweDHmxjwE0ijTOdIU92y9puR3zuQ==
+
 nuxt-svg-loader@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/nuxt-svg-loader/-/nuxt-svg-loader-1.2.0.tgz#1f2448d5170168b12c4275cd7774a79eee0132ae"

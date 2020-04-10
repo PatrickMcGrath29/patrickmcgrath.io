@@ -217,6 +217,11 @@ export default {
         }
       })
     }
+  },
+  head() {
+    return {
+      title: 'Patrick McGrath | Shorten Urls'
+    }
   }
 }
 </script>

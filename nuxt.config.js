@@ -4,14 +4,14 @@ export default {
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Patrick McGrath | Home',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: 'Patrick McGraths Personal Website'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -55,7 +55,18 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     'nuxt-svg-loader',
-    'nuxt-logrocket'
+    'nuxt-logrocket',
+    [
+      'nuxt-social-meta',
+      {
+        url: 'https://patrickmcgrath.io',
+        title: 'Patrick McGrath | Home',
+        description: 'Patrick McGraths Personal Website',
+        img: 'patrickmcgrath.jpg',
+        locale: 'en_US',
+        themeColor: '#ffb316'
+      }
+    ]
   ],
   /*
    ** Axios module configuration

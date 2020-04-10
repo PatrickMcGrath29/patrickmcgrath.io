@@ -73,6 +73,11 @@ export default {
       }
       return this.skillsJson
     }
+  },
+  head() {
+    return {
+      title: 'Patrick McGrath | Skills'
+    }
   }
 }
 </script>
