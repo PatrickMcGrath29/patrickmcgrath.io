@@ -24,14 +24,14 @@ Modify Environment Variables (`config/dev.env.js`, `config/prod.env.js`)
 ### Run Development Webserver
 
 ```
-yarn start
+yarn dev
 ```
 
 ## Deployment
 
 The master branch on the GitHub repository automatically deploys to production using Netlify's build and hosting services.
 
-At buildtime a prerendering plugin will generate static assets for most of the website in the `dist` directory, which enable better search engine indexing of the website while improving its performance on older browsers.
+I'm currently using `nuxt generate` to generate static prerendered files for all of the non-dynamic routes. A redirect rule is configured in the `netlify.toml` file to enable support for redirects back to the `index.html` on dynamic routes.
 
 ## Built With
 
