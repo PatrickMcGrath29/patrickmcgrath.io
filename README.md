@@ -19,7 +19,7 @@ brew install yarn
 git clone https://github.com/PatrickMcGrath29/patrickmcgrath.io.git
 ```
 
-Modify Environment Variables (`config/dev.env.js`, `config/prod.env.js`)
+Modify Environment Variables (`nuxt.config.js`)
 
 ### Run Development Webserver
 
