@@ -1,6 +1,6 @@
 [build]
-  command = "yarn build"
-  publish = "dist/client"
+  command = "yarn generate"
+  publish = "dist"
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -11,7 +11,7 @@ Production - [patrickmcgrath.io](https://patrickmcgrath.io)
 ### Prerequisites
 
 - [Yarn](https://yarnpkg.com/lang/en/)
-- NodeJS (I'm using v13.5)
+- Node.js (I'm using v13.5)
 
 ### Setup & Installation
 
@@ -37,7 +37,7 @@ At buildtime a prerendering plugin will generate static assets for most of the w
 
 ## Built With
 
-- [Vue JS](https://vuejs.org/) - The web framework used
+- [Nuxt.js](https://nuxtjs.org/) - The web framework used
 - [Netlify](https://www.netlify.com/) - CI/CD, Hosting
 
 ## Authors
