@@ -1,17 +1,15 @@
 # patrickmcgrath.io
 
-This is the source code for my personal website. The codebase is written in VueJs, uses a prerender plugin that generates static HTML for the homepage to improve SEO, and deploys to Netlify. The content of the website describes various projects that I've worked on, lists different skills that I have acquired, and also has a UI for a [URL shortener that I built](https://github.com/PatrickMcGrath29/stella).
+This is the source code for my personal website. The codebase is written with Vue.js and Nuxt.js, and deploys to Netlify. The content of the website describes various projects that I've worked on, lists different skills that I have acquired, and also has a UI for a [URL shortener that I built](https://github.com/PatrickMcGrath29/stella).
 
 ## Getting Started
 
-### Environments
-
-Production - [patrickmcgrath.io](https://patrickmcgrath.io)
+[https://patrickmcgrath.io](https://patrickmcgrath.io)
 
 ### Prerequisites
 
 - [Yarn](https://yarnpkg.com/lang/en/)
-- Node.js (I'm using v13.5)
+- [Node.js](https://nodejs.org/en/)
 
 ### Setup & Installation
 
