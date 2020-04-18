@@ -3,7 +3,7 @@
     "title": "Work Experience",
     "projects": [
       {
-        "heading": "DevOps Co-Op",
+        "heading": "DevOps Engineer, Co-Op",
         "heading_subtitle": "FareLogix",
         "content": [
           "Led the architecture and implementation of the infrastructure monitoring tooling for the organization, monitoring 1,000+ servers, switches, and load balancers across a hybrid multi-cloud environment, using SolarWinds with a suite of custom tooling built with PowerShell, Jenkins, Django, Vue.js, Docker, RDS, and EC2",
