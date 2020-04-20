@@ -3,6 +3,11 @@
     <Header />
     <nuxt />
     <Footer />
+    <script
+      async
+      type="text/javascript"
+      src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=UJPuhs"
+    ></script>
   </main>
 </template>
 <script>
