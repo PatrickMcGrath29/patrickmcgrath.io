@@ -36,6 +36,13 @@ export default {
       mobileHidden: true
     }
   },
+  watch: {
+    $route() {
+      setTimeout(() => {
+        this.mobileHidden = true
+      }, 150)
+    }
+  },
   methods: {
     toggleMobileNav() {
       this.mobileHidden = !this.mobileHidden

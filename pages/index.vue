@@ -7,9 +7,9 @@
       <div class="bio-and-image">
         <div class="bio">
           <p>
-            I am a student at Northeastern University pursuing a Bachelor of
-            Science in Computer Science. I'm an engineer at heart driven by a
-            desire to impact peoples lives through innovative problem solving.
+            I'm an engineer at heart driven by a desire to impact peoples lives
+            through innovative problem solving. I'm currently working as a
+            software engineer at Klaviyo.
           </p>
           <p>
             In my spare time you'll find me swing dancing, hiking or skiing the

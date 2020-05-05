@@ -3,6 +3,12 @@
     "title": "Work Experience",
     "projects": [
       {
+        "heading": "Software Engineer",
+        "heading_subtitle": "Klaviyo",
+        "start_date": "May 2020",
+        "end_date": "Present"
+      },
+      {
         "heading": "DevOps Engineer, Co-Op",
         "heading_subtitle": "FareLogix",
         "content": [
