@@ -62,6 +62,7 @@ export default {
         url: 'https://patrickmcgrath.io',
         title: 'Patrick McGrath | Home',
         description: 'Patrick McGraths Personal Website',
+        site_name: 'Patrick McGrath',
         img: '/patrickmcgrath.jpg',
         locale: 'en_US',
         themeColor: '#ffb316'
