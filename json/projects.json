@@ -84,7 +84,9 @@
       },
       {
         "heading": "President",
-        "heading_subtitle": "Cru / Agape Christian Fellowship, Northeastern"
+        "heading_subtitle": "Cru / Agape Christian Fellowship, Northeastern",
+        "start_date": "June, 2019",
+        "end_date": "June, 2020"
       },
       {
         "heading": "Eagle Scout",
@@ -92,10 +94,6 @@
         "content": [
           "Spearheaded an Eagle Scout project designing and carrying out a renovation project with the help of fellow Scouts for the Weston Historical Society, fulfilling a 100+ hour of community service requirement in order to achieve the Eagle Scout rank"
         ]
-      },
-      {
-        "heading": "Former President",
-        "heading_subtitle": "Association of Computing Machinery, Northeastern"
       }
     ]
   }
