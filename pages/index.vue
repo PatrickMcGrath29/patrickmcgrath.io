@@ -26,14 +26,14 @@
     </div>
     <div class="content-section project-intro__wrapper">
       <div
-        v-for="(projectGrouping, index) in projectList"
-        :key="index"
+        v-for="(projectGrouping, listIndex) in projectList"
+        :key="listIndex"
         class="project-intro"
       >
         <h2>{{ projectGrouping.title }}</h2>
         <div
-          v-for="(project, index) in projectGrouping.projects"
-          :key="index"
+          v-for="(project, entryIndex) in projectGrouping.projects"
+          :key="entryIndex"
           class="project-intro__entry"
         >
           <div class="project-intro__entry-inner">

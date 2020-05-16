@@ -12,8 +12,8 @@
             <h3 class="skills__group-header">Key</h3>
             <div class="skills__term-wrapper">
               <div
-                v-for="(skill, index) in skillsJson.proficiency_key"
-                :key="index"
+                v-for="(skill, proficiencyIndex) in skillsJson.proficiency_key"
+                :key="proficiencyIndex"
                 class="skills__term"
               >
                 <div class="skills__proficiency-indicator" :class="skill"></div>
@@ -23,15 +23,15 @@
           </div>
         </el-card>
         <el-card
-          v-for="(skill_group, index) in sortedSkills.data"
-          :key="index"
+          v-for="(skill_group, skillGroupIndex) in sortedSkills.data"
+          :key="skillGroupIndex"
           class="skills__group"
         >
           <h3 class="skills__group-header">{{ skill_group.group_name }}</h3>
           <div v-if="skill_group.terms" class="skills__term-wrapper">
             <div
-              v-for="(skill, index) in skill_group.terms"
-              :key="index"
+              v-for="(skill, skillTermIndex) in skill_group.terms"
+              :key="skillTermIndex"
               class="skills__term"
             >
               <div

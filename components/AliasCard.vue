@@ -34,11 +34,26 @@
 export default {
   name: 'AliasCard',
   props: {
-    secretID: String,
-    fullUrl: String,
-    alias: String,
-    localAddress: String,
-    pending: Boolean
+    secretID: {
+      type: String,
+      default: null
+    },
+    fullUrl: {
+      type: String,
+      default: null
+    },
+    alias: {
+      type: String,
+      default: null
+    },
+    localAddress: {
+      type: String,
+      default: null
+    },
+    pending: {
+      type: Boolean,
+      default: false
+    }
   },
   methods: {
     redirect() {

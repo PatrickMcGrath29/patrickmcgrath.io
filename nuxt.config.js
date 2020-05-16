@@ -88,6 +88,14 @@ export default {
     id: 'GTM-MK9XB6N'
   },
   /*
+   ** Progresisve Web App Configuration
+   */
+  pwa: {
+    manifest: {
+      name: 'Patrick McGrath'
+    }
+  },
+  /*
    ** Build configuration
    */
   build: {

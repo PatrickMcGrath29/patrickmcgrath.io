@@ -11,14 +11,14 @@
       <el-card class="box-card">
         <el-tabs :stretch="true">
           <el-tab-pane
-            v-for="(projectGroup, index) in projectList"
-            :key="index"
+            v-for="(projectGroup, listIndex) in projectList"
+            :key="listIndex"
             :label="projectGroup.title"
           >
             <div class="project-section__wrapper">
               <div
-                v-for="(project, index) in projectGroup.projects"
-                :key="index"
+                v-for="(project, entryIndex) in projectGroup.projects"
+                :key="entryIndex"
                 class="project-entry"
                 :name="index"
               >
