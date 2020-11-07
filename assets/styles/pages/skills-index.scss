@@ -46,13 +46,13 @@
     width: 5px;
     border-radius: 3px 0 0 3px;
 
-    &.Expert {
+    &.proficiency_key_3 {
       background-color: $green;
     }
-    &.Proficient {
+    &.proficiency_key_2 {
       background-color: $yellow;
     }
-    &.Comfortable {
+    &.proficiency_key_1 {
       background-color: $light-blue;
       opacity: 0.5;
     }

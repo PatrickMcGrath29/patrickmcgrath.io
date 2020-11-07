@@ -55,13 +55,6 @@
       </div>
     </div>
     <div class="content-section">
-      <div class="primary-header">
-        <h1>Say Hi</h1>
-      </div>
-      <p>
-        If you'd like to get in contact with me, drop me a line at the email
-        address below.
-      </p>
       <div class="social-icon__set">
         <a
           class="social-icon__icon green"

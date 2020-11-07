@@ -1,5 +1,10 @@
 <template>
   <main>
+    <script
+      async
+      type="text/javascript"
+      src="//static.klaviyo.com/onsite/js/klaviyo.js?company_id=89ye2u"
+    ></script>
     <Header />
     <nuxt />
     <Footer />

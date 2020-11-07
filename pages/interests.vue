@@ -3,7 +3,7 @@
     <div class="container">
       <div class="primary-header center">
         <h1>
-          Skills
+          Areas of Interest
         </h1>
       </div>
       <div class="skills__wrapper">
@@ -12,18 +12,22 @@
             <h3 class="skills__group-header">Key</h3>
             <div class="skills__term-wrapper">
               <div
-                v-for="(skill, proficiencyIndex) in skillsJson.proficiency_key"
-                :key="proficiencyIndex"
+                v-for="(rating,
+                proficiencyIndex) in interestsJson.proficiency_key"
+                :key="rating"
                 class="skills__term"
               >
-                <div class="skills__proficiency-indicator" :class="skill"></div>
-                <div class="skills__term-content">{{ skill }}</div>
+                <div
+                  class="skills__proficiency-indicator"
+                  :class="'proficiency_key_' + proficiencyIndex"
+                ></div>
+                <div class="skills__term-content">{{ rating }}</div>
               </div>
             </div>
           </div>
         </el-card>
         <el-card
-          v-for="(skill_group, skillGroupIndex) in sortedSkills.data"
+          v-for="(skill_group, skillGroupIndex) in sortedInterests.data"
           :key="skillGroupIndex"
           class="skills__group"
         >
@@ -37,7 +41,7 @@
               <div
                 v-if="'proficiency' in skill"
                 class="skills__proficiency-indicator"
-                :class="skillsJson.proficiency_key[skill.proficiency]"
+                :class="'proficiency_key_' + skill.proficiency"
               ></div>
               <div class="skills__term-content">{{ skill.name }}</div>
             </div>
@@ -49,19 +53,19 @@
 </template>
 
 <script>
-import SkillsJson from '@/json/skills.json'
+import interestsJson from '@/json/interests.json'
 
 export default {
   name: 'Skills',
   data: () => {
     return {
-      skillsJson: SkillsJson
+      interestsJson
     }
   },
   computed: {
-    sortedSkills() {
-      if (this.skillsJson.data) {
-        this.skillsJson.data.map((group) => {
+    sortedInterests() {
+      if (this.interestsJson.data) {
+        this.interestsJson.data.map((group) => {
           group.terms.sort((a, b) => {
             if ('proficiency' in a && 'proficiency' in b) {
               return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1
@@ -71,12 +75,12 @@ export default {
           })
         })
       }
-      return this.skillsJson
+      return this.interestsJson
     }
   },
   head() {
     return {
-      title: 'Patrick McGrath | Skills'
+      title: 'Patrick McGrath | Areas of Interest'
     }
   }
 }

@@ -17,12 +17,12 @@
       <NLink to="/projects" class="navbar-link">
         Projects
       </NLink>
-      <NLink to="/skills" class="navbar-link">
-        Skills
+      <NLink to="/interests" class="navbar-link">
+        Interests
       </NLink>
-      <NLink to="/shorten" class="navbar-link">
+      <!-- <NLink to="/shorten" class="navbar-link">
         Shorten Urls
-      </NLink>
+      </NLink> -->
       <a href="/Resume_McGrath_Patrick.pdf" class="navbar-link">Résumé</a>
     </nav>
   </header>
