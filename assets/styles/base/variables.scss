@@ -1,4 +1,4 @@
-$base-font-family: "Avenir", Helvetica, Arial, sans-serif;
+$base-font-family: 'Avenir', Helvetica, Arial, sans-serif;
 
 // Colors
 $green: #16a085;
@@ -9,8 +9,9 @@ $light-blue: #6bbde0;
 $dark-navy: #114054;
 $light-gray: #f3f6f8;
 $medium-gray: #4c5454;
+$background-gray: #1e2021;
 $dark-gray: #1f2323;
-$text-color: $dark-gray;
+$text-color: $white;
 
 $action-color: $light-gray;
 $action-color-hover: $medium-gray;
@@ -37,9 +38,9 @@ $base-border-radius: 4px;
 
 $base-border: $base-border-color 2px solid;
 $thicker-border: $base-border-color 3px solid;
-$thin-gray-border: #dbdbdb 1px solid;
-$thin-border: $medium-gray 1px solid;
-$side-border: $dark-gray 3px solid;
+$light-gray-border: $medium-gray 1px solid;
+$thick-dark-gray-border: $dark-gray 2px solid;
+$side-border: $light-gray 3px solid;
 //Shadows
 $base-box-shadow: 0 14px 26px -12px rgba(0, 0, 0, 0.42),
   0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.02);

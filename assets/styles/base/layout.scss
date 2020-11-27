@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: $light-gray;
+  background-color: $background-gray;
   margin: 0;
 }
 
@@ -21,4 +21,10 @@ body {
 
 .form-group-submit {
   text-align: center;
+}
+
+.el-card {
+  background-color: $medium-gray !important;
+  border-color: $dark-gray;
+  color: $text-color;
 }

@@ -29,8 +29,8 @@
     flex-wrap: wrap;
 
     .skills__term {
-      background-color: darken($white, 5%);
-      border: $thin-gray-border;
+      background-color: $dark-gray;
+      border: $light-gray-border;
       border-radius: $base-border-radius;
       display: flex;
       margin: 5px 7.5px;
