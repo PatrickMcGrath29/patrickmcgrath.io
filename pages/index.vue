@@ -56,17 +56,14 @@
     </div>
     <div class="content-section">
       <div class="social-icon__set">
-        <a
-          class="social-icon__icon green"
-          href="mailto:hello@patrickmcgrath.io"
-        >
+        <a class="social-icon__icon" href="mailto:hello@patrickmcgrath.io">
           <EmailIcon class="social-svg" />
         </a>
         <a class="social-icon__icon" href="https://github.com/PatrickMcGrath29">
           <GithubIcon class="social-svg" />
         </a>
         <a
-          class="social-icon__icon blue"
+          class="social-icon__icon"
           href="https://www.linkedin.com/in/patrickrmcgrath/"
         >
           <LinkedInIcon class="social-svg" />
