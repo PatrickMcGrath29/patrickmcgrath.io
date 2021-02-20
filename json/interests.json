@@ -156,7 +156,7 @@
       ]
     },
     {
-      "group_name": "Big Data & Analytics Tech",
+      "group_name": "Data & Analytics Tech",
       "terms": [
         {
           "name": "MongoDB",
@@ -175,8 +175,8 @@
           "proficiency": "2"
         },
         {
-          "name": "SQL",
-          "proficiency": "2"
+          "name": "MySQL",
+          "proficiency": "3"
         },
         {
           "name": "Hadoop MapReduce",
@@ -217,7 +217,7 @@
         },
         {
           "name": "Django",
-          "proficiency": "2"
+          "proficiency": "3"
         },
         {
           "name": "React",
@@ -228,6 +228,14 @@
     {
       "group_name": "Tools",
       "terms": [
+        {
+          "name": "RabbitMQ",
+          "proficiency": "1"
+        },
+        {
+          "name": "Celery",
+          "proficiency": "2"
+        }
         {
           "name": "SolarWinds (SAM & NPM)",
           "proficiency": "3"
