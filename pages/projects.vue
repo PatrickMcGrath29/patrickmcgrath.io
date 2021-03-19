@@ -8,20 +8,20 @@
       </div>
     </div>
     <div class="container">
-      <el-card class="box-card">
-        <el-tabs :stretch="true">
-          <el-tab-pane
-            v-for="(projectGroup, listIndex) in projectList"
-            :key="listIndex"
-            :label="projectGroup.title"
-          >
-            <div class="project-section__wrapper">
-              <div
-                v-for="(project, entryIndex) in projectGroup.projects"
-                :key="entryIndex"
-                class="project-entry"
-                :name="index"
-              >
+      <el-tabs :stretch="true">
+        <el-tab-pane
+          v-for="(projectGroup, listIndex) in projectList"
+          :key="listIndex"
+          :label="projectGroup.title"
+        >
+          <div class="project-section__wrapper">
+            <div
+              v-for="(project, entryIndex) in projectGroup.projects"
+              :key="entryIndex"
+              class="project-entry"
+              :name="index"
+            >
+              <el-card>
                 <div class="project-entry__intro">
                   <h4 class="project-entry__intro-headline">
                     {{ project.heading }}
@@ -55,11 +55,11 @@
                     {{ item }}
                   </li>
                 </ul>
-              </div>
+              </el-card>
             </div>
-          </el-tab-pane>
-        </el-tabs>
-      </el-card>
+          </div>
+        </el-tab-pane>
+      </el-tabs>
     </div>
   </section>
 </template>

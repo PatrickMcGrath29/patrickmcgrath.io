@@ -12,7 +12,7 @@
   }
 
   &:not(:last-child) {
-    border-bottom: $thin-gray-border;
+    // border-bottom: $thin-gray-border;
     padding-bottom: 30px;
   }
 
@@ -47,16 +47,23 @@
 // Overrides for Element UI
 #projects {
   .el-tabs__header {
-    margin: 10px 0 25px 0;
+    margin: 10px 0 40px 0;
   }
 
   .el-tabs__active-bar {
     background-color: $yellow;
+    height: 4px;
   }
 
   .el-tabs__item {
     color: $text-color;
-    font-size: $small-font-size;
+    font-size: $base-font-size;
     font-weight: $semibold-font-weight;
+    margin-bottom: 10px;
+  }
+
+  .el-tabs__nav-wrap.is-top::after {
+    background-color: $light-gray;
+    height: 4px;
   }
 }
