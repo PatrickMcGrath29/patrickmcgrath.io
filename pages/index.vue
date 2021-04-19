@@ -74,11 +74,11 @@
 </template>
 
 <script>
-import EmailIcon from '~/assets/images/email.svg'
 import GithubIcon from '@/assets/images/github.svg'
 import LinkedInIcon from '@/assets/images/linkedin.svg'
 
 import ProjectJson from '@/json/projects.json'
+import EmailIcon from '~/assets/images/email.svg'
 
 export default {
   name: 'Index',
