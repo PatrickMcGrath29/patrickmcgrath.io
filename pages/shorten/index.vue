@@ -135,10 +135,15 @@ export default {
       myAliases: []
     }
   },
+  head() {
+    return {
+      title: 'Patrick McGrath | Shorten Urls'
+    }
+  },
   watch: {
     // Update saved aliases in localStage whenever the local object is changed
     myAliases: {
-      handler: (newAliases) => {
+      handler(newAliases) {
         localStorage.myAliases = JSON.stringify(newAliases)
       },
       deep: true
@@ -216,11 +221,6 @@ export default {
           return false
         }
       })
-    }
-  },
-  head() {
-    return {
-      title: 'Patrick McGrath | Shorten Urls'
     }
   }
 }

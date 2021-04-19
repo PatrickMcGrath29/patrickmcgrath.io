@@ -14,6 +14,11 @@ export default {
       loadingService: null
     }
   },
+  head() {
+    return {
+      title: 'Redirecting...'
+    }
+  },
   mounted() {
     this.loadingService = Loading.service({
       lock: true,
@@ -42,11 +47,6 @@ export default {
         this.loadingService.close()
         this.$router.push('/shorten')
       }, 3000)
-    }
-  },
-  head() {
-    return {
-      title: 'Redirecting...'
     }
   }
 }

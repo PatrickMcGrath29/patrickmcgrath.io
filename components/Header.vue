@@ -27,7 +27,7 @@ export default {
   name: 'Header',
   data() {
     return {
-      mobileHidden: true,
+      mobileHidden: true
     }
   },
   watch: {
@@ -35,12 +35,12 @@ export default {
       setTimeout(() => {
         this.mobileHidden = true
       }, 150)
-    },
+    }
   },
   methods: {
     toggleMobileNav() {
       this.mobileHidden = !this.mobileHidden
-    },
-  },
+    }
+  }
 }
 </script>

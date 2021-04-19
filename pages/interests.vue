@@ -62,11 +62,16 @@ export default {
       interestsJson
     }
   },
+  head() {
+    return {
+      title: 'Patrick McGrath | Areas of Interest'
+    }
+  },
   computed: {
     sortedInterests() {
       if (this.interestsJson.data) {
         this.interestsJson.data.map((group) => {
-          group.terms.sort((a, b) => {
+          return group.terms.sort((a, b) => {
             if ('proficiency' in a && 'proficiency' in b) {
               return parseInt(a.proficiency) > parseInt(b.proficiency) ? -1 : 1
             } else {
@@ -76,11 +81,6 @@ export default {
         })
       }
       return this.interestsJson
-    }
-  },
-  head() {
-    return {
-      title: 'Patrick McGrath | Areas of Interest'
     }
   }
 }
