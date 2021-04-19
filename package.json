@@ -21,6 +21,9 @@
       "pre-commit": "lint-staged"
     }
   },
+  "engines": {
+    "node": "^14.16.1"
+  },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
