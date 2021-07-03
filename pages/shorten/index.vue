@@ -50,8 +50,9 @@
             <div class="shorten__implementation-description">
               <small>
                 Powered by
-                <a href="https://github.com/PatrickMcGrath29/stella">Stella</a>,
-                built with Nginx, Node.js, Docker, and MongoDB.</small
+                <a href="https://github.com/PatrickMcGrath29/stella-serverless"
+                  >Stella Serverless</a
+                >, built with Flask, Serverless, MongoDB, and AWS.</small
               >
             </div>
           </el-card>
@@ -82,7 +83,7 @@
             class="shorten__saved-aliases-empty"
           >
             <i class="el-icon-place"></i>
-            <h4>Oh no, it looks like you don't have any saved aliases.</h4>
+            <h4>It looks like you don't have any saved aliases.</h4>
             <small>Create one and it'll show up here.</small>
           </div>
           <div v-if="myAliases.length > 0" class="shorten__saved-aliases">
