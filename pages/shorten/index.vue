@@ -57,12 +57,12 @@
             </div>
           </el-card>
 
-          <div v-if="resultName && secretKey" class="shorten__result-wrapper">
+          <div v-if="name && secretKey" class="shorten__result-wrapper">
             <el-card>
               <h5 class="shorten__result-subtitle">Shortened URL</h5>
-              <a :href="localAddress + resultName">
+              <a :href="localAddress + name">
                 <h3 id="shortened-url" class="shorten__result-primary">
-                  {{ localAddress + resultName }}
+                  {{ localAddress + name }}
                 </h3>
               </a>
             </el-card>
@@ -79,23 +79,26 @@
         >
         <div class="shorten__saved-aliases-wrapper">
           <div
-            v-if="myAliases.length == 0"
+            v-if="Object.keys(aliases).length === 0"
             class="shorten__saved-aliases-empty"
           >
             <i class="el-icon-place"></i>
             <h4>It looks like you don't have any saved aliases.</h4>
             <small>Create one and it'll show up here.</small>
           </div>
-          <div v-if="myAliases.length > 0" class="shorten__saved-aliases">
+          <div
+            v-if="Object.keys(aliases).length > 0"
+            class="shorten__saved-aliases"
+          >
             <AliasCard
-              v-for="(aliasData, index) in myAliases"
+              v-for="(alias, index) in Object.values(aliases)"
               :key="index"
-              :pending="aliasData.pending"
-              :name="aliasData.name"
-              :url="aliasData.url"
-              :secret-key="aliasData.secretKey"
+              :pending="alias.pending"
+              :name="alias.name"
+              :url="alias.url"
+              :secret-key="alias.secretKey"
               :local-address="localAddress"
-              @delete="deleteAlias(aliasData.name)"
+              @delete="deleteAlias(alias.name)"
             />
           </div>
           <div class="shorten__saved-aliases-disclaimer">
@@ -132,11 +135,11 @@ export default {
         proposedName: [{ required: true, message: 'Please enter an alias' }]
       },
       secretKey: null,
-      resultName: null,
+      name: null,
       errorMessage: null,
       pending: false,
       localAddress: null,
-      myAliases: []
+      aliases: {}
     }
   },
   head() {
@@ -145,18 +148,16 @@ export default {
     }
   },
   watch: {
-    // Update saved aliases in localStage whenever the local object is changed
-    myAliases: {
+    aliases: {
       handler(newAliases) {
-        localStorage.myAliases = JSON.stringify(newAliases)
-      },
-      deep: true
+        localStorage.aliases = JSON.stringify(newAliases)
+      }
     }
   },
   mounted() {
-    this.localAddress = `${window.location.origin}/shorten/` // Load any saved aliases from localStorage
-    if (localStorage.myAliases) {
-      this.myAliases = JSON.parse(localStorage.myAliases)
+    this.localAddress = `${window.location.origin}/shorten/`
+    if (localStorage.aliases) {
+      this.aliases = JSON.parse(localStorage.aliases)
     }
   },
   methods: {
@@ -168,24 +169,26 @@ export default {
         this.formFields.proposedURL
       )
         .then((response) => {
-          response.data.errorMessage
-            ? this.handleError(response.data.errorMessage)
-            : this.handleResponse(response)
+          response.status === 200
+            ? this.handleResponse(response)
+            : this.handleError(response.data.message)
         })
-        .catch(() => {
+        .catch((e) => {
           this.handleError('Unable to create alias.')
         })
     },
     // Handle a successful response when creating an alias
     handleResponse(response) {
+      const { name, url, secretKey } = response.data
       this.pending = false
-      this.resultName = response.data.name
-      this.secretKey = response.data.secret_id
+      this.name = name
+      this.secretKey = secretKey
       this.errorMessage = null
-      this.myAliases.push({
-        url: response.data.url,
-        name: this.resultName,
-        secret_key: this.secretKey,
+
+      this.$set(this.aliases, name, {
+        name,
+        url,
+        secretKey,
         pending: false
       })
     },
@@ -193,23 +196,19 @@ export default {
     handleError(errorMessage) {
       this.pending = false
       this.errorMessage = errorMessage
-      this.resultName = this.secretKey = null
+      this.name = this.secretKey = null
     },
     // Handle a delete operation on an alias
     deleteAlias(name) {
-      let selectedAlias
-      this.myAliases.forEach((a) => {
-        if (a.name === name) {
-          selectedAlias = a
-        }
-      })
-      if (selectedAlias) {
+      if (name in this.aliases) {
+        const selectedAlias = this.aliases[name]
         selectedAlias.pending = true
+
         ShortenUrlsService.delete(name, selectedAlias.secretKey)
           .then((res) => {
-            this.myAliases = this.myAliases.filter((a) => {
-              return a !== selectedAlias
-            })
+            if (res.status === 200) {
+              this.$delete(this.aliases, name)
+            }
           })
           .catch(() => {
             selectedAlias.pending = false

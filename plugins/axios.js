@@ -1,5 +1,8 @@
+import applyCaseMiddleware from 'axios-case-converter'
 import axios from 'axios'
 
-export default axios.create({
-  baseURL: process.env.baseUrl
-})
+export default applyCaseMiddleware(
+  axios.create({
+    baseURL: process.env.baseUrl
+  })
+)

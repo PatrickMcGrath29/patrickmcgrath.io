@@ -29,6 +29,7 @@
     "@nuxtjs/dotenv": "^1.4.0",
     "@nuxtjs/gtm": "^2.2.3",
     "@nuxtjs/pwa": "^3.0.0-0",
+    "axios-case-converter": "^0.8.1",
     "element-ui": "^2.4.11",
     "nuxt": "^2.0.0",
     "nuxt-logrocket": "^1.2.7",
