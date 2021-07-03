@@ -7,15 +7,15 @@
             :src="getOrigin() + '/favicon.ico'"
             onerror="this.style.display='none'"
           />
-          {{ alias }}
+          {{ name }}
         </h3>
         <div class="alias-card__long-text alias-card__subtitle">
-          {{ localAddress + alias }}
+          {{ localAddress + name }}
         </div>
       </div>
       <div class="alias-card__content-group">
         <small> goes to </small>
-        <div class="alias-card__long-text">{{ fullUrl }}</div>
+        <div class="alias-card__long-text">{{ url }}</div>
         <div class="alias-card__buttons">
           <el-button icon="el-icon-link" @click="redirect"></el-button>
           <el-button
@@ -34,15 +34,15 @@
 export default {
   name: 'AliasCard',
   props: {
-    secretID: {
+    secretKey: {
       type: String,
       default: null
     },
-    fullUrl: {
+    url: {
       type: String,
       default: null
     },
-    alias: {
+    name: {
       type: String,
       default: null
     },
@@ -57,11 +57,11 @@ export default {
   },
   methods: {
     redirect() {
-      window.location.href = this.fullUrl
+      window.location.href = this.url
     },
     getOrigin() {
       const tempAnchor = document.createElement('a')
-      tempAnchor.href = this.fullUrl
+      tempAnchor.href = this.url
       return tempAnchor.origin
     }
   }

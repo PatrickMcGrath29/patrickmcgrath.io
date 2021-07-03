@@ -1,26 +1,26 @@
 import axios from '@/plugins/axios'
 
-const RESOURCE_NAME = '/alias'
+const RESOURCE_NAME = 'alias'
 const DEFAULT_TIMEOUT = 5000
 
 export default {
-  create(alias, url) {
+  create(name, url) {
     return axios.post(
-      RESOURCE_NAME,
+      `${RESOURCE_NAME}/`,
       {
-        full_url: url,
-        alias
+        url,
+        name
       },
       { timeout: DEFAULT_TIMEOUT }
     )
   },
-  get(alias) {
-    return axios.get(`${RESOURCE_NAME}/${alias}`, { timeout: DEFAULT_TIMEOUT })
+  get(name) {
+    return axios.get(`${RESOURCE_NAME}/${name}`, { timeout: DEFAULT_TIMEOUT })
   },
-  delete(alias, secretId) {
-    return axios.delete(`${RESOURCE_NAME}/${alias}`, {
+  delete(name, secretId) {
+    return axios.delete(`${RESOURCE_NAME}/${name}/`, {
       params: {
-        secret_id: secretId
+        secret_key: secretId
       },
       timeout: DEFAULT_TIMEOUT
     })

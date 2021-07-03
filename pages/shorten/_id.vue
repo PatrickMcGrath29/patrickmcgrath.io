@@ -31,7 +31,7 @@ export default {
         if (response.data.errorMessage) {
           this.notifyAndClose()
         } else {
-          window.location.href = response.data.full_url
+          window.location.href = response.data.url
         }
       })
       .catch(() => {
