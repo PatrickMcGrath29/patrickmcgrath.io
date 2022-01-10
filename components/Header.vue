@@ -17,7 +17,6 @@
       <NLink to="/shorten" class="navbar-link">
         Shorten Urls
       </NLink>
-      <a href="/Resume_McGrath_Patrick.pdf" class="navbar-link">Résumé</a>
     </nav>
   </header>
 </template>

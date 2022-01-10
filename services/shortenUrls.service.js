@@ -17,11 +17,11 @@ export default {
   get(name) {
     return axios.get(`${RESOURCE_NAME}/${name}`, { timeout: DEFAULT_TIMEOUT })
   },
-  delete(name, secretId) {
+  delete(name, secretKey) {
     return axios.delete(`${RESOURCE_NAME}/`, {
       data: {
         name,
-        secret_key: secretId
+        secretKey
       },
       timeout: DEFAULT_TIMEOUT
     })
