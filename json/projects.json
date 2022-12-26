@@ -3,10 +3,16 @@
     "title": "Work Experience",
     "projects": [
       {
+        "heading": "Senior Software Engineer",
+        "heading_subtitle": "Klaviyo",
+        "start_date": "Sept 2022",
+        "end_date": "Present"
+      },
+      {
         "heading": "Software Engineer",
         "heading_subtitle": "Klaviyo",
         "start_date": "May 2020",
-        "end_date": "Present"
+        "end_date": "Sept 2022"
       },
       {
         "heading": "DevOps Engineer, Co-Op",
