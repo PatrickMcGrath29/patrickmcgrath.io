@@ -33,7 +33,7 @@
     "element-ui": "^2.4.11",
     "nuxt": "^2.0.0",
     "nuxt-logrocket": "^1.2.7",
-    "nuxt-social-meta": "git://github.com/PatrickMcGrath29/nuxt-social-meta.git"
+    "nuxt-social-meta": "https://github.com/PatrickMcGrath29/nuxt-social-meta"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",

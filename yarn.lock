@@ -7962,9 +7962,9 @@ nuxt-logrocket@^1.2.7:
     logrocket "^1.0.14"
     logrocket-vuex "^0.0.3"
 
-"nuxt-social-meta@git://github.com/PatrickMcGrath29/nuxt-social-meta.git":
+"nuxt-social-meta@https://github.com/PatrickMcGrath29/nuxt-social-meta":
   version "0.0.1"
-  resolved "git://github.com/PatrickMcGrath29/nuxt-social-meta.git#92d993ca5582a574abe84e42536b880a1391043f"
+  resolved "https://github.com/PatrickMcGrath29/nuxt-social-meta#92d993ca5582a574abe84e42536b880a1391043f"
 
 nuxt-svg-loader@^1.2.0:
   version "1.2.0"
